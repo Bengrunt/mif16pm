@@ -1,0 +1,13 @@
+#summary Liste des membres du projet.
+
+= Membres du projet Mif16pm =
+
+Chef de projet :
+  * Benjamin GUILLON
+
+Programmeurs :
+  * Rémi AUDUON
+  * Emmanuel GAUDE
+  * Adrian GAUDEBERT
+  * Emmanuel HALTER
+  * Mamy RAMINOSOA
