@@ -1,0 +1,57 @@
+#summary Compte rendu de réunion du 21/09/2009.
+
+
+
+= Réunion du 21/09/2009 =
+----
+
+*Membres présents:* Benjamin GUILLON, Rémi AUDUON, Emmanuel GAUDE, Adrian GAUDEBERT, Emmanuel HALTER et Mamy RAMINOSOA.
+
+*Ordre du jour:* définir les premiers axes de progression.
+
+----
+
+
+
+== Premières tâches et objectifs ==
+  * Chaque personne doit se remettre les bases du PHP dans la tête (balises, syntaxe, etc...).
+  * Objectif de la 1ère séance de TP: mettre en place la structure supportant le développement du projet, premières ébauches d'organisation du développement, diagrammes divers et étude conceptuelle.
+  * Mise en place des différents outils de communication (MSN,Skype,Wikis) et assignation des membres aux premières tâches.
+
+
+        
+
+==== Réunion Skype jeudi 24/09/2009 à 21h. ====
+
+_Site utile : master.lqbs.fr_
+
+
+
+
+== Fonctionnalités principales du projet : ==
+
+
+
+Dans un premier temps, on se limitera à ces fonctionnalités :
+
+  * *Gestion des membres :* gestion de membres et d'équipes
+    * Informations personnelles : mail, téléphone ... 
+    * Gestion des droits (permissions "locales").
+    * Définition des rôles: chef d'équipe, developpeur, etc ...
+  * *Gestion des tâches:* mise en place de plannings et mailing lists
+    * Création, attribution, suivi de tâches et catégorisation (conception, design, developpement, etc...).
+    * Afficher un planning (avec ou sans filtres).
+    * Gestions de mailing lists.
+  * *Gestion des communications entre les membres:* 
+    * Système de commentaires, d'ouverture de tickets (bug trackers?).
+    * Support des mails.
+    * Organisation de réunions (via skype/téléphone).
+  * *Applications dans le cadre de la gestion de projets amateurs*
+    * Pas de gestion de financement/facturation.
+    * Pas de gestion de version des fichiers (type SVN) ???
+    * Mise en place de licences libres (type GNU/GPL).
+  * *Gestion des milestones (?)*
+
+
+
+==== Objectif Bonus: réutilisation de ce projet pour la gestion des futurs projets du master. ====
