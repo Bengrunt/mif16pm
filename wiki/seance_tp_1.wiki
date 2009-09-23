@@ -14,7 +14,7 @@ AUDUON Rémi (au CROUSS)
 
 
 ==Travail de la séance== 
--Rédaction en partie du cahier des charges `*`
+-Rédaction en partie du cahier des charges \\
 -Rédiger les grands axes de conception
 
 ==Objectif Prochaine séance==
