@@ -1,0 +1,22 @@
+#summary One-sentence summary of this page.
+
+= CONDUITE PROJET MIF16 SEANCE=
+
+
+==Membres présents==  
+
+ "  *"
+GAUDEBERT Adrian / GAUDE Emmanuel / GUILLON Benjamin / HALTER Emmanuel / RAMINOSA Mamy
+
+==Absents== 
+ "  *"
+AUDUON Rémi (au CROUSS
+
+
+
+==Travail de la séance== 
+# Rédaction en partie du cahier des charges
+# Rédiger les grands axes de conception
+
+==Objectif Prochaine séance==
+Rendre cahier des charges complétés
