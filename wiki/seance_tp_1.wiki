@@ -1,4 +1,4 @@
-#Compte rendu de la séance de TP n°1.
+#summary Compte rendu de la séance de TP n°1.
 
 = CONDUITE PROJET MIF16=
 
