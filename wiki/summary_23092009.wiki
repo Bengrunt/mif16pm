@@ -7,7 +7,7 @@
 
 *Membres présents:* Benjamin GUILLON, Emmanuel GAUDE, Adrian GAUDEBERT, Emmanuel HALTER et Mamy RAMINOSOA.
 
-*Membres absents:* AUDUON REMI(au CROUSS)
+*Membres absents:* Rémi AUDUON(au CROUSS)
 
 *Ordre du jour:* Rédaction en partie du cahier des charges et rédiger les grands axes de conception
 
