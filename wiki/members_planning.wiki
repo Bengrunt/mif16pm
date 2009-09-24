@@ -4,4 +4,6 @@
 = Planning =
 ----
 
-
+Lundi 28 Septembre :   * Cahier des charges light.
+                       * Finaliser les diagrammes conceptuels.
+     
