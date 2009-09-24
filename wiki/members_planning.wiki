@@ -1,7 +1,7 @@
 = Planning =
 
 #summary Planning des membres de l'équipe de développement.
-#sidebar Plannings
+#sidebar members_planning_sidebar
   * [Articles HOWTO articles]
     * [ArticlesXSS Web security]
     * [ArticlesDom DOM manipulation]
