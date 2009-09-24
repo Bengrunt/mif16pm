@@ -1,13 +1,15 @@
+#summary Contacts des membres de l'équipe de développement.
+
 =Contact des membres=
 ----
 
-||Membre||Email||Skype||WLM||
-||Benjamin GUILLON||bengrunt@gmail.com||bengrunt||benjamin_guillon@msn.com||
+||Membre||Email||Skype||WLM||TeamViewer||
+||Benjamin GUILLON||bengrunt@gmail.com||bengrunt||benjamin_guillon@msn.com||Bengrunt||
 ||Mamy RAMINOSOA||newmax@gmail.com||mafy.hira||hyperesmax@hotmail.com||
 ||Adrian GAUDEBERT||adrian.gaudebert@gmail.com||adriangaudebert||warshadow@hotmail.fr||
 ||Emmanuel HALTER||hbmanu@gmail.com||mhayoe||leclown25@hotmail.com||
 ||Emmanuel GAUDE||gaude.emmanuel@gmail.com||EMegamanu||gaude.emmanuel@gmail.com||
-||Rémi AUDUON||remaud41@hotmail.com||super_chinois26||remaud41@hotmail.com||
+||Rémi AUDUON||remaud41@hotmail.com||super_chinois26||remaud41@hotmail.com||super_chinois26||
 
 
 ----
