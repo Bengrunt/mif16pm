@@ -1,14 +1,9 @@
-= Planning =
-
 #summary Planning des membres de l'équipe de développement.
-#sidebar members_planning_sidebar
-  * [Articles HOWTO articles]
-    * [ArticlesXSS Web security]
-    * [ArticlesDom DOM manipulation]
-    * [ArticlesStyle CSS and style]
-    * [ArticlesTips Tips and tricks]
-  * [DOMReference DOM reference]
-  * [HTMLElements HTML reference]
-  * [CSSReference CSS reference]
-
+*<wiki:toc max_depth="3" />*
 ----
+= Planning =
+Blabla blabla
+== Niveau 2 ==
+=== Niveau 3 ===
+== Re Niveau 2 ==
+= Re Niveau 1 =
