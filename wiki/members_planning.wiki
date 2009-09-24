@@ -1,10 +1,10 @@
 #summary Planning des membres de l'équipe de développement.
-#sidebar Plannings
+#sidebar members_planning_sidebar
 
 = Planning =
 ----
 
-Lundi 28 Septembre :   
+[DATE_01 Lundi 28 Septembre :]   
   * Cahier des charges light.
   * Finaliser les diagrammes conceptuels.
      
