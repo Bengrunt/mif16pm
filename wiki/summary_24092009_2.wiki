@@ -13,3 +13,7 @@
 * Chaque personne doit pouvoir être en mesure de maitriser les bases de CakePHP (balises, syntaxe, etc...).
 
 * Reprise et discussion autour des différents diagrammes crées par Mamy & Rémi cette après-midi
+
+
+
+==== Réunion Projet lundi 28/09/2009 entre 12h et 14h. ====
