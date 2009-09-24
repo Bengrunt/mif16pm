@@ -1,5 +1,1 @@
-  * Comptes rendus 
-    * [summary_24092009_2 24 Septembre bis]
-    * [summary_24092009 24 Septembre]
-    * [summary_23092009 23 Septembre]
-    * [summary_21092009_1 21 Septembre]
+<wiki:toc max_depth="5" />
