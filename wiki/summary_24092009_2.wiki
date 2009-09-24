@@ -10,9 +10,12 @@
 ----
 
 == Premières tâches et objectifs ==
-* Chaque personne doit pouvoir être en mesure de maitriser les bases de CakePHP (balises, syntaxe, etc...).
+Chaque personne doit pouvoir être en mesure de maitriser les bases de CakePHP (balises, syntaxe, etc...).
 
-* Reprise et discussion autour des différents diagrammes crées par Mamy & Rémi cette après-midi
+Reprise et discussion autour des différents diagrammes crées par Mamy & Rémi cette après-midi
+
+
+
 
 
 
