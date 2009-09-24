@@ -1,10 +1,14 @@
-#summary Planning des membres de l'équipe de développement.
-#sidebar members_planning_sidebar
-
 = Planning =
-----
 
-[DATE_01 Lundi 28 Septembre :]   
-  * Cahier des charges light.
-  * Finaliser les diagrammes conceptuels.
-     
+#summary Planning des membres de l'équipe de développement.
+#sidebar Plannings
+  * [Articles HOWTO articles]
+    * [ArticlesXSS Web security]
+    * [ArticlesDom DOM manipulation]
+    * [ArticlesStyle CSS and style]
+    * [ArticlesTips Tips and tricks]
+  * [DOMReference DOM reference]
+  * [HTMLElements HTML reference]
+  * [CSSReference CSS reference]
+
+----
