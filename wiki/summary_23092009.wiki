@@ -2,17 +2,11 @@
 
 
 
-= Séance de TP du 21/09/2009 =
+= Compte rendu de séance de TP du 21/09/2009 =
 ----
 
-*Membres présents:* Benjamin GUILLON, Emmanuel GAUDE, Adrian GAUDEBERT, Emmanuel HALTER et Mamy RAMINOSOA.
+*Membres présents:* Benjamin GUILLON, Emmanuel GAUDE, Adrian GAUDEBERT et Emmanuel HALTER.
 
-*Membres absents:* Rémi AUDUON(au CROUSS)
-
-*Ordre du jour:* Rédaction en partie du cahier des charges et rédiger les grands axes de conception
+*Ordre du jour:* Début de la rédaction du cahier des charges et établissement des grands axes de conception du projet.
 
 ----
-
-
-==== Séance TP jeudi 07/10/2009====
-Rendre le cahier des charges complétés
