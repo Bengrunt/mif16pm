@@ -1,3 +1,7 @@
 #summary Planning des membres de l'équipe de développement.
 = Planning =
 ----
+
+#sidebar Plannings
+
+
