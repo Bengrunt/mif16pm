@@ -8,6 +8,6 @@
 
 *Membres absents:* Benjamin GUILLON, Emmanuel GAUDE, Adrian GAUDEBERT, Emmanuel HALTER (en TD)
 
-----
+*Ordre du jour:* Réalisation du Diagramme des cas d'utilisation, et du diagramme des classes.
 
-*Ordre du jour:* Réalisation du Diagramme des Cas d'utilisation, et du Diagramme des Classes.
+----
