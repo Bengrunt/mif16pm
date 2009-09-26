@@ -1,4 +1,6 @@
 http://img197.imageshack.us/img197/4374/logo96.png
+
+===[wiki_home Acceuil] ===
 ===Informations Générales===
 ----
   * [project_members Liste des membres du projet]
