@@ -1,4 +1,4 @@
-#summary Compte rendu de séance de TP n°1 du 23/09/2009.
+#summary Compte rendu du TP n°1 du 23/09/2009.
 
 
 
