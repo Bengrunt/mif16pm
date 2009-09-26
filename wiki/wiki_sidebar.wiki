@@ -1,16 +1,29 @@
 http://img197.imageshack.us/img197/4374/logo96.png
 
-===[wiki_home Acceuil] ===
+===[wiki_home Acceuil]===
+
+----
 ===Informations Générales===
 ----
   * [project_members Liste des membres du projet]
   * [members_contact_information Contacts des membres de l'équipe de développement]
 
+----
 ===Développement===
 ----
   * [members_planning Planning des membres de l'équipe de développement]
   * [cakephp_links Liens utiles pour le framework cakephp]
 
+----
+===Comptes Rendus===
+----
+  * *Comptes rendus de réunion:*
+    * [summary_21092009_1 Compte rendu de réunion du 21/09/2009]
+    * [summary_24092009_2 Compte rendu de réunion du 24/09/2009]
+  * *Comptes rendus de séances de TP:*
+    * [summary_23092009 Compte rendu du TP n°1 du 23/09/2009]
+    * [summary_24092009 Compte rendu du TP n°1 bis du 24/09/2009]
+----
 ===Annexes===
 ----
   * [documents_annexes Liste des documents qui ne sont pas hébergés sur ce wiki]
