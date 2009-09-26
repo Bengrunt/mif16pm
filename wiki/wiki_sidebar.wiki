@@ -1,0 +1,6 @@
+http://img197.imageshack.us/img197/4374/logo96.png
+----
+=Informations Générales=
+----
+  * [project_members Liste des membres du projet]
+  * [members_contact_information Contacts des membres de l'équipe de développement]
