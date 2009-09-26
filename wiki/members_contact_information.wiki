@@ -1,7 +1,7 @@
 #summary Contacts des membres de l'équipe de développement.
 
 ----
-=Contact des membres=
+=Contact des Membres=
 ----
 
 ||Membre||Email||Skype||WLM||TeamViewer||
