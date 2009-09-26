@@ -1,16 +1,13 @@
 http://img197.imageshack.us/img197/4374/logo96.png
-----
-=Informations Générales=
+===Informations Générales===
 ----
   * [project_members Liste des membres du projet]
   * [members_contact_information Contacts des membres de l'équipe de développement]
 
-----
-=Développement=
+===Développement===
 ----
   * [members_planning Planning des membres de l'équipe de développement]
 
-----
-=Annexes=
+===Annexes===
 ----
   * [documents_annexes Liste des documents qui ne sont pas hébergés sur ce wiki]
