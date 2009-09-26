@@ -1,0 +1,10 @@
+#summary Page d'acceuil du Wiki du projet MIF16PM
+
+http://img59.imageshack.us/img59/9571/logo300.png
+
+=Bienvenue !=
+
+Bienvenue sur le Wiki de développement du projet MIF16PM, une application Web de gestion de projets amateurs, informatiques ou non.
+
+===Index===
+
