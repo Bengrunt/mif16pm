@@ -1,12 +1,10 @@
-#summary Compte rendu du TP n°1 bis du 24/09/2009
+#summary Compte rendu du TP n°1 bis du 24/09/2009.
 
 = Séance de TP du 24/09/2009 =
 
 ----
 
 *Membres présents:* Rémi AUDION, Mamy RAMINOSOA.
-
-*Membres absents:* Benjamin GUILLON, Emmanuel GAUDE, Adrian GAUDEBERT, Emmanuel HALTER (en TD)
 
 *Ordre du jour:* Réalisation du Diagramme des cas d'utilisation, et du diagramme des classes.
 
