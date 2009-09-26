@@ -1,7 +1,7 @@
 #summary Liste des documents qui ne sont pas hébergés sur ce wiki.
 
 ----
-=Liste de documents annexes=
+=Liste des Documents Annexes=
 ----
 
 ===Documents===
