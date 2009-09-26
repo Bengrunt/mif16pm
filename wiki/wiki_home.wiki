@@ -9,3 +9,6 @@ Bienvenue sur le Wiki de développement du projet MIF16PM, une application Web d
 Vous pouvez facilement naviguer dans le wiki à l'aide du menu situé à gauche de chacune des pages.
 
 Enjoy !
+
+
+*_L'équipe MIF16PM_*
