@@ -4,7 +4,7 @@
 
 ----
 
-*Membres présents:* Rémi AUDION, Mamy RAMINOSOA.
+*Membres présents:* Rémi AUDUON, Mamy RAMINOSOA.
 
 *Ordre du jour:* Réalisation du Diagramme des cas d'utilisation, et du diagramme des classes.
 
