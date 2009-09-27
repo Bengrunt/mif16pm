@@ -17,12 +17,12 @@ http://img197.imageshack.us/img197/4374/logo96.png
 ----
 ===Comptes Rendus===
 ----
-  * *Comptes rendus de réunion:*
-    * [summary_21092009_1 Compte rendu de réunion du 21/09/2009]
-    * [summary_24092009_2 Compte rendu de réunion du 24/09/2009]
-  * *Comptes rendus de séances de TP:*
-    * [summary_23092009 Compte rendu du TP n°1 du 23/09/2009]
-    * [summary_24092009 Compte rendu du TP n°1 bis du 24/09/2009]
+  *Comptes rendus de réunion:
+  * [summary_21092009_1 Compte rendu de réunion du 21/09/2009]
+  * [summary_24092009_2 Compte rendu de réunion du 24/09/2009]
+  *Comptes rendus de séances de TP:
+  * [summary_23092009 Compte rendu du TP n°1 du 23/09/2009]
+  * [summary_24092009 Compte rendu du TP n°1 bis du 24/09/2009]
 ----
 ===Annexes===
 ----
