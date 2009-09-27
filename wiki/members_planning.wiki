@@ -1,9 +1,20 @@
 #summary Planning des membres de l'équipe de développement.
-*<wiki:toc max_depth="3" />*
+
+=Planning de Développement=
 ----
-= Planning =
-Blabla blabla
-== Niveau 2 ==
-=== Niveau 3 ===
-== Re Niveau 2 ==
-= Re Niveau 1 =
+
+Membres -> 1 journée
+Equipes / Groupes -> 1 journée
+Gestion des projets -> 2 journées
+Gestion des tâches -> 7 journées
+Evènements -> 4 journées
+Planning -> 4 journées
+Communications entre membres  -> 7 journées
+Tests, débugage -> 6 journées
+
+\\
+\\
+\\
+
+=Planning des Membres=
+----
