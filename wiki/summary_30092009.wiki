@@ -1,0 +1,10 @@
+#summary Compte rendu du TP n°2 du 30/09/2009.
+----
+= Compte rendu de séance de TP du 30/09/2009 =
+----
+
+*Membres présents:* Benjamin GUILLON, Emmanuel GAUDE, Adrian GAUDEBERT et Emmanuel HALTER.
+
+*Ordre du jour:* Fin de la rédaction du cahier des charges finals. Se renseigner et télécharger les différents outils de développement
+
+----
