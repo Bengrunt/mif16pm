@@ -5,6 +5,12 @@
 
 *Membres présents:* Benjamin GUILLON, Emmanuel GAUDE, Adrian GAUDEBERT et Emmanuel HALTER.
 
-*Ordre du jour:* Fin de la rédaction du cahier des charges finals. Se renseigner et télécharger les différents outils de développement
+*Ordre du jour:* 
+
+Fin de la rédaction du cahier des charges final. 
+
+Se renseigner et télécharger les différents outils de développement. 
+
+Mise en place de la base de données et du serveur SVN. Commencer les premiers modules de développement
 
 ----
