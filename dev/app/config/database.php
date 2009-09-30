@@ -81,9 +81,9 @@ class DATABASE_CONFIG {
     var $default = array(
         'driver' => 'mysql',
         'persistent' => false,
-        'host' => 'sql2.power-heberg.net'
-        'login' => 'adriangaudebert3'
-        'password' => 'tikiajax'
+        'host' => 'sql2.power-heberg.net',
+        'login' => 'adriangaudebert3',
+        'password' => 'tikiajax',
         'database' => 'adriangaudebert3',
         'prefix' => '',
     );
