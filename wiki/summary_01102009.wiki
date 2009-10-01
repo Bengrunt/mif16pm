@@ -1,0 +1,54 @@
+#summary Compte rendu du TP n°2 du 01/10/2009.
+
+= Compte rendu de séance de TP du 01/10/2009 =
+
+*Membres présents:* AUDUON Rémi, RAMINOSOA Mamy
+
+*Ordre du jour:* Première implémentation de la base de données
+
+ * Création des tables Users et Roles dans la base de données MySQL
+ * Pour utiliser le module ACL de cakePHP, il faut : 
+ 
+	- Lancer la console CakePHP
+	- Executer la commande : "cake schema run create DbAcl"
+	
+	Cette commande créera les tables nécessaires à la gestion des permissions, à savoir aros, acos, et aros_acos. Si les tables existent déjà, elles seront supprimées et recréées.
+	
+ * Création des tables Projects, Tasks, Teams, Teams_Users et Tasks_Teams
+ 
+ * Modifications par rapport au diagramme de classe : 
+ 
+	- Les deux relations Membres-Taches et Equipes-Taches (XOR sur le diagramme) ont été remplacées par une seule relation Equipes-Taches. Dans le	cas où une tache est executée par un seul membre, on créera une équipe à un seul membre.
+
+ * Définition des droits des utilisateurs : 
+ 
+	- Dans la table Users : le champs role_id fait référence aux droits sur le site "en entier" (administration du site).
+	
+		* Admin
+		* Membre
+		
+	- Dans la table Teams_Users : le champs team_role fait référence aux droits sur le projet affecté à l'équipe (administration du projet).
+		
+		* Membre avec droits
+		* Membre (tout court)
+		
+	Le chef de projet est définit comme étant le chef de l'équipe "principale" du projet.
+	
+ * Problèmes : 
+ 
+	- Ajout possible de données, même si les clés étrangères ne sont pas respectées
+	
+	* Liste des clés étrangères : 
+	
+		- Users.role_id = Roles.role_id
+		- Projects.project_owner_id = Users.user_id (déjà créée, non fonctionnelle)
+		- Teams.team_project_id = Projects.project_id
+		- Teams.team_mother_id = Teams.team_id
+		- Tasks.task_project_id = Projects.project_id
+		- Teams_Users.team_id = Teams.team_id
+		- Teams_Users.user_id = Users.user_id
+		- Teams_Users.team_role = Roles.role_id
+		- Tasks_Teams.task_id = Tasks.task_id
+		- Tasks_Teams.team_id = Teams.team_id
+		
+	- La relation reflexive sur Tâche, que signifie-t-elle ?!?
