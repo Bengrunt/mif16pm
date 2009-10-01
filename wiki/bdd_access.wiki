@@ -1,0 +1,12 @@
+= Comment accéder à la base de données de développement =
+
+Rendez vous sur la page http://mysql.whd-rs.com et connectez vous : 
+login : adriangaudebert3
+password : tikiajax
+serveur : SQL2
+
+Vous accédez alors à l'interface PHPMyAdmin pour notre bdd de dev. 
+
+== Attention ==
+
+Ne supprimez aucune donnée sans être sur qu'elle peut l'être. Faites des sauvegardes (Exporter) de la base entière avant de faire des grosses modifications. 
