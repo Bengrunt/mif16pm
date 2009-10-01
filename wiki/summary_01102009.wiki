@@ -40,7 +40,7 @@
  
 	- Ajout possible de données, même si les clés étrangères ne sont pas respectées
 	
-	* Liste des clés étrangères : 
+	¤ Liste des clés étrangères : 
 	
 		- Users.role_id = Roles.role_id
 		- Projects.project_owner_id = Users.user_id (déjà créée, non fonctionnelle)
