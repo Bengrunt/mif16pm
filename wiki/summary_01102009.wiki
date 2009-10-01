@@ -43,14 +43,24 @@
 	¤ Liste des clés étrangères : 
 	
 		- Users.role_id = Roles.role_id
+
 		- Projects.project_owner_id = Users.user_id (déjà créée, non fonctionnelle)
+
 		- Teams.team_project_id = Projects.project_id
+
 		- Teams.team_mother_id = Teams.team_id
+
 		- Tasks.task_project_id = Projects.project_id
+
 		- Teams_Users.team_id = Teams.team_id
+
 		- Teams_Users.user_id = Users.user_id
+
 		- Teams_Users.team_role = Roles.role_id
+
 		- Tasks_Teams.task_id = Tasks.task_id
+
 		- Tasks_Teams.team_id = Teams.team_id
+
 		
 	- La relation reflexive sur Tâche, que signifie-t-elle ?!?
