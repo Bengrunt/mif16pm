@@ -24,13 +24,15 @@
  
 	- Dans la table Users : le champs role_id fait référence aux droits sur le site "en entier" (administration du site).
 	
-		. Admin
-		. Membre
+		  + Admin
+
+		  + Membre
 		
 	- Dans la table Teams_Users : le champs team_role fait référence aux droits sur le projet affecté à l'équipe (administration du projet).
 		
-		. Membre avec droits
-		. Membre (tout court)
+		  + Membre avec droits
+
+		  + Membre (tout court)
 		
 	Le chef de projet est définit comme étant le chef de l'équipe "principale" du projet.
 	
