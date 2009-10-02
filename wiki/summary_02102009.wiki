@@ -1,5 +1,5 @@
 #summary Compte rendu de réunion du 02/10/2009.
-#labels réunion,skype,cahier_des_charges
+#labels réunion,cahier_des_charges,base_de_données
 
 = Réunion Skype du 02/10/2009 =
 ----
