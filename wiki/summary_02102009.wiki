@@ -1,0 +1,54 @@
+#summary Compte rendu de réunion du 02/10/2009.
+#labels compte-rendu,skype,cahierdescharges,basededonnées,script,réunion
+
+= Réunion Skype du 02/10/2009 =
+----
+
+*Membres présents:* Benjamin GUILLON, Rémi AUDUON, Emmanuel GAUDE, Adrian GAUDEBERT, et Emmanuel HALTER (en début de réunion).
+
+*Membres absents:* Mamy RAMINOSOA (_séance de théâtre dans l'UE reproduction organique_)
+
+*Ordre du jour:* 
+ * Finaliser le cahier des charges;
+ * L'envoyer à Erwan GUILLOU.
+ * Discuter de la base de données.
+ * Assigner les tâches et équipes.
+ * Fixer prochaine réunion et début de la phase de codage.
+
+----
+
+== Résumé ==
+=== Cahier des charges ===
+Emmanuel H. nous a fourni le cahier des charges quasiment terminé (après suppression accidentelle du SVN). Nous avons discuté autour des points à ajouter ou reformuler, puis Emmanuel H. nous a laissé.
+Afin de veiller à une plus grande compatibilité entre nos suites bureautiques, nous avons décidé de n'exploiter que la version au format Office 2003 et de supprimer la version en OOXML.
+
+Au final le travail a porté sur :
+ * Quelques fautes d'orthographes et d'accord corrigées.
+ * Reformulation de certains points.
+ * Déplacement de l'équipe en début de cahier des charges.
+
+=== Base de données ===
+Nous avons ensuite réalisé un petit topo sur la base de données créée par Mamy et Rémi lors de la séance de projet de jeudi.
+Celle-ci présentait un problème d'interclassement, certaines tables utilisant un encodage en _latin1_swedish_. De plus les noms de certaines colonnes (id et id référençant d'autres tables) ne respectent pas le formalisme de CakePHP.
+Quelques explications sur le fonctionnement de MySQL avec le moteur MyISAM et CakePHP nous ont été fournies par Adrian.
+
+
+=== Assignation des équipes et ds tâches ===
+Les équipes, et leurs tâches, ont été définies par commodité (horaires et lieux) et affinités :
+ * *Adrian et Emmanuel H :* Module Equipes
+ * *Benjamin et Emmanuel G :* Module Membres
+ * *Mamy et Rémi :* Module Projets
+
+Il a été aussi convenu les tâches suivantes dans la soirée :
+ * *Benjamin :* Envoi du cahier des charges.
+ * *Emmanuel G. :* 
+  * compte-rendu de la réunion,
+  * mise en conformité de la base
+  * réalisation de scripts de création, destruction et remplissage des tables.
+
+== Prochains évènements rendez-vous ==
+=== Réunion Skype / TeamViewer ===
+Dimanche 04/10/2009 à 20:00.
+
+=== Début de la phase de codage ===
+Dimanche soir au plus tard.
