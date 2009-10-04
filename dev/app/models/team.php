@@ -8,4 +8,6 @@
 class Team extends AppModel
 {
     public $name = "Team";
+
+    public $hasAndBelongsToMany = 'User';
 }
