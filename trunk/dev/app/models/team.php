@@ -9,5 +9,6 @@ class Team extends AppModel
 {
     public $name = "Team";
 
-    public $hasAndBelongsToMany = 'User';
+    public $hasAndBelongsToMany = "User";
+    public $belongsTo = "Project";
 }
