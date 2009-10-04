@@ -1,0 +1,43 @@
+#summary Analyse du module Equipe du 04/09/2009.
+----
+= Brainstorming du module Equipe du 04/09/2009 =
+----
+
+*Membres affectés à la tâche:* Adrian GAUDEBERT et Emmanuel HALTER.
+
+
+*Aide pour le développement:*
+
+Former Equipe :
+ Besoin d’un chef d’équipe
+ Liste membres
+ Nom Equipe
+ Liste projet affecté
+ Droit Equipe
+ Id Equipe
+ Nom membre
+ Hiérarchie (statut)
+
+Fonctions possibles pour former l’équipe : 
+ Champ Nom Equipe
+ Champ Liste projet
+ Champ statut du membre
+ Champ Id Equipe
+ DonnerDroitEquipe()
+ CréerEquipe()
+ SupprimerEquipe()
+ ModifierEquipe()
+
+Ajouter / Assigner membres
+ Nom membre & statut
+ Zone recherche de membre
+ Responsable chef Equipe/Projet
+ Id membre
+ Barre de droit (~profil)
+ Envoie ajout par mail au futur membre
+
+Fonctions possibles pour ajouter un membre : 
+ Champ recherche de membre
+ AfficherMembre()
+ SélectionnerMembre()
+ InviterMembre() -> EnvoyerMail() qui sera forcément explicite
