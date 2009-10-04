@@ -14,13 +14,16 @@ class TeamsController extends AppController
      */
     public function index()
     {
+        $this->set('teams', $this->Team->find('all'));
     }
 
     /**
      *
      */
-    public function view()
+    public function view($id = null)
     {
+        $this->Team->id = $id;
+        $this->set('team', $this->Team->read());
     }
 
     /**

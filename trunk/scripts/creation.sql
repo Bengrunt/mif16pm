@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `tasks` (
   `id` int(11) NOT NULL auto_increment,
   `task_name` varchar(30) NOT NULL,
   `project_id` int(11) NOT NULL,
-  `task_id` int(11) NOT NULL,
+  `task_id` int(11) NULL,
   `duration` int(11) NOT NULL COMMENT 'durée en jours',
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `teams` (
   `name` varchar(30) NOT NULL,
   `description` text NOT NULL,
   `project_id` int(11) NOT NULL,
-  `team_id` int(11) NOT NULL,
+  `team_id` int(11) NULL,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;

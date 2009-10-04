@@ -37,6 +37,9 @@ INSERT INTO `roles` (`id`, `name`, `add_account`, `delete_account`, `modify_acco
 -- Contenu de la table `teams`
 --
 
+INSERT INTO `teams` (`id`, `name`, `description`, `project_id`, `team_id`, `user_id`) VALUES
+(1, 'Dev', 'Equipe des developpeurs', 6, NULL, 2);
+
 -- --------------------------------------------------------
 
 --
