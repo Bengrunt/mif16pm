@@ -22,8 +22,8 @@ INSERT INTO `projects` (`id`, `name`, `description`, `created`, `user_id`) VALUE
 -- Contenu de la table `roles`
 --
 
-INSERT INTO `roles` (`id`, `name`, `add_account`, `delete_account`, `modify_account`) VALUES
-(1, 'Super Chef de l\\''Univers', 1, 1, 1);
+INSERT INTO `roles` (`id`, `name`) VALUES
+(1, 'Super Chef de l\\''Univers');
 
 -- --------------------------------------------------------
 
@@ -52,7 +52,7 @@ INSERT INTO `teams` (`id`, `name`, `description`, `project_id`, `team_id`, `user
 -- Contenu de la table `users`
 --
 
-INSERT INTO `users` (`id`, `nickname`, `first_name`, `last_name`, `password`, `role_id`) VALUES
+INSERT INTO `users` (`id`, `username`, `firstname`, `lastname`, `password`, `role_id`) VALUES
 (1, 'Nick', 'Jack', 'O''neil', 'test', 3),
 (2, 'Adrian', 'Adrian', 'Gaudebert', 'prout', 1);
 

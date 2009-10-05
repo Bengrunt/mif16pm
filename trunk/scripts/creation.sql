@@ -14,7 +14,8 @@ CREATE TABLE IF NOT EXISTS `projects` (
   `id` int(11) NOT NULL auto_increment,
   `name` varchar(100) NOT NULL,
   `description` text NOT NULL,
-  `created` DATETIME default NULL,
+  `created` DATETIME,
+  `modified` DATETIME,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1;
@@ -28,9 +29,8 @@ CREATE TABLE IF NOT EXISTS `projects` (
 CREATE TABLE IF NOT EXISTS `roles` (
   `id` int(11) NOT NULL auto_increment,
   `name` varchar(30) NOT NULL,
-  `add_account` tinyint(1) NOT NULL,
-  `delete_account` tinyint(1) NOT NULL,
-  `modify_account` tinyint(1) NOT NULL,
+  `created` DATETIME,
+  `modified` DATETIME,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1;
 
@@ -46,6 +46,8 @@ CREATE TABLE IF NOT EXISTS `tasks` (
   `project_id` int(11) NOT NULL,
   `task_id` int(11) NULL,
   `duration` int(11) NOT NULL COMMENT 'durée en jours',
+  `created` DATETIME,
+  `modified` DATETIME,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
@@ -62,6 +64,8 @@ CREATE TABLE IF NOT EXISTS `teams` (
   `project_id` int(11) NOT NULL,
   `team_id` int(11) NULL,
   `user_id` int(11) NOT NULL,
+  `created` DATETIME,
+  `modified` DATETIME,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
@@ -86,11 +90,13 @@ CREATE TABLE IF NOT EXISTS `tasks_teams` (
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL auto_increment,
-  `nickname` varchar(30) NOT NULL,
-  `first_name` varchar(30) NOT NULL,
-  `last_name` varchar(30) NOT NULL,
-  `password` varchar(30) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `role_id` int(11) NOT NULL,
+  `firstname` varchar(30) NOT NULL,
+  `lastname` varchar(30) NOT NULL,
+  `created` datetime,
+  `modified` datetime,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
