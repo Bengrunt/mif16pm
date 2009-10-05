@@ -4,7 +4,7 @@ class UsersController extends AppController
 {
     public $scaffold;
 
-    function beforeFilter()
+    /*function beforeFilter()
     {
         parent::beforeFilter();
         $this->Auth->allowedActions = array('*');
@@ -20,6 +20,6 @@ class UsersController extends AppController
 
     public function logout()
     {
-    }
+    }*/
 	
 }
