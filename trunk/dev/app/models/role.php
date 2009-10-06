@@ -7,6 +7,22 @@ class Role extends AppModel
 
     function parentNode()
     {
-        return null;
+		if (!$this->id && empty($this->data))
+        {
+            return null;
+        }
+        $data = $this->data;
+        if (empty($this->data))
+        {
+            $data = $this->read();
+        }
+        if (!$data['role']['role_id'])
+        {
+            return null;
+        }
+        else
+        {
+            return array('Role' => array('id' => $data['role']['role_id']));
+        }
     }
 }

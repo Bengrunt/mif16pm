@@ -1,4 +1,4 @@
-<?php echo $form->create('Team');
+<?php echo $form->create('Team', array('action' => 'edit')); ?>
 <?php echo $form->input('Nom'); ?>
 <?php echo $form->input('Description'); ?>
 <?php echo $form->input('Projet'); ?>
