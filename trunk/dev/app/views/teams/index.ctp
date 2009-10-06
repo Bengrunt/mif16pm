@@ -14,6 +14,20 @@
         </td>
         <td><?php echo $team['Team']['description']; ?></td>
         <td><?php echo $team['Project']['name']; ?></td>
+		<td>
+				<?php echo $html->link(	$html->image('icone_effacer.png'),
+							array(	'controller'=>'teams',
+								'action'=>'delete', 
+								$team['Team']['id']),
+							array('escape' => false) ); ?>
+				<?php echo $html->link(	$html->image('icone_editer.png'),
+							array(	'controller'=>'teams',
+								'action'=>'edit', 
+								$team['Team']['id']),
+							array('escape' => false)); ?>
+		</td>
+
     </tr>
     <?php endforeach; ?>
 </table>
+<?php echo $html->link('Ajouter une Equipe', array('controller'=>'teams','action'=>'add')); ?>
