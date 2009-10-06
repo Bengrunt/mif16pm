@@ -63,7 +63,7 @@ class TeamsController extends AppController
 		{
 			if($this->Team->save($this->data['Team']))
 			{
-				$this->flash('La composition de lequipe='. $id 'a bien été modifié','/team');
+				$this->flash('La composition de lequipe a bien été modifié. ','/team');
 			}
 		}
 	}
