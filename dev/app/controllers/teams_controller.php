@@ -30,20 +30,42 @@ class TeamsController extends AppController
      *
      */
     public function add()
-    {
+    {	
+		if (!empty($this->data)) 
+		{
+			if ($this->Team->save($this->data)) 
+			{
+				$this->flash('Lequipe a bien été ajouté & sauvergardé.','/team');
+			}
+		}
     }
 
     /**
      *
      */
-    public function remove()
+    public function delete($id = null)
     {
+		$this->del($id);
+		$this->flash('Lequipe avec l\'id: '.$id.' a été supprimé.', '/team');
     }
 
     /**
      *
      */
-    public function edit()
-    {
+    public function edit($id = null)
+    {	
+		if(!empty($this->data))
+		{
+			$this->Team->id = $id; 
+			$this->data = $this->Team->read();
+		}
+		else
+		{
+			if($this->Team->save($this->data)
+			{
+				$this->flash('La composition de lequipe='. $id 'a bien été modifié', array('controller' => 'livres','action'=>'index'));
+			}
+		}
+e
     }
 }
