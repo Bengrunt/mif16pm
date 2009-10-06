@@ -61,7 +61,7 @@ class TeamsController extends AppController
 		}
 		else
 		{
-			if($this->Team->save($this->data)
+			if($this->Team->save($this->data['Team']))
 			{
 				$this->flash('La composition de lequipe='. $id 'a bien été modifié', array('controller' => 'team','action'=>'index'));
 			}
