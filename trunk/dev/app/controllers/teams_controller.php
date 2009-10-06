@@ -66,6 +66,5 @@ class TeamsController extends AppController
 				$this->flash('La composition de lequipe='. $id 'a bien été modifié', array('controller' => 'team','action'=>'index'));
 			}
 		}
-e
-    }
+	}
 }
