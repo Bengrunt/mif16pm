@@ -1,4 +1,4 @@
-#summary Comment configurer SVN au Nautibus pour accéder au Sdépôt
+#summary Comment configurer SVN au Nautibus pour accéder au dépôt
 = Introduction =
 Comment configurer le client SVN au Nautibus pour accéder au dépôt
 
