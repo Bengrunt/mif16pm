@@ -13,20 +13,20 @@ class Team extends AppModel
     public $belongsTo = "Project";
 	
 	var $validate = array(
-		'team_id' => array(
-			'rule' => 'Numeric',
+		'Nom' => array(
+			'rule' => array('minLength', 5),
 			'required' => true,
 			'allowEmpty' => false,
-			'message' => 'Une id doit avoir au moins 1 chiffre'
+			'message' => 'Un nom doit au moins se composer de 5 lettres'
 		),
-		'user_id' => array(
-			'rule' => 'Numeric'
-			'required' => true,
-			'allowEmpty' => false,
+		'Description' => array(
+			'rule' => array('minLength', 10),
+			'message' => 'Veuillez remplir une description un peu plus longue.'
+
 		),
-		'role_id' => array(
+		'Projet' => array(
 			'rule' => 'alphaNumeric',
-			'message' => 'Ce n\'est pas un role.'
+			'message' => 'Ce n\'est pas un Projet existant.'
 		),
 	);
 
