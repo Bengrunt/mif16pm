@@ -9,9 +9,7 @@ class Project extends AppModel
     public $name = "Project";
 	public $hasMany = "Team";
 	
-	// A voir plus tard avec programmation tache 
-	// public $hasMany = "Taches";
-	
+
 	var $validate = array(
 		'Nom' => array(
 			'rule' => array('minLength', 5),
