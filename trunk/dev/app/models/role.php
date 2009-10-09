@@ -35,5 +35,5 @@ class Role extends AppModel
 			'allowEmpty' => false,
 			'message' => 'Un role doit au moins se composer de 5 lettres'
 		)
-	)
+	);
 }
