@@ -23,7 +23,7 @@ class TeamsController extends AppController
     public function view($id = null)
     {
         $this->Team->id = $id;
-        $this->set('team', $this->Team->read());
+        $this->set('teams', $this->Team->read());
     }
 
     /**
