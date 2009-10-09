@@ -1,6 +1,6 @@
 <?php
 
-class ProjectController extends AppController
+class ProjectsController extends AppController
 {
 
 	public $name = "Project";
