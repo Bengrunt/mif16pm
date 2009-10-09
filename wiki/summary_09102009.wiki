@@ -1,0 +1,21 @@
+#summary Compte rendu de réunion du 09/10/2009.
+
+= Réunion Skype du 09/10/2009 =
+----
+
+*Membres présents:* Benjamin GUILLON, Emmanuel GAUDE et Emmanuel HALTER
+
+*Membres absents:* Mamy RAMINOSOA (_séance de théâtre dans l'UE reproduction organique_), Rémi AUDUON (Anniv), Adrian GAUDEBERT (WTF COLLECTIVE ?!)
+
+*Ordre du jour:* 
+ * Installer wamp & un SVN pour certains membres;
+ * Continuer le développement des différents modules
+----
+
+== Résumé ==
+
+Ben, Manu G et moi même avons travaillé sur le développement du module projet en faisant découvrir à Ben les différentes possibilités de MVC. Nous avons aussi régler quelques problèmes au niveau du module équipe.
+
+== Prochaine Tâches ==
+* Etendre l'installation dans les plus brefs délais aux autres membres du projet
+* Continuer à développer les modules pour ne pas prendre trop de retard
