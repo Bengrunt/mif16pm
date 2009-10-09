@@ -18,12 +18,12 @@ class Team extends AppModel
 			'required' => true,
 			'allowEmpty' => false,
 			'message' => 'Un nom doit au moins se composer de 5 lettres'
-		)
+		),
 		'Description' => array(
 			'rule' => array('minLength', 10),
 			'message' => 'Veuillez remplir une description un peu plus longue.'
 
-		)
+		),
 		'Projet' => array(
 			'rule' => 'alphaNumeric',
 			'message' => 'Ce n\'est pas un Projet existant.'
