@@ -30,4 +30,4 @@
     </tr>
     <?php endforeach; ?>
 </table>
-<?php echo $html->link('Cr&eacute;er un projet', array('controller'=>'projects','action'=>'add')); ?>
+<?php echo $html->link('Créer un projet', array('controller'=>'projects','action'=>'add')); ?>
