@@ -16,6 +16,6 @@
 
 Ben, Manu G et moi même avons travaillé sur le développement du module projet en faisant découvrir à Ben les différentes possibilités de MVC. Nous avons aussi régler quelques problèmes au niveau du module équipe.
 
-*Prochaine Tâches:*
+*Prochaines Tâches:*
  * Etendre l'installation dans les plus brefs délais aux autres membres du projet
  * Continuer à développer les modules pour ne pas prendre trop de retard
