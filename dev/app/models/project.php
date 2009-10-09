@@ -2,7 +2,8 @@
 
 /**
  *
- * @author
+ * @author Benjamin Guillon - bengrunt@gmail.com
+ * @see http://code.google.com/p/mif16pm/
  */
 class Project extends AppModel
 {
