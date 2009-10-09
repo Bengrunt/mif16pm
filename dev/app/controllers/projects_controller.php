@@ -8,11 +8,11 @@
 class ProjectsController extends AppController
 {
 
-	public $name = "Project";
+	public $name = "Projects";
 	
 	public function index()
     {
-        $this->set('project', $this->Project->find('all'));
+        $this->set('projects', $this->Project->find('all'));
     }
 
 	public function view($id = null)
@@ -54,7 +54,7 @@ class ProjectsController extends AppController
 		}	
     }
 	
-	//Gérer les droits
+	//GÃ©rer les droits
     public function admin()	
     {
 		
