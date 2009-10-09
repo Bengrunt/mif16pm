@@ -12,6 +12,8 @@ class Team extends AppModel
     public $hasAndBelongsToMany = "User";
     public $belongsTo = "Project";
 	
+	
+	
 	var $validate = array(
 		'Nom' => array(
 			'rule' => array('minLength', 5),

@@ -35,6 +35,10 @@ class TeamsController extends AppController
 		{
 			if ($this->Team->save($this->data)) 
 			{
+				echo '<pre>';
+					var_dump($this->data);
+				echo '</pre><hr/>';
+
 				$this->flash('Lequipe a bien ete ajoute & sauvergarde.','/teams');
 			}
 		}
@@ -45,7 +49,7 @@ class TeamsController extends AppController
      */
     public function delete($id = null)
     {
-		$this->del($id);
+		$this->Team->del($id);
 		$this->flash('Lequipe avec l\'id: '.$id.' a ete supprime.', '/teams');
     }
 
