@@ -14,6 +14,7 @@
         </td>
         <td><?php echo $team['Team']['description']; ?></td>
         <td><?php echo $team['Project']['name']; ?></td>
+
 		<td>
 				<?php echo $html->link(	$html->image('delete.png'),
 							array(	'controller'=>'teams',
