@@ -15,12 +15,12 @@
         <td><?php echo $team['Team']['description']; ?></td>
         <td><?php echo $team['Project']['name']; ?></td>
 		<td>
-				<?php echo $html->link(	$html->image('delete.jpg'),
+				<?php echo $html->link(	$html->image('delete.png'),
 							array(	'controller'=>'teams',
 								'action'=>'delete', 
 								$team['Team']['id']),
 							array('escape' => false) ); ?>
-				<?php echo $html->link(	$html->image('edit1.png'),
+				<?php echo $html->link(	$html->image('edit.png'),
 							array(	'controller'=>'teams',
 								'action'=>'edit', 
 								$team['Team']['id']),
