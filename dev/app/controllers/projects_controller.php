@@ -18,7 +18,7 @@ class ProjectsController extends AppController
 	public function view($id = null)
     {
         $this->Project->id = $id;
-        $this->set('project', $this->Project->read());
+        $this->set('projects', $this->Project->read());
     }	
 	
     public function add()
@@ -51,7 +51,8 @@ class ProjectsController extends AppController
 			{
 				$this->flash('Les attributs du projet ont bien &eacutet&eacutes modifi&eacutes. ','/project');
 			}
-		}	
+		}
+		$this->set('projects', $this->Project->Team->find('list'));		
     }
 	
 	/*Gérer les droits

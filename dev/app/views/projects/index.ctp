@@ -14,7 +14,6 @@
         </td>
         <td><?php echo $project['Project']['description']; ?></td>
         <td><?php echo $project['Project']['user_id']; ?></td>
-		<td><?php echo $project['Team']['name']; ?></td>
 		<td>
 				<?php echo $html->link(	$html->image('delete.png'),
 							array(	'controller'=>'projects',
