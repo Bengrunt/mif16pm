@@ -34,7 +34,7 @@ class ProjectsController extends AppController
 
     public function delete($id = null)
     {
-		$this->Equipe->del($id);
+		$this->Project->del($id);
 		$this->flash('Le projet avec l\'id: '.$id.' a ete supprime.', '/projects');
     }
 
@@ -54,9 +54,10 @@ class ProjectsController extends AppController
 		}	
     }
 	
-	//Gérer les droits
+	/*Gérer les droits
     public function admin()	
     {
 		
 	}
+*/
 }
