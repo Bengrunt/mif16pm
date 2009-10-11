@@ -55,7 +55,7 @@ class User extends AppModel
         }
     }
 	
-		var $validate = array(
+	var $validate = array(
 		'Nom' => array(
 			'rule' => array('minLength', 3),
 			'required' => true,
