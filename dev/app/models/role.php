@@ -16,7 +16,7 @@ class Role extends AppModel
 			'rule' => array('minLength', 5),
 			'required' => true,
 			'allowEmpty' => false,
-			'message' => 'Un rÙle doit au moins se composer de 5 lettres'
+			'message' => 'Un r√¥le doit au moins se composer de 5 lettres'
 		)
 	);
 
