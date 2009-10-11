@@ -4,31 +4,31 @@
         <th>Description</th>
         <th>Projet</th>
     </tr>
-    <?php foreach($teams as $team): ?>
+    <?php foreach($tasks as $task): ?>
     <tr>
         <td>
             <?php echo $html->link(
-                            $team['Team']['name'],
-                            array('controller' => 'teams', 'action' => 'view', $team['Team']['id'])
+                            $task['Task']['task_name'],
+                            array('controller' => 'tasks', 'action' => 'view', $task['Task']['id'])
                         ); ?>
         </td>
-        <td><?php echo $team['Team']['description']; ?></td>
-        <td><?php echo $team['Project']['name']; ?></td>
+        <td><?php echo $task['Task']['description']; ?></td>
+        <td><?php echo $task['Project']['task_name']; ?></td>
 
 		<td>
 				<?php echo $html->link(	$html->image('delete.png'),
-							array(	'controller'=>'teams',
+							array(	'controller'=>'tasks',
 								'action'=>'delete', 
-								$team['Team']['id']),
+								$task['Task']['id']),
 							array('escape' => false) ); ?>
 				<?php echo $html->link(	$html->image('edit.png'),
-							array(	'controller'=>'teams',
+							array(	'controller'=>'tasks',
 								'action'=>'edit', 
-								$team['Team']['id']),
+								$task['Task']['id']),
 							array('escape' => false)); ?>
 		</td>
 
     </tr>
     <?php endforeach; ?>
 </table>
-<?php echo $html->link('Ajouter une Equipe', array('controller'=>'teams','action'=>'add')); ?>
+<?php echo $html->link('Ajouter une Tâche', array('controller'=>'tasks','action'=>'add')); ?>
