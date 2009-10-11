@@ -27,7 +27,7 @@ class ProjectsController extends AppController
 		{
 			if ($this->Project->save($this->data)) 
 			{
-				$this->flash('Le projet a bien &eacute;t&eacute; ajout&eacute; &amp; sauvegard&eacute;e.','/projects');
+				$this->flash('Le projet a bien été ajouté et sauvegardé.','/projects');
 			}
 		}
     }
@@ -35,7 +35,7 @@ class ProjectsController extends AppController
     public function delete($id = null)
     {
 		$this->Project->del($id);
-		$this->flash('Le projet avec l\'id: '.$id.' a ete supprime.', '/projects');
+		$this->flash('Le projet avec l\'id: '.$id.' a été supprimé.', '/projects');
     }
 
     public function edit()
@@ -49,7 +49,7 @@ class ProjectsController extends AppController
 		{
 			if($this->Project->save($this->data['Project']))
 			{
-				$this->flash('Les attributs du projet ont bien &eacutet&eacutes modifi&eacutes. ','/project');
+				$this->flash('Les attributs du projet ont bien été modifiés. ','/project');
 			}
 		}
 		$this->set('projects', $this->Project->Team->find('list'));		
