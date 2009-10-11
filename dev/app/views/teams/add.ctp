@@ -1,6 +1,8 @@
-<?php echo $form->create('Team', array('action' => 'add')); ?>
-<?php echo $form->input('name'); ?>
-<?php echo $form->input('description'); ?>
-<?php echo $form->input('Project'); ?>
-<?php echo $form->input('id', array('type'=>'hidden')); ?>
+<?php echo $form->create('Task', array('action' => 'add')); ?>
+<?php echo $form->input('task_name'); ?>
+<?php echo $form->input('project_id', array('type'=>'hidden')); ?>
+<?php echo $form->input('task_id', array('type'=>'hidden')); ?>
+<?php echo $form->input('duration'); ?>
+<?php echo $form->input('creation', array('type'=>'hidden')); ?>
+<?php echo $form->input('modified', array('type'=>'hidden')); ?>
 <?php echo $form->end('Ajouter'); ?>
