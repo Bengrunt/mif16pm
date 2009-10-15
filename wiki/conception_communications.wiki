@@ -1,0 +1,25 @@
+#summary Conception des fonctions de communication
+
+----
+Conception : Fonctions de communication
+----
+
+*Principe :*
+
+Regroupe l'ensemble des fonctionnalités liées à la communication.
+
+*Associations directes :* 
+  * 1 Équipe
+  * 1+ Tâche
+
+*Module :*
+  * Création / Destruction (Owner)
+  * Modification (Owner)
+  * Mises à Jour (d'avancement par ex)  (Membres de l'équipe)
+  * Répartition des rôles et des tâches dans l'évènement (Owner)
+  * Communication :
+    * Page d'accueil de l'évènement
+      * Système de news
+      * Système de commentaires
+    * Personnalisation de la page d'accueil de l'utilisateur en fonction de ses évènements
+    * Utilisation de mailing-lists propres
