@@ -16,9 +16,8 @@
 
 *Étudiants de l'Université Claude Bernard Lyon 1*
 
-----
-==Contact==
-----
+==Contacts==
+
 
 ||Membre||Email||Skype||WLM||TeamViewer||
 ||Benjamin GUILLON||bengrunt@gmail.com||bengrunt||benjamin_guillon@msn.com||Bengrunt||
