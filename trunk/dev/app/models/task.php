@@ -10,7 +10,7 @@ class Task extends AppModel
 {
     public $name = "Task";
     public $belongsToMany = "Team";
-	public $belongsto = "Project"
+	public $belongsto = "Project";
 	
 	
 	var $validate = array(
