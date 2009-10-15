@@ -1,10 +1,13 @@
 #summary Quelques indications utiles pour faciliter le développement
+----
+= Aide pour les outils de développement =
+----
 
-= Introduction =
+== Introduction ==
 Veuillez lire cette notice et l'appliquer à vos outils de développement. Ceci permettra de prévenir quelques erreurs courantes.
 
 
-= Format / encodage des fichiers =
+== Format / encodage des fichiers ==
 Tous les fichiers sources doivent être encodés en UTF-8 sans BOM.
 Veuillez veiller à la bonne configuration de votre éditeur / IDE.
 == Notepad ++ ==
@@ -14,24 +17,16 @@ Veuillez veiller à la bonne configuration de votre éditeur / IDE.
   * Dans la section `[Nouveau document`] régler l'encodage en _UTF-8 sans BOM_ et cocher _`[v`] Apply while open ANSI file_.
  * Modification à la volée pour un fichier existant
   * Menu `[Format`]/_Convertir en UTF-8 (sans BOM)_
-== Netbeans ==
-TODO si quelqu'un bosse avec
-== Eclipse / Aptana ==
-TODO si quelqu'un bosse avec
 
-= Coloration syntaxique des vues .ctp =
+== Coloration syntaxique des vues .ctp ==
 La coloration syntaxique n'est pas utilisée par défaut pour ce type d'extensions. Afin d'améliorer la visualisation du code et éviter des erreurs de syntaxe bêtes réglez votre éditeur / IDE.
 == Notepad ++ ==
  * Menu `[Paramétrages`]/`[Configuration de coloration syntaxique...`]
  * Choisir _php_ dans le menu langage de gauche.
  * Rajouter l'extension _ctp_ dans le champ `[Ext ajouté :`].
  * `[Enregistrer et fermer`], puis réouvrir les éventuels documents .ctp déjà ouverts.
-== Netbeans ==
-TODO si quelqu'un bosse avec
-== Eclipse / Aptana ==
-TODO si quelqu'un bosse avec
 
-= Comment configurer le client SVN au Nautibus pour accéder au dépôt =
+== Comment configurer le client SVN au Nautibus pour accéder au dépôt ==
  * Editer le fichier ~/.subversion/servers
  * À la section global :
   * http-proxy-host = proxy710
