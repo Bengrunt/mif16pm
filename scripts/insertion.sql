@@ -8,12 +8,8 @@
 -- Contenu de la table `projects`
 --
 
-INSERT INTO `projects` (`id`, `name`, `description`, `created`, `user_id`) VALUES
-(1, 'Test', 'Ah que c''est un projet de test', NULL, 3),
-(2, 'Temps !!!', 'Test de temps', NULL, 2),
-(3, 'Test owner', 'test owner... eh ouais', NULL, 10),
-(4, 'Test encore', 'encore un test owner', NULL, 342),
-(5, 'ARGH', 'pff...', NULL, 1),
+INSERT INTO `projects` (`id`, `name`, `description`, `created`, `team_id`) VALUES
+(1, 'Test', 'Ah que c''est un projet de test', NULL, 1),
 (6, 'Projet test équipes', 'PROUT', '2009-10-04 17:37:52', 2);
 
 -- --------------------------------------------------------
@@ -22,8 +18,11 @@ INSERT INTO `projects` (`id`, `name`, `description`, `created`, `user_id`) VALUE
 -- Contenu de la table `roles`
 --
 
-INSERT INTO `roles` (`id`, `name`) VALUES
-(1, 'Super Chef de l\\''Univers');
+INSERT INTO `roles` (`id`, `name`, `created`, `modified`) VALUES
+(1, 'administrator', '2009-10-15 10:53:05', '2009-10-15 10:53:05'),
+(2, 'user', '2009-10-15 10:53:05', '2009-10-15 10:53:05'),
+(3, 'team_administrator', '2009-10-15 10:53:05', '2009-10-15 10:53:05'),
+(4, 'team_user', '2009-10-15 10:53:05', '2009-10-15 10:53:05');
 
 -- --------------------------------------------------------
 
@@ -37,8 +36,11 @@ INSERT INTO `roles` (`id`, `name`) VALUES
 -- Contenu de la table `teams`
 --
 
-INSERT INTO `teams` (`id`, `name`, `description`, `project_id`, `team_id`, `user_id`) VALUES
-(1, 'Dev', 'Equipe des developpeurs', 6, NULL, 2);
+INSERT INTO `teams` (`id`, `name`, `description`, `project_id`, `team_id`, `user_id`, `created`, `modified`) VALUES
+(1, 'aaaaa', 'abcdefghijklmnopqrstuvwxyz', 0, NULL, 0, '2009-10-11 19:51:19', '2009-10-11 19:51:19'),
+(2, 'Jonlajoie', 'I kill people with gun !', 0, NULL, 0, '2009-10-09 22:22:16', '2009-10-09 22:22:16'),
+(3, 'MC UFF', 'I come from behind and make you suffer !!!', 0, NULL, 0, '2009-10-11 19:50:10', '2009-10-11 19:50:10'),
+(4, 'MC Motherfucker', 'I''m in your house and I''m screwin'' your mum''s ass !', 0, NULL, 0, '2009-10-11 19:51:19', '2009-10-11 19:52:50');
 
 -- --------------------------------------------------------
 
