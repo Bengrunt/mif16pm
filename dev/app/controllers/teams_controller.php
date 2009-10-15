@@ -35,7 +35,7 @@ class TeamsController extends AppController
 		{
 			if ($this->Team->save($this->data)) 
 			{
-				$this->flash('L\'&eacute;quipe a bien &eacute;t&eacute; ajout&eacute; &amp; sauvegard&eacute;e.','/teams');
+				$this->flash('L\'équipe a bien été ajoutée et sauvegardée.', '/teams');
 			}
 		}
     }
@@ -46,7 +46,7 @@ class TeamsController extends AppController
     public function delete($id = null)
     {
 		$this->Team->del($id);
-		$this->flash('L\'equipe avec l\'id: '.$id.' a ete supprime.', '/teams');
+		$this->flash('L\'equipe avec l\'id: '.$id.' a été supprimée.', '/teams');
     }
 
     /**
@@ -63,7 +63,7 @@ class TeamsController extends AppController
 		{
 			if($this->Team->save($this->data['Team']))
 			{
-				$this->flash('La composition de lequipe a bien ete modifie. ','/teams');
+				$this->flash('La composition de l\'équipe a bien été modifiée.', '/teams');
 			}
 		}
 	}
