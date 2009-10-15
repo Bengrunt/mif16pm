@@ -92,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL auto_increment,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `role_id` int(11) NOT NULL,
+  `role_id` int(11) NOT NULL DEFAULT 1,
   `firstname` varchar(30) NOT NULL,
   `lastname` varchar(30) NOT NULL,
   `created` datetime,

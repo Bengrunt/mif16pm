@@ -19,8 +19,8 @@ INSERT INTO `projects` (`id`, `name`, `description`, `created`, `team_id`) VALUE
 --
 
 INSERT INTO `roles` (`id`, `name`, `created`, `modified`) VALUES
-(1, 'administrator', '2009-10-15 10:53:05', '2009-10-15 10:53:05'),
-(2, 'user', '2009-10-15 10:53:05', '2009-10-15 10:53:05'),
+(1, 'user', '2009-10-15 10:53:05', '2009-10-15 10:53:05'),
+(2, 'administrator', '2009-10-15 10:53:05', '2009-10-15 10:53:05'),
 (3, 'team_administrator', '2009-10-15 10:53:05', '2009-10-15 10:53:05'),
 (4, 'team_user', '2009-10-15 10:53:05', '2009-10-15 10:53:05');
 

@@ -51,7 +51,7 @@ class UsersController extends AppController
             }
             else
             {
-                $this->flash("echec");
+                $this->flash("echec", null);
             }
         }
     }
