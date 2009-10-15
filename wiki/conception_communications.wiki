@@ -8,15 +8,20 @@ Conception : Fonctions de communication
 
 Regroupe l'ensemble des fonctionnalités liées à la communication.
 
-*Associations directes :* 
-  * 1 Équipe
-  * 1+ Tâche
+*Module Project :*
+  * Envoyer emails via mailing-lists (mailing-list projet, mailing-list équipe, etc...)
+    * Pour tous les membres du projet
+    * Nécéssite un accès direct aux membres concernés
+  * Ecrire / Modifier / Supprimer des news sur la page d'acceuil
+    * Réservé au chef de projet
+  * Afficher les news sur la page d'acceuil du projet
+    * Pour tous les membres du projet
+  * Commenter les news du projet
+    * Pour tous les membres du projet
+  * Modérer les commentaires du projet
+    * Réservé au chef de projet
 
-*Module Project:*
-  * EnvoyerMail inclue d'utiliser une MailingList
-  * Recevoir / Afficher New dépend des New du projet
-
-*Module Team:*
+*Module Team :*
   * EnvoyerMail inclue d'utiliser une MailingList
 
 *Module Tâches:*
