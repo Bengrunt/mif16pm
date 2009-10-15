@@ -21,6 +21,8 @@ Lien entre les tâches et les utilisateurs associés. Représentation temporelle
 
 
 *Liens :*
-  * http://www.phpscripts-fr.net/
-  * http://www.eyecon.ro/colorpicker/
-  * http://www.supinfo-projects.com/fr/2005/generate_pdf/3/
+  * Scripts à récupérer partiellement ? - http://www.phpscripts-fr.net/
+  * Aide au choix d'une couleur pour l'utilisateur - http://www.eyecon.ro/colorpicker/
+  * Génération de PDF
+   * Exemple FPDF - http://www.supinfo-projects.com/fr/2005/generate_pdf/3/
+   * HTML2PDF (amélioration FPDF) - http://html2pdf.spipu.net/fr/example
