@@ -1,4 +1,5 @@
 #summary Page d'accueil du Wiki du projet MIF16PM
+#labels Featured
 
 http://img59.imageshack.us/img59/9571/logo300.png
 
