@@ -1,0 +1,24 @@
+#summary Conception du module planning
+
+= Réunion Skype du 15/10/2009 =
+----
+
+*Membres présents:* Tous les membres
+
+*Principe:*
+
+Regroupe des tâches et des utilisateurs. Se renseigner sur le déroulement dans le temps du projet & de ses tâches. 
+Intégration d'un planning via framework CakePHP
+
+*Associations directes*
+
+1+ tâche 
+1+ membre
+1 projet
+ 
+----
+
+*Fonctionnalité / Fonction *
+
+
+
