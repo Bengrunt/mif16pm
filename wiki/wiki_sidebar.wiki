@@ -8,6 +8,10 @@ http://img197.imageshack.us/img197/4374/logo96.png
   * [project_members Liste des membres du projet]
 
 ----
+===Conception===
+----
+  * *[conception_events Évènements]*
+----
 ===Développement===
 ----
   * [members_planning Planning des membres de l'équipe de développement]
