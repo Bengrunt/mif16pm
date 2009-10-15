@@ -11,7 +11,8 @@ http://img197.imageshack.us/img197/4374/logo96.png
 ===Développement===
 ----
   * [members_planning Planning des membres de l'équipe de développement]
-  * [cakephp_links Liens utiles pour le framework cakePHP]
+  * [links Liens utiles]
+  * [help_dev Quelques infos utiles pour les outils de développement]
 
 ----
 ===Comptes Rendus===
