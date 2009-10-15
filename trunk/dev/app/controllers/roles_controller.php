@@ -31,7 +31,7 @@ class RolesController extends AppController
 		{
 			if ($this->Role->save($this->data)) 
 			{
-				$this->flash('Le role a bien &eacute;t&eacute; ajout&eacute; &amp; sauvegard&eacute;e.','/roles');
+				$this->flash('Le rôle a bien été ajouté et sauvegardée.', '/roles');
 			}
 		}
     }
@@ -42,6 +42,6 @@ class RolesController extends AppController
     public function delete($id = null)
     {
 		$this->Role->del($id);
-		$this->flash('Le role avec l\'id: '.$id.' a ete supprime.', '/roles');
+		$this->flash('Le rôle avec l\'id: ' . $id . ' a été supprimé.', '/roles');
     }
 }

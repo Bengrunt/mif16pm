@@ -28,7 +28,7 @@ class TasksController extends AppController
 		{
 			if ($this->Task->save($this->data)) 
 			{
-				$this->flash('La tâche a bien &eacute;t&eacute; ajout&eacutee; &amp; sauvegard&eacute;e.','/tasks');
+				$this->flash('La tâche a bien été ajoutée et sauvegardée.','/tasks');
 			}
 		}
     }
@@ -36,7 +36,7 @@ class TasksController extends AppController
     public function delete($id = null)
     {
 		$this->Task->del($id);
-		$this->flash('La tâche avec l\'id: '.$id.' a ete supprimée.', '/tasks');
+		$this->flash('La tâche avec l\'id: '.$id.' a été supprimée.', '/tasks');
     }
 
     public function edit()
@@ -50,7 +50,7 @@ class TasksController extends AppController
 		{
 			if($this->Task->save($this->data['Task']))
 			{
-				$this->flash('Les attributs de la tâche ont bien &eacutet&eacutes modifi&eacutes. ','/task');
+				$this->flash('Les attributs de la tâche ont bien été modifiés. ','/task');
 			}
 		}
 		$this->set('tasks', $this->Task->Team->find('list'));		
