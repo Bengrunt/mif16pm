@@ -32,3 +32,7 @@
         </tr>
     <?php endforeach; ?>
 </table>
+
+<p>
+    <?php echo $html->link("S'incrire", array("action" => "register")); ?>
+</p>
