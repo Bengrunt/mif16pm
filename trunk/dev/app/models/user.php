@@ -9,7 +9,7 @@ class User extends AppModel
 {
     public $name = "User";
     public $hasAndbelongsToMany = "Team";
-    public $belongsTo = array('Role');
+    public $belongsTo = "Role";
 
     public $validate = array(
         'Nom' => array(
