@@ -13,14 +13,14 @@ Regroupe l'ensemble des fonctionnalités liées à la communication.
   * 1+ Tâche
 
 *Module Project:*
-  * EnvoyerMail -> MailingList
-  * Recevoir / Afficher New -> New du projet
+  * EnvoyerMail inclue d'utiliser une MailingList
+  * Recevoir / Afficher New dépend des New du projet
 
 *Module Team:*
-  * EnvoyerMail -> MailingList
+  * EnvoyerMail inclue d'utiliser une MailingList
 
 *Module Tâches:*
-  * EnvoyerCommentaire -> Commentaires
+  * EnvoyerCommentaire doit passer par un système de commentaires
 
 *Module Users:*
       * L'utilisateur n'est pas un acteur des moyens de communication. Il sera tout au plus intermédiaire des messages et principalement le destinataire
