@@ -6,15 +6,15 @@
 
 ==Outils de Communication==
 
-* *[http://groups.google.fr/group/mif16pm_team Groupe de discussion sur Google Groups (privé)]*
-* *[http://www.skype.com/ Skype]*
-* *[http://www.teamviewer.com TeamViewer]*
+  * *[http://groups.google.fr/group/mif16pm_team Groupe de discussion sur Google Groups (privé)]*
+  * *[http://www.skype.com/ Skype]*
+  * *[http://www.teamviewer.com TeamViewer]*
 
 ==Framework cakePHP==
 
-* *[http://www.cakephp.org Site officiel de CakePHP]*
-* *[http://book.cakephp.org Documentation officielle de CakePHP]*
-* *[http://www.siteduzero.com/tutoriel-3-115159-cake-php-du-gateau-pour-tous-les-zeros.html Tutoriel CakePHP du site du zéro]*
+  * *[http://www.cakephp.org Site officiel de CakePHP]*
+  * *[http://book.cakephp.org Documentation officielle de CakePHP]*
+  * *[http://www.siteduzero.com/tutoriel-3-115159-cake-php-du-gateau-pour-tous-les-zeros.html Tutoriel CakePHP du site du zéro]*
 
 ==Documents Divers==
 
