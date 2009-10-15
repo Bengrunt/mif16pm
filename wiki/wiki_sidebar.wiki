@@ -30,8 +30,3 @@ http://img197.imageshack.us/img197/4374/logo96.png
   * [summary_24092009 Compte rendu du TP n°1 bis du 24/09/2009]
   * [summary_30092009 Compte rendu du TP n°2 du 30/09/2009]
   * [summary_01102009 Compte rendu du TP n°2 bis du 01/10/2009]
-
-----
-===Annexes===
-----
-  * [documents_annexes Liste des documents qui ne sont pas hébergés sur ce wiki]
