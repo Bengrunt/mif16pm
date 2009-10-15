@@ -1,0 +1,28 @@
+#summary Conception du module events
+#labels Phase-Design
+
+----
+Conception : Module Events
+----
+
+*Principe :*
+
+Regroupe des tâches pour une équipe avec un délai (ou un ultimatum) donné.
+
+*Associations directes :* 
+  * 1 Équipe
+  * 1+ Tâche
+
+*Fonctionnalités :*
+  * Création / Destruction (Owner)
+  * Modification (Owner)
+  * Mises à Jour (d'avancement par ex) (Membres de l'équipe)
+  * Répartition des rôles et des tâches dans l'évènement (Owner)
+  * Communication :
+    * Page d'accueil de l'évènement
+      * Système de news
+      * Système de commentaires
+    * Personnalisation de la page d'accueil de l'utilisateur en fonction de ses évènements
+    * Utilisation de mailing-lists propres
+
+
