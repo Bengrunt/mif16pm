@@ -8,24 +8,45 @@ Conception : Fonctions de communication
 
 Regroupe l'ensemble des fonctionnalités liées à la communication.
 
-*Module Project :*
+*Module Users:*
+  * Le module utilisateur n'interagit pas directement avec les moyens de communication.
+
+*Module Teams :*
+  * Envoyer emails via mailing-lists (mailing-list équipe)
+    * Pour tous les membres de l'équipe
+    * Nécessite un accès direct aux membres concernés
+
+*Module Projects :*
   * Envoyer emails via mailing-lists (mailing-list projet, mailing-list équipe, etc...)
     * Pour tous les membres du projet
-    * Nécéssite un accès direct aux membres concernés
-  * Ecrire / Modifier / Supprimer des news sur la page d'acceuil
+    * Nécessite un accès direct aux membres concernés
+  * Écrire / Modifier / Supprimer des news sur la page d'accueil du projet
     * Réservé au chef de projet
-  * Afficher les news sur la page d'acceuil du projet
+  * Afficher les news sur la page d'accueil du projet
     * Pour tous les membres du projet
   * Commenter les news du projet
     * Pour tous les membres du projet
   * Modérer les commentaires du projet
     * Réservé au chef de projet
 
-*Module Team :*
-  * EnvoyerMail inclue d'utiliser une MailingList
+*Module Tasks :*
+  * Envoyer emails via mailing-lists (mailing-list tâche, mailing-list équipe, etc...)
+    * Pour tous les membres associé à la tâche
+    * Nécessite un accès direct aux membres concernés
+  * Commenter la tâche
+    * Pour tous les membres associés à la tâche
+  * Modérer les commentaires du de la tâche
+    * Réservé au responsable de la tâche
 
-*Module Tâches:*
-  * EnvoyerCommentaire doit passer par un système de commentaires
-
-*Module Users:*
-      * L'utilisateur n'est pas un acteur des moyens de communication. Il sera tout au plus intermédiaire des messages et principalement le destinataire
+*Module Events :*
+  * Envoyer emails via mailing-lists (mailing-list event, mailing-list projet, etc...)
+    * Pour tous les membres associés à l'event
+    * Nécessite un accès direct aux membres concernés
+  * Écrire / Modifier / Supprimer des news sur la page d'accueil de l'event
+    * Réservé au responsable de l'event
+  * Afficher les news sur la page d'accueil de l'event
+    * Pour tous les membres associés à l'event
+  * Commenter les news de l'event
+    * Pour tous les membres associés à l'event
+  * Modérer les commentaires de l'event
+    * Réservé au responsable de l'event
