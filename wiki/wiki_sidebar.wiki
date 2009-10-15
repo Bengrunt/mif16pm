@@ -22,7 +22,7 @@ http://img197.imageshack.us/img197/4374/logo96.png
   * [summary_24092009_2 Compte rendu de réunion du 24/09/2009]
   * [summary_02102009 Compte rendu de réunion du 02/10/2009]
   * [summary_09102009 Compte rendu de réunion du 09/10/2009]
-  * [summary_15102009_1 Compte rendu de réunion du 15/10/2009]
+  * [summary_151009 Compte rendu de réunion du 15/10/2009]
 
 
 *Comptes rendus de séances de TP:*
