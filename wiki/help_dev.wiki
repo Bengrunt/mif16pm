@@ -30,3 +30,9 @@ La coloration syntaxique n'est pas utilisée par défaut pour ce type d'extensio
 TODO si quelqu'un bosse avec
 == Eclipse / Aptana ==
 TODO si quelqu'un bosse avec
+
+= Comment configurer le client SVN au Nautibus pour accéder au dépôt =
+ * Editer le fichier ~/.subversion/servers
+ * À la section global :
+  * http-proxy-host = proxy710
+  * http-proxy-port = 8080
