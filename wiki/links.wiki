@@ -1,0 +1,34 @@
+#summary Recensement de liens utiles.
+
+----
+=Liste des Documents Annexes=
+----
+
+===Communication===
+
+*Groupe de discussion (privé) :*
+ * http://groups.google.fr/group/mif16pm_team
+
+===Documents===
+
+*Sur Google Docs :*
+  * ~~[https://docs.google.com/Doc?docid=0AdyC88srWPR9ZGM4N2hycDVfMzJjZms4amdnbQ&hl=fr Cahier des charges du projet]~~ (_travaillé par Emmanuel H. sous Office 2007_)
+
+===Logos===
+
+*Sur [http://imageshack.us/ Imageshack] :*
+  * [http://img197.imageshack.us/img197/4374/logo96.png Logo MIF16 PM (PNG@96px)]
+  * [http://img19.imageshack.us/img19/1746/logo120.png Logo MIF16 PM (PNG@120px)]
+  * [http://img59.imageshack.us/img59/9571/logo300.png Logo MIF16 PM (PNG@300px)]
+
+
+
+----
+=Liens utiles pour le Framework cakePHP=
+----
+
+*[http://www.cakephp.org Site officiel de Cake PHP]*
+
+*Documentation :*
+  * [http://book.cakephp.org Documentation officielle de cakePHP]
+  * [http://www.siteduzero.com/tutoriel-3-115159-cake-php-du-gateau-pour-tous-les-zeros.html Tutoriel du site du zéro]
