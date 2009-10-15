@@ -8,7 +8,7 @@
 
 * *[http://groups.google.fr/group/mif16pm_team Groupe de discussion sur Google Groups (privé)]*
 * *[http://www.skype.com/ Skype]*
-* *[http://www.teamviewer.com TeamViewer]* //
+* *[http://www.teamviewer.com TeamViewer]*
 
 ==Framework cakePHP==
 
