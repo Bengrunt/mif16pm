@@ -8,8 +8,7 @@
 *Ordre du jour:* 
  * Réunion avec tuteur projet, mise au point de l'avancement et des méthodes de gestions
  * Suite du développement du module "gestion des tâches" et refonte du module "gestion des membres"
- * Mise en place de la conception des principaux modules.
-
+ * Mise en place de la conception des modules avancés.
 ----
 
 == Résumé ==
@@ -18,4 +17,4 @@ Nous avons abandonné l'implémentation du module ACL(celui utilisé pour facili
 
 *Prochaines Tâches:*
  * Finir de développer les modules de base.
- * Commencer à développer les principaux modules du projet.
+ * Commencer à développer les modules avancés du projet.
