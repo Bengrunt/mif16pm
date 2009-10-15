@@ -13,7 +13,7 @@ class Task extends AppModel
 	public $belongsto = "Project";
 	
 	
-	var $validate = array(
+	public $validate = array(
 		'task_name' => array(
 			'rule' => array('minLength', 5),
 			'required' => true,

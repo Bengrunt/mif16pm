@@ -14,7 +14,7 @@ class Team extends AppModel
 	
 	
 	
-	var $validate = array(
+	public $validate = array(
 		'name' => array(
 			'rule' => array('minLength', 5),
 			'required' => true,

@@ -11,7 +11,7 @@ class Project extends AppModel
 	public $hasMany = "Team";
 	
 
-	var $validate = array(
+	public $validate = array(
 		'name' => array(
 			'rule' => array('minLength', 5),
 			'required' => true,
@@ -21,10 +21,10 @@ class Project extends AppModel
 		'description' => array(
 			'rule' => array('minLength', 10),
 			'message' => 'Veuillez remplir une description un peu plus longue.'
-		),
+		)/*,
 		'user_id' => array(
 			'rule' => array('minLength',5),
-			'message' => 'Un prenom doit au moins se composer de 5 lettres'
-		)
+			'message' => 'Un prénom doit au moins se composer de 5 lettres'
+		)*/
 	);
 }
