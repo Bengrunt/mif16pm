@@ -18,12 +18,9 @@
 
 ==Documents Divers==
 
-*Sur Google Docs :*
-  * ~~[https://docs.google.com/Doc?docid=0AdyC88srWPR9ZGM4N2hycDVfMzJjZms4amdnbQ&hl=fr Cahier des charges du projet]~~ (_travaillé par Emmanuel H. sous Office 2007_)
+  * *[http://code.google.com/p/mif16pm/downloads/detail?name=projet_mif16_groupe3_cahier_des_charges_light.pdf&can=2&q=#makechanges Cahier des charges (pré-version) (livrée 2/10/2009]
+  * *[http://code.google.com/p/mif16pm/downloads/detail?name=MIF16PM.jpg&can=2&q=#makechanges Diagramme de Gantt du projet]
 
 ==Logos MIF16PM==
 
-*Sur [http://imageshack.us/ Imageshack] :*
-  * [http://img197.imageshack.us/img197/4374/logo96.png Logo MIF16 PM (PNG@96px)]
-  * [http://img19.imageshack.us/img19/1746/logo120.png Logo MIF16 PM (PNG@120px)]
-  * [http://img59.imageshack.us/img59/9571/logo300.png Logo MIF16 PM (PNG@300px)]
+  *[http://code.google.com/p/mif16pm/downloads/detail?name=mif16_logo.zip&can=2&q=#makechanges Archive compressée .zip contenant le logo en diverses tailles et formats]
