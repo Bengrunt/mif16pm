@@ -23,4 +23,4 @@
 
 ==Logos MIF16PM==
 
-  *[http://code.google.com/p/mif16pm/downloads/detail?name=mif16_logo.zip&can=2&q=#makechanges Archive compressée .zip contenant le logo en diverses tailles et formats]
+  * *[http://code.google.com/p/mif16pm/downloads/detail?name=mif16_logo.zip&can=2&q=#makechanges Archive compressée .zip contenant le logo en diverses tailles et formats]*
