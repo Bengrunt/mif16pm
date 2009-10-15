@@ -5,32 +5,33 @@ http://img197.imageshack.us/img197/4374/logo96.png
 ----
 ===Informations Générales===
 ----
-  * [project_members Liste des membres du projet]
+  * *[project_members Liste des membres du projet]*
 
 ----
 ===Conception===
 ----
   * *[conception_events Évènements]*
+
 ----
 ===Développement===
 ----
-  * [members_planning Planning des membres de l'équipe de développement]
-  * [links Liens utiles]
-  * [help_dev Quelques infos utiles pour les outils de développement]
+  * *[members_planning Planning des membres de l'équipe de développement]*
+  * *[links Liens utiles]*
+  * *[help_dev Quelques infos utiles pour les outils de développement]*
 
 ----
 ===Comptes Rendus===
 ----
-*Comptes rendus de réunion:*
-  * [summary_21092009_1 Compte rendu de réunion du 21/09/2009]
-  * [summary_24092009_2 Compte rendu de réunion du 24/09/2009]
-  * [summary_02102009 Compte rendu de réunion du 02/10/2009]
-  * [summary_09102009 Compte rendu de réunion du 09/10/2009]
-  * [summary_151009 Compte rendu de réunion du 15/10/2009]
+  * *Comptes rendus de réunion:*
+    * *[summary_21092009_1 Compte rendu de réunion du 21/09/2009]*
+    * *[summary_24092009_2 Compte rendu de réunion du 24/09/2009]*
+    * *[summary_02102009 Compte rendu de réunion du 02/10/2009]*
+    * *[summary_09102009 Compte rendu de réunion du 09/10/2009]*
+    * *[summary_151009 Compte rendu de réunion du 15/10/2009]*
 
 
-*Comptes rendus de séances de TP:*
-  * [summary_23092009 Compte rendu du TP n°1 du 23/09/2009]
-  * [summary_24092009 Compte rendu du TP n°1 bis du 24/09/2009]
-  * [summary_30092009 Compte rendu du TP n°2 du 30/09/2009]
-  * [summary_01102009 Compte rendu du TP n°2 bis du 01/10/2009]
+  * *Comptes rendus de séances de TP:*
+    * *[summary_23092009 Compte rendu du TP n°1 du 23/09/2009]*
+    * *[summary_24092009 Compte rendu du TP n°1 bis du 24/09/2009]*
+    * *[summary_30092009 Compte rendu du TP n°2 du 30/09/2009]*
+    * *[summary_01102009 Compte rendu du TP n°2 bis du 01/10/2009]*
