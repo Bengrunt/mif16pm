@@ -5,7 +5,7 @@
 
 *Membres présents:* Tous les membres
 
-*Principe:*
+*Principe*
 
 Regroupe des tâches et des utilisateurs. Se renseigner sur le déroulement dans le temps du projet & de ses tâches. 
 Intégration d'un planning via framework CakePHP
@@ -19,4 +19,3 @@ Intégration d'un planning via framework CakePHP
 1 projet
 
 *Fonctionnalité / Fonction *
-
