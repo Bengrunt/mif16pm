@@ -10,7 +10,7 @@ Veuillez lire cette notice et l'appliquer à vos outils de développement. Ceci 
 == Format / encodage des fichiers ==
 Tous les fichiers sources doivent être encodés en UTF-8 sans BOM.
 Veuillez veiller à la bonne configuration de votre éditeur / IDE.
-== Notepad ++ ==
+=== Notepad ++ ===
  * Configuration pour les nouveaux fichiers.
   * Menu `[Paramétrages`]/`[Préférences`]
   * Onglet `[Nouveau document/Répertoire`]
@@ -20,7 +20,7 @@ Veuillez veiller à la bonne configuration de votre éditeur / IDE.
 
 == Coloration syntaxique des vues .ctp ==
 La coloration syntaxique n'est pas utilisée par défaut pour ce type d'extensions. Afin d'améliorer la visualisation du code et éviter des erreurs de syntaxe bêtes réglez votre éditeur / IDE.
-== Notepad ++ ==
+=== Notepad ++ ===
  * Menu `[Paramétrages`]/`[Configuration de coloration syntaxique...`]
  * Choisir _php_ dans le menu langage de gauche.
  * Rajouter l'extension _ctp_ dans le champ `[Ext ajouté :`].
