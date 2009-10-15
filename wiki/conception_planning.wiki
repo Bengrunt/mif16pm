@@ -1,21 +1,26 @@
 #summary Conception du module planning
 
-= Réunion Skype du 15/10/2009 =
+----
+===Conception : module Planning===
 ----
 
-*Membres présents:* Tous les membres
+*Principe :*
 
-*Principe*
+Lien entre les tâches et les utilisateurs associés. Représentation temporelle graphique de la planification des étapes successives d'un projet.
 
-Regroupe des tâches et des utilisateurs. Se renseigner sur le déroulement dans le temps du projet & de ses tâches. 
-Intégration d'un planning via framework CakePHP
+*Associations directes :*
+  * 1+ tâche
+  * 1+ membre
+  * 1 projet
 
-----
+*Fonctionnalités :*
+  * Coloration (personnalisée) d'un planning
+  * Affichage customisable (éléments, ordonnancement, etc ...)
+  * Généré automatiquement : pas d'interactions fondamentales directes avec les données
+  * Prévoir un format exportable
 
-*Associations directes*
 
-1+ tâche 
-1+ membre
-1 projet
-
-*Fonctionnalité / Fonction *
+*Liens :*
+  * http://www.phpscripts-fr.net/
+  * http://www.eyecon.ro/colorpicker/
+  * http://www.supinfo-projects.com/fr/2005/generate_pdf/3/
