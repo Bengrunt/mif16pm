@@ -12,14 +12,15 @@ Regroupe l'ensemble des fonctionnalités liées à la communication.
   * 1 Équipe
   * 1+ Tâche
 
-*Module :*
-  * Création / Destruction (Owner)
-  * Modification (Owner)
-  * Mises à Jour (d'avancement par ex)  (Membres de l'équipe)
-  * Répartition des rôles et des tâches dans l'évènement (Owner)
-  * Communication :
-    * Page d'accueil de l'évènement
-      * Système de news
-      * Système de commentaires
-    * Personnalisation de la page d'accueil de l'utilisateur en fonction de ses évènements
-    * Utilisation de mailing-lists propres
+*Module Project:*
+  * EnvoyerMail -> MailingList
+  * Recevoir / Afficher New -> New du projet
+
+*Module Team:*
+  * EnvoyerMail -> MailingList
+
+*Module Tâches:*
+  * EnvoyerCommentaire -> Commentaires
+
+*Module Users:*
+      * L'utilisateur n'est pas un acteur des moyens de communication. Il sera tout au plus intermédiaire des messages et principalement le destinataire
