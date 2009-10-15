@@ -1,0 +1,21 @@
+#summary Compte rendu de réunion du 15/10/2009.
+
+= Réunion Séance CM 15/10/2009 =
+----
+
+*Membres présents:* Tous les membres
+
+*Ordre du jour:* 
+ * Réunion avec tuteur projet, mise au point de l'avancement et des méthodes de gestions
+ * Suite du développement du module "gestion des tâches" et refonte du module "gestion des membres"
+ * Mise en place de la conception des principaux modules.
+
+----
+
+== Résumé ==
+
+Nous avons abandonné l'implémentation du module ACL(celui utilisé pour faciliter la gestion des sessions), celui-ci nous faisant perdre trop de temps pour la suite du Projet. Nous nous sommes donc orienté vers une implémentation plus conséquente mais beaucoup plus facile à réaliser.
+
+*Prochaines Tâches:*
+ * Finir de développer les modules de base.
+ * Commencer à développer les principaux modules du projet.
