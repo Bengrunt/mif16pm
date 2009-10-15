@@ -1,7 +1,7 @@
 #summary Quelques indications utiles pour faciliter le développement
 
 = Introduction =
-Veuillez lire cette notice et l'appliquer à vos outils de développement s'il vous plaît. Ceci permettra de prévenir quelques erreurs courantes.
+Veuillez lire cette notice et l'appliquer à vos outils de développement. Ceci permettra de prévenir quelques erreurs courantes.
 
 
 = Format / encodage des fichiers =
