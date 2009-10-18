@@ -13,6 +13,11 @@
 
 ----
 
+== Mise au point sur les différents modules==
+*Users*
+*Teams*
+*Project*
+
 == Résumé ==
 
 
