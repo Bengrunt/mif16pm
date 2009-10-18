@@ -17,6 +17,13 @@
 *Users:*
 
 *Teams:*
+ * Ce qui marche :
+  * Ajout d'une équipe
+  * Enregistrement d'une équipe
+  * Suppression d'une équipe
+  * Modifier une équipe
+ * Ce qui ne marche pas :
+  * Aucune fonctionnalité défaillante
 
 *Projects:*
  * Ce qui marche :
