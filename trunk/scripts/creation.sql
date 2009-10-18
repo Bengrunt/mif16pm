@@ -1,7 +1,7 @@
 --
 -- Serveur: sql2.power-heberg.net
--- Base de données: `adriangaudebert3`
--- Script de création des tables
+-- Base de donnÃ©es: `adriangaudebert3`
+-- Script de crÃ©ation des tables
 --
 
 -- --------------------------------------------------------
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `tasks` (
   `task_name` varchar(30) NOT NULL,
   `project_id` int(11) NOT NULL,
   `task_id` int(11) NULL,
-  `duration` int(11) NOT NULL COMMENT 'durée en jours',
+  `duration` int(11) NOT NULL COMMENT 'durÃ©e en jours',
   `created` DATETIME,
   `modified` DATETIME,
   PRIMARY KEY  (`id`)

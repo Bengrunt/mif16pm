@@ -1,6 +1,6 @@
 --
 -- Serveur: sql2.power-heberg.net
--- Base de données: `adriangaudebert3`
+-- Base de donnÃ©es: `adriangaudebert3`
 -- Script d'insertion dans les tables
 --
 
@@ -10,7 +10,7 @@
 
 INSERT INTO `projects` (`id`, `name`, `description`, `created`, `team_id`) VALUES
 (1, 'Test', 'Ah que c''est un projet de test', NULL, 1),
-(6, 'Projet test équipes', 'PROUT', '2009-10-04 17:37:52', 2);
+(6, 'Projet test Ã©quipes', 'PROUT', '2009-10-04 17:37:52', 2);
 
 -- --------------------------------------------------------
 

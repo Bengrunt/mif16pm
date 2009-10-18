@@ -9,12 +9,12 @@ class Team extends AppModel
 {
     public $name = "Team";
 
-    public $hasAndBelongsToMany = "User";
-    public $belongsTo = "Project";
+    public $hasAndBelongsToMany = 'User';
+	public $belongsTo = 'Project';
 	
 	
 	
-	public $validate = array(
+	/*public $validate = array(
 		'name' => array(
 			'rule' => array('minLength', 5),
 			'required' => true,
@@ -30,6 +30,6 @@ class Team extends AppModel
 			'rule' => 'alphaNumeric',
 			'message' => 'Ce n\'est pas un Projet existant.'
 		)
-	);
+	);*/
 
 }
