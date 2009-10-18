@@ -8,7 +8,7 @@
 *Membres absents:* Adrian GAUDEBERT
 
 *Ordre du jour:* 
- * Faire le point sur les tâches déjà effectué
+ * Faire le point sur les tâches déjà effectuées
  * Continuer le développement des modules
 
 ----
