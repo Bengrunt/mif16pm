@@ -45,7 +45,14 @@
 
 *Tasks:*
  * Ce qui marche :
+  * Ajout d'une tâche (sans la date de la tâche)
+  * Enregistrement d'une tâche
+  * Suppression d'une tâche
+  * Affichage
+  * Modification de tâche
  * Ce qui ne marche pas :
+  * Intégration au planning
+
 
 
 == Résumé ==
