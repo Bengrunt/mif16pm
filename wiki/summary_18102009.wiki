@@ -41,7 +41,7 @@
   * Edition d'un projet
   * Affichage
  * Ce qui ne marche pas :
-  * Aucunes fonctionnalités défaillantes
+  * Aucune fonctionnalité défaillante
 
 *Tasks:*
  * Ce qui marche :
