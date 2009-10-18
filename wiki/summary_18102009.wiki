@@ -1,0 +1,21 @@
+#summary Compte rendu de réunion du 18/10/2009.
+
+= Réunion Skype du 18/10/2009 =
+----
+
+*Membres présents:* Benjamin GUILLON, Rémi AUDUON, Emmanuel GAUDE, Mamy RAMINOSOA et Emmanuel HALTER.
+
+*Membres absents:* Adrian GAUDEBERT
+
+*Ordre du jour:* 
+ * Faire le point sur les tâches déjà effectué
+ * Continuer le développement des modules
+
+----
+
+== Résumé ==
+
+
+== Prochains évènements rendez-vous ==
+=== Réunion TP ===
+Séance de TP mecredi matin 21 octobre
