@@ -15,6 +15,13 @@
 
 == Mise au point sur les différents modules==
 *Users:*
+* Ce qui marche :
+  * Ajout d'un utilisateur
+  * Suppression d'un utilisateur
+  * Modifier un utilisateur
+  * Affichage
+ * Ce qui ne marche pas :
+  * Enregistrement utilisateur
 
 *Teams:*
  * Ce qui marche :
