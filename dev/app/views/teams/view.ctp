@@ -1,1 +1,1 @@
-<?php print_r($task); ?>
+<?php print_r($team); ?>

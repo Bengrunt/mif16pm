@@ -1,35 +1,34 @@
 <table>
     <tr>
         <th>Nom</th>
+        <th>Description</th>
         <th>Projet</th>
-        <th>Duree</th>
     </tr>
-    <?php foreach($tasks as $task): ?>
+    <?php foreach($teams as $team): ?>
     <tr>
         <td>
             <?php echo $html->link(
-                            $task['Task']['task_name'],
-                            array('controller' => 'tasks', 'action' => 'view', $task['Task']['id'])
+                            $team['Team']['name'],
+                            array('controller' => 'teams', 'action' => 'view', $team['Team']['id'])
                         ); ?>
         </td>
-        <td><?php echo $task['Task']['project_id']; ?></td>
-        <td><?php echo $task['Task']['duration']; ?></td>
+        <td><?php echo $team['Team']['description']; ?></td>
+        <td><?php echo $team['Project']['name']; ?></td>
 
 		<td>
 				<?php echo $html->link(	$html->image('delete.png'),
-							array(	'controller'=>'tasks',
+							array(	'controller'=>'teams',
 								'action'=>'delete', 
-								$task['Task']['id']),
+								$team['Team']['id']),
 							array('escape' => false) ); ?>
 				<?php echo $html->link(	$html->image('edit.png'),
-							array(	'controller'=>'tasks',
+							array(	'controller'=>'teams',
 								'action'=>'edit', 
-								$task['Task']['id']),
+								$team['Team']['id']),
 							array('escape' => false)); ?>
 		</td>
 
     </tr>
     <?php endforeach; ?>
 </table>
-<?php echo $cal->showCalendar(); ?>
-<?php echo $html->link('Ajouter une Tache', array('controller'=>'tasks','action'=>'add')); ?>
+<?php echo $html->link('Ajouter une Equipe', array('controller'=>'teams','action'=>'add')); ?>
