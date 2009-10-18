@@ -54,10 +54,6 @@
   * Intégration au planning
 
 
-
-== Résumé ==
-
-
 == Prochains évènements rendez-vous ==
 === Réunion TP ===
 Séance de TP mecredi matin 21 octobre
