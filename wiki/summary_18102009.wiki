@@ -25,6 +25,7 @@
   * Suppression d'un projet
   * Edition d'un projet
  * Ce qui ne marche pas :
+  * Aucune fonctionnalité défaillante
 
 *Tasks:*
 
