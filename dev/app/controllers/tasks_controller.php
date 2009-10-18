@@ -11,9 +11,13 @@ class TasksController extends AppController
 
 	public $name = "Tasks";
 	
+	var $components = array('SimpleCalendar');
+	
 	public function index()
     {
         $this->set('tasks', $this->Task->find('all'));
+		$this->set('cal', $this->SimpleCalendar->setUp());
+
     }
 
 	public function view($id = null)
