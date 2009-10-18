@@ -44,6 +44,8 @@
   * Aucune fonctionnalité défaillante
 
 *Tasks:*
+ * Ce qui marche :
+ * Ce qui ne marche pas :
 
 
 == Résumé ==
