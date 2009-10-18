@@ -16,6 +16,7 @@ class TasksController extends AppController
 	public function index()
     {
         $this->set('tasks', $this->Task->find('all'));
+		App::import('Vendor', 'simple_calendar.php');
 		$this->set('cal', $this->SimpleCalendar->setUp());
 
     }

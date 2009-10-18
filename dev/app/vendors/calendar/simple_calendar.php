@@ -210,7 +210,7 @@ class SimpleCalendar {
 			$dayNumber = date('j', $tstamp);
 			$dayName = strftime('%a', $tstamp);
 			$dayNameLong = strftime('%A', $tstamp);			
-			$weekDay = strftime('%u', $tstamp);
+			$weekDay = strftime('%w', $tstamp) == 0 ? 7 : strftime('%w', $tstamp);
 			$yearDay = strftime('%j', $tstamp);
 			$yearWeek = strftime('%U', $tstamp);			
 

@@ -21,6 +21,7 @@ class Task extends AppModel
 			'message' => 'Le nom de la tâche doit être au minimum de 5 caractères.'
 		),
 		'duration' => array(
+			'rule' => 'alphaNumeric',
 			'required' => true,
 			'allowEmpty' => false,
 			'message' => 'La durée de la tâche ne peut être vide.'
