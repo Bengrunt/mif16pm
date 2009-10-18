@@ -1,5 +1,6 @@
-<?php echo $form->create('Task', array('action' => 'delete')); ?>
-<?php echo $form->input('task_name'); ?>
-<?php echo $form->input('project_id', array('type'=>'hidden')); ?>
-<?php echo $form->input('task_id', array('type'=>'hidden')); ?>
+<?php echo $form->create('Team', array('action' => 'delete')); ?>
+<?php echo $form->input('name'); ?>
+<?php echo $form->input('description'); ?>
+<?php echo $form->input('project'); ?>
+<?php echo $form->input('id', array('type'=>'hidden')); ?>
 <?php echo $form->end('Supprimer'); ?>
