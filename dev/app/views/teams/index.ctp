@@ -1,8 +1,8 @@
 <table>
     <tr>
         <th>Nom</th>
-        <th>Description</th>
         <th>Projet</th>
+        <th>Duree</th>
     </tr>
     <?php foreach($tasks as $task): ?>
     <tr>
@@ -12,8 +12,8 @@
                             array('controller' => 'tasks', 'action' => 'view', $task['Task']['id'])
                         ); ?>
         </td>
-        <td><?php echo $task['Task']['description']; ?></td>
-        <td><?php echo $task['Project']['task_name']; ?></td>
+        <td><?php echo $task['Task']['project_id']; ?></td>
+        <td><?php echo $task['Task']['duration']; ?></td>
 
 		<td>
 				<?php echo $html->link(	$html->image('delete.png'),
@@ -31,4 +31,5 @@
     </tr>
     <?php endforeach; ?>
 </table>
-<?php echo $html->link('Ajouter une Tâche', array('controller'=>'tasks','action'=>'add')); ?>
+<?php echo $cal->showCalendar(); ?>
+<?php echo $html->link('Ajouter une Tache', array('controller'=>'tasks','action'=>'add')); ?>
