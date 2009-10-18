@@ -15,7 +15,7 @@
 
 == Mise au point sur les différents modules==
 *Users:*
-* Ce qui marche :
+ * Ce qui marche :
   * Ajout d'un utilisateur
   * Suppression d'un utilisateur
   * Modifier un utilisateur
