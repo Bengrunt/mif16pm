@@ -22,6 +22,7 @@
   * Enregistrement d'une équipe
   * Suppression d'une équipe
   * Modifier une équipe
+  * Affichage
  * Ce qui ne marche pas :
   * Lien avec affichage projet manquant
 
@@ -31,6 +32,7 @@
   * Enregistrement d'un projet
   * Suppression d'un projet
   * Edition d'un projet
+  * Affichage
  * Ce qui ne marche pas :
   * Aucune fonctionnalité défaillante
 
