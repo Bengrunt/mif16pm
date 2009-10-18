@@ -1,6 +1,6 @@
 --
 -- Serveur: sql2.power-heberg.net
--- Base de données: `adriangaudebert3`
+-- Base de donnÃ©es: `adriangaudebert3`
 -- Script de destruction des tables
 --
 

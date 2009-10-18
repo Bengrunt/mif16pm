@@ -18,11 +18,12 @@ class ProjectsController extends AppController
 	public function view($id = null)
     {
         $this->Project->id = $id;
-        $this->set('projects', $this->Project->read());
+        $this->set('project', $this->Project->read());
     }	
 	
     public function add()
     {
+		$this->set('teams', $this->Project->Team->find('list'));
 		if(!empty($this->data))
 		{
 			if ($this->Project->save($this->data)) 
@@ -38,8 +39,9 @@ class ProjectsController extends AppController
 		$this->flash('Le projet avec l\'id: ' . $id . ' a été supprimé.', '/projects');
     }
 
-    public function edit()
+    public function edit($id = null)
     {
+		$this->set('teams', $this->Project->Team->find('list'));
 		if(empty($this->data))
 		{
 			$this->Project->id = $id; 

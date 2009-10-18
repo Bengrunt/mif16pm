@@ -23,7 +23,7 @@ class TeamsController extends AppController
     public function view($id = null)
     {
         $this->Team->id = $id;
-        $this->set('teams', $this->Team->read());
+        $this->set('team', $this->Team->read());
     }
 
     /**
@@ -31,6 +31,7 @@ class TeamsController extends AppController
      */
     public function add()
     {	
+		$this->set('projects', $this->Team->Project->find('list'));
 		if (!empty($this->data)) 
 		{
 			if ($this->Team->save($this->data)) 
@@ -54,6 +55,7 @@ class TeamsController extends AppController
      */
     public function edit($id = null)
     {	
+		$this->set('projects', $this->Team->Project->find('list'));
 		if(empty($this->data))
 		{
 			$this->Team->id = $id; 
