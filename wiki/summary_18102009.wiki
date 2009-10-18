@@ -23,7 +23,7 @@
   * Suppression d'une équipe
   * Modifier une équipe
  * Ce qui ne marche pas :
-  * Aucune fonctionnalité défaillante
+  * Lien avec affichage projet manquant
 
 *Projects:*
  * Ce qui marche :
