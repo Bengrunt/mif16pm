@@ -19,6 +19,12 @@
 *Teams:*
 
 *Projects:*
+ * Ce qui marche :
+  * Ajout d'un projet
+  * Enregistrement d'un projet
+  * Suppression d'un projet
+  * Edition d'un projet
+ * Ce qui ne marche pas :
 
 *Tasks:*
 
