@@ -25,20 +25,25 @@ class ProjectsController extends AppController
     {
 		if(!empty($this->data))
 		{
-			$ret = $this->Project->save($this->data);
-			$this->data['id'] = $this->Project->id;
-			$ret = $ret && $this->Project->Team->save(Array(
+			$retAddProject = $this->Project->save($this->data);
+			
+			$this->data['Project']['id'] = $this->Project->id;
+			
+			$retAddTeam = $this->Project->Team->save(Array(
 				'name' => 'Equipe ' . $this->data['Project']['name'],
 				'description' => 'Equipe du projet [' .
-								 $this->Project->id . '] "' .
+								 $this->data['Project']['id'] . '] "' .
 								 $this->data['Project']['name'] . '"',
-				'project_id' => $this->Project->id,
+				'project_id' => $this->data['Project']['id'],
 				'team_id' => NULL,
 				'user_id' => 0 // TODO: récupérer id utilisateur courant.
 			));
-			$this->data['team_id'] = $this->Project->Team->id;
-			$ret = $ret && $this->Project->save($this->data);
-			if($ret) {
+			
+			$this->data['Project']['team_id'] = $this->Project->Team->id;
+			
+			$retUpProject = $this->Project->save($this->data);
+			
+			if($retAddProject && $retAddTeam && $retUpProject) {
 				$this->flash(
 					'Le projet a bien été ajouté et sauvegardé.',
 					'/projects'
