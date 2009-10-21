@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `roles` (
 
 CREATE TABLE IF NOT EXISTS `tasks` (
   `id` int(11) NOT NULL auto_increment,
-  `task_name` varchar(30) NOT NULL,
+  `name` varchar(30) NOT NULL,
   `project_id` int(11) NOT NULL,
   `task_id` int(11) NULL,
   `duration` int(11) NOT NULL COMMENT 'durée en jours',
