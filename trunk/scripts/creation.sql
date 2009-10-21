@@ -29,8 +29,6 @@ CREATE TABLE IF NOT EXISTS `projects` (
 CREATE TABLE IF NOT EXISTS `roles` (
   `id` int(11) NOT NULL auto_increment,
   `name` varchar(30) NOT NULL,
-  `created` DATETIME,
-  `modified` DATETIME,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -62,8 +60,6 @@ CREATE TABLE IF NOT EXISTS `teams` (
   `name` varchar(30) NOT NULL,
   `description` text NOT NULL,
   `project_id` int(11) NOT NULL,
-  `team_id` int(11) NULL,
-  `user_id` int(11) NOT NULL,
   `created` DATETIME,
   `modified` DATETIME,
   PRIMARY KEY  (`id`)
@@ -111,4 +107,11 @@ CREATE TABLE IF NOT EXISTS `teams_users` (
   `user_id` int(11) NOT NULL,
   `role_id` int(11) NOT NULL,
   PRIMARY KEY  (`team_id`,`user_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `projects_users` (
+  `project_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `role_id` int(11) NOT NULL,
+  PRIMARY KEY  (`project_id`,`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
