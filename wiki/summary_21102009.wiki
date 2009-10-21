@@ -1,0 +1,11 @@
+#summary Compte rendu du TP du 21/10/2009.
+
+= Compte rendu de séance de TP du 21/10/2009 =
+
+*Membres présents:* Benjamin GUILLON, Adrian GAUDEBERT, Emmanuel GAUDE, Emmanuel HALTER
+*Membres absents:* AUDUON Rémi, RAMINOSOA Mamy (en td)
+
+*Ordre du jour:* 
+ *Finir de développer le module user
+ *Faire le maintien des modules existants
+ *Elaboration de document de référence pour l'équipe de travail (base de données par exemple)
