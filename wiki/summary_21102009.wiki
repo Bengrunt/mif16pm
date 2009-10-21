@@ -7,6 +7,8 @@
 *Membres absents:* AUDUON Rémi, RAMINOSOA Mamy (en td)
 
 *Ordre du jour:* 
- * Finir de développer le module user
- * Faire le maintien des modules existants
- * Elaboration de document de référence pour l'équipe de travail (base de données par exemple)
+ * Mise en place de la gestion de session et d'utilisateur courant
+ * Modifications sur le schéma de la base de données 
+   * Palier aux limitations du framework et du SQL
+   * Simplification de la gestion des équipe
+   * Simplification de l'attribution des roles aux utilisateurs
