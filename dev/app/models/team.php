@@ -10,9 +10,8 @@ class Team extends AppModel
     public $name = "Team";
 
     public $hasAndBelongsToMany = 'User';
-	public $belongsTo = 'Project';
-	
-	
+	public $hasOne = 'Project';
+	//public $hasOne = 'Team';
 	
 	/*public $validate = array(
 		'name' => array(
