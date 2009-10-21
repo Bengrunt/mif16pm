@@ -3,6 +3,7 @@
 = Compte rendu de séance de TP du 21/10/2009 =
 
 *Membres présents:* Benjamin GUILLON, Adrian GAUDEBERT, Emmanuel GAUDE, Emmanuel HALTER
+
 *Membres absents:* AUDUON Rémi, RAMINOSOA Mamy (en td)
 
 *Ordre du jour:* 
