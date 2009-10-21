@@ -6,6 +6,6 @@
 *Membres absents:* AUDUON Rémi, RAMINOSOA Mamy (en td)
 
 *Ordre du jour:* 
- *Finir de développer le module user
- *Faire le maintien des modules existants
- *Elaboration de document de référence pour l'équipe de travail (base de données par exemple)
+ * Finir de développer le module user
+ * Faire le maintien des modules existants
+ * Elaboration de document de référence pour l'équipe de travail (base de données par exemple)
