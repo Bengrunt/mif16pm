@@ -7,9 +7,7 @@
  */
 class Project extends AppModel
 {
-    public $name = 'Project';
 	public $hasOne = 'Team';
-	
 
 	public $validate = array(
 		'name' => array(
