@@ -43,6 +43,7 @@ CREATE TABLE IF NOT EXISTS `tasks` (
   `project_id` int(11) NOT NULL,
   `task_id` int(11) NULL,
   `duration` int(11) NOT NULL COMMENT 'durée en jours',
+  `begin_date` DATETIME COMMENT 'date de début',
   `created` DATETIME,
   `modified` DATETIME,
   PRIMARY KEY  (`id`)
