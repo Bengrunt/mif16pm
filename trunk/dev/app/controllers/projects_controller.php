@@ -19,6 +19,8 @@ class ProjectsController extends AppController
     {
         $this->Project->id = $id;
         $this->set('project', $this->Project->read());
+		//$this->Project->Team->findById();
+		$this->Project->Team->find('first',name);
     }	
 	
     public function add()
