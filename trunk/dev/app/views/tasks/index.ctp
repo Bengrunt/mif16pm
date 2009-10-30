@@ -31,8 +31,4 @@
     </tr>
     <?php endforeach; ?>
 </table>
-<?php 
-	$cal = new SimpleCalendar();
-	$cal->showCalendar();
-?>
 <?php echo $html->link('Ajouter une Tache', array('controller'=>'tasks','action'=>'add')); ?>
