@@ -13,7 +13,7 @@
         <td><?php echo $role['Role']['name']; ?></td>
 		<td>
 				<?php echo $html->link(	$html->image('delete.png'),
-							array(	'controller'=>'teams',
+							array(	'controller'=>'roles',
 								'action'=>'delete', 
 								$role['Role']['id']),
 							array('escape' => false) ); ?>

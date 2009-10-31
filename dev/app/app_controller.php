@@ -10,6 +10,8 @@ class AppController extends Controller
 
     function beforeFilter()
     {
+		$this->layout = "patate";
+	
         //Configure AuthComponent
         $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
         $this->Auth->logoutRedirect = array('controller' => 'page');

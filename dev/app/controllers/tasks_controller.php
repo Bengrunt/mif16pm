@@ -39,8 +39,9 @@ class TasksController extends AppController
 		$this->flash('La tâche avec l\'id: '.$id.' a été supprimée.', '/tasks');
     }
 
-    public function edit()
+    public function edit($id = null)
     {
+		//$this->set('teams', $this->Task->Team->find('list'));
 		if(empty($this->data))
 		{
 			$this->Task->id = $id; 

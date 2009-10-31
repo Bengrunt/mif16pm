@@ -5,15 +5,12 @@
 <title><?php echo $title_for_layout?></title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="/MIF16PM/dev/app/webroot/css/cake.generic.css" type="text/css">
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />
+<link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
 <script type="text/javascript" src="http://jqueryui.com/latest/jquery-1.3.2.js"></script>
 <script type="text/javascript" src="http://jqueryui.com/latest/ui/ui.core.js"></script>
 <script type="text/javascript" src="http://jqueryui.com/latest/ui/ui.datepicker.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-	$("#datepicker").datepicker();
-	});
-</script>
-<script type="text/javascript" src="/MIF16PM/dev/app/webroot/js/libs/jquery.min.js"></script>
+<!--<script type="text/javascript" src="/MIF16PM/dev/app/webroot/js/libs/jquery.min.js"></script>-->
 <?php echo $scripts_for_layout ?>
 </head>
 <body>

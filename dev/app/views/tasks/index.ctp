@@ -8,7 +8,7 @@
     <tr>
         <td>
             <?php echo $html->link(
-                            $task['Task']['task_name'],
+                            $task['Task']['name'],
                             array('controller' => 'tasks', 'action' => 'view', $task['Task']['id'])
                         ); ?>
         </td>
