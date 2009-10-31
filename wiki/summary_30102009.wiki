@@ -1,0 +1,30 @@
+#summary Compte rendu express de la séance de travail du 30/10/2009.
+
+= Compte rendu express de la séance de travail du 30/10/2009 =
+
+*Membres présents:* AUDUON Rémi, Benjamin GUILLON, Adrian GAUDEBERT, Emmanuel GAUDE (à partir de 22h30), Emmanuel HALTER
+
+*Membres absents:* RAMINOSOA Mamy (parti à un défilé de mode ?)
+
+*Objectifs de la séance de travail :* 
+ * faire fonctionner le plugin SimpleCalendar de JQuery
+
+*Commentaires*
+ * Le nouveau template par défaut de notre projet Cake n'était pas inclus. *C'est corrigé.*
+ * L'inclusion du script *marche correctement désormais*. _L'id ciblée par JQuery doit porter sur un input de type text et non sur un div parent._
+ * *Correction des relations* sur quelques modèles. _BelongsToMany n'existe pas par exemple_.
+
+*Difficultés rencontrées :*
+ * WampServer ne marche pas sur l'ordinateur fixe d'Emmanuel G.
+ * Oubli de l'inclusion du template par défaut
+ * Inclusion des scripts à partir de leurs adresses d'origine.
+ * Fourniture d'une documentation d'un SimpleCalendar autre que celui de JQuery-UI...
+ * Erreurs JavaScript grossières
+ * Problèmes dans le modèle de Tasks et des modèles liés
+ * Mauvaise cardinalité pour la relation Tasks/Teams ?
+
+*À faire :*
+ * Réunion de mise au point sur JavaScript, JQuery
+ * Mises au points sur le schéma de la base et l'utilisation des modèles
+ * Inclusion des scripts en local et non à partir de leurs adresses d'origine.
+ * Utilisation de la balise HTML {{{<base>}}} ou d'une variable PHP pour la racine de l'application ?
