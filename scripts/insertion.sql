@@ -21,8 +21,11 @@ INSERT INTO `projects` (`id`, `name`, `description`, `created`) VALUES
 INSERT INTO `roles` (`id`, `name`) VALUES
 (1, 'site_user'),
 (2, 'site_admin'),
-(3, 'team_administrator'),
-(4, 'team_user');
+(3, 'team_admin'),
+(4, 'team_user'),
+(5, 'project_admin'),
+(6, 'project_user');
+
 
 -- --------------------------------------------------------
 
