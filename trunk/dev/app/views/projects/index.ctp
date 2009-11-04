@@ -3,6 +3,7 @@
         <th>Nom</th>
         <th>Description</th>
         <th>Chef de Projet</th>
+		<th>Options</th>
     </tr>
     <?php foreach($projects as $project): ?>
     <tr>
@@ -13,6 +14,7 @@
                         ); ?>
         </td>
         <td><?php echo $project['Project']['description']; ?></td>
+		<td><?php echo $project['User'][0]['username'];?></td>
 		<td>
 				<?php echo $html->link(	$html->image('delete.png'),
 							array(	'controller'=>'projects',
