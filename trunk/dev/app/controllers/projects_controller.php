@@ -66,6 +66,7 @@ class ProjectsController extends AppController
 				
 					$retUpProject = $this->Project->save($this->data);
 				}
+				$this->set('combobox', $this->Project->User->find('list'));
 			}
 			
 			/* Message de confirmation en cas de succès. */
