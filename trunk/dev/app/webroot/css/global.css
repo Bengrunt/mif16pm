@@ -1,0 +1,42 @@
+/* Global elements */
+
+body {
+    font-family: 'Trebuchet MS', serif;
+    font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+h1 {
+    font-size: 2.0em;
+}
+h2 {
+    font-size: 1.8em;
+}
+h3 {
+    font-size: 1.6em;
+}
+h4 {
+    font-size: 1.4em;
+}
+h5 {
+    font-size: 1.2em;
+}
+h6 {
+    font-size: 1.0em;
+}
+img {
+    vertical-align: middle;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+ins {
+    text-decoration: underline;
+}
+p {
+    margin: 0 10px;
+}
