@@ -13,9 +13,8 @@
 ----
 
 *Commentaires*
- * Le nouveau template par défaut de notre projet Cake n'était pas inclus. *C'est corrigé.*
- * L'inclusion du script *marche correctement désormais*. _L'id ciblée par JQuery doit porter sur un input de type text et non sur un div parent._
- * *Correction des relations* sur quelques modèles. _BelongsToMany n'existe pas par exemple_.
+ * Les modules basiques de notre projet *marche correctement désormais*. Ceux-ci ont été révisé en fonction des modifications apportées à notre BDD.
+
 
 *Difficultés rencontrées :*
  * Intégration de requête SQL en CakePHP peu élémentaire
