@@ -8,6 +8,7 @@
 class Project extends AppModel
 {
     public $hasMany = 'Team';
+    public $hasAndBelongsToMany = 'User';
 
     public $validate = array(
         'name' => array(

@@ -12,14 +12,28 @@ class ProjectsController extends AppController
 	
 	public function index()
     {
-        $this->set('projects', $this->Project->find('all'));
+	// SELECT p.id, p.name, p.description, u.username
+	// FROM users u, projects p, projects_users pu, roles r
+	// WHERE u.id = pu.user_id
+	// AND p.id = pu.project_id
+	// AND r.id = pu.role_id
+	// AND r.name = 'project_admin'
+		$param = array (
+			'conditions' => array(
+				'User.project_id' => 'Project.id',
+				'Project.role_id' => 'Role.id',
+				'Role.name' => 'project_admin'
+			),
+			'fields' => array('Project.id', 'Project.name', 'Project.description', 'User.username'), // tableau de nom de champs
+		);
+		
+		$this->set('projects', $this->Project->find('all', $params));
     }
 
 	public function view($id = null)
     {
         $this->Project->id = $id;
         $this->set('project', $this->Project->read());
-		//$this->Project->Team->findById();
 		$this->Project->Team->find('first',name);
     }	
 	
@@ -29,6 +43,8 @@ class ProjectsController extends AppController
 		{
 			/* Ajout du projet à la BDD. */
 			$retAddProject = $this->Project->save($this->data);
+			$retAddTeam = false;
+			$retUpProject = false;
 			
 			/* Ajout de l'équipe mère du projet. */
 			if($retAddProject) {
