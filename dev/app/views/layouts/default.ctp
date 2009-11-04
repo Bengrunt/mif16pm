@@ -4,7 +4,7 @@
 <head>
 <title><?php echo $title_for_layout?></title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="/MIF16PM/dev/app/webroot/css/cake.generic.css" type="text/css">
+<link rel="stylesheet" href="css/cake.generic.css" type="text/css">
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />
 <link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
 <script type="text/javascript" src="http://jqueryui.com/latest/jquery-1.3.2.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<!-- If you'd like some sort of menu to 
+<!-- If you'd like some sort of menu to
 show up on all of your views, include it here -->
 <div id="header">
     <div id="menu">...</div>
