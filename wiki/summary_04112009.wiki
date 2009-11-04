@@ -1,0 +1,30 @@
+#summary Compte rendu express de la séance de travail du 30/10/2009.
+
+= Compte rendu du TP du 04/11/2009 =
+----
+*Membres présents:* Benjamin GUILLON, Adrian GAUDEBERT, Emmanuel GAUDE , Emmanuel HALTER
+
+*Membres absents:* RAMINOSOA Mamy / AUDUON Rémi (td)
+
+*Objectifs de la séance de travail :* 
+ * Avancer la mise en place du calendrier 
+ * Continuer à vérifier tout en détail la bonne fonctionnalité des modules précédents
+ * Commencer la réalisation d'une vrai interface pour nos différents modules
+----
+
+*Commentaires*
+ * Le nouveau template par défaut de notre projet Cake n'était pas inclus. *C'est corrigé.*
+ * L'inclusion du script *marche correctement désormais*. _L'id ciblée par JQuery doit porter sur un input de type text et non sur un div parent._
+ * *Correction des relations* sur quelques modèles. _BelongsToMany n'existe pas par exemple_.
+
+*Difficultés rencontrées :*
+ * Intégration de requête SQL en CakePHP peu élémentaire
+ * Problème de type de données et de controller lors de la modification de notre BDD
+
+*À faire :*
+ * Commencer le développement des derniers gros modules
+ * Régler le problème du calendrier
+ * Continuer la mise en place de l'IHM de notre outil
+
+*Prochaine Réunion*
+ * A partir de vendredi soir et ce durant tout le week-end le temps libre est consacré au projet MIF16
