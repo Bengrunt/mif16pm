@@ -8,16 +8,16 @@
 
 *Objectifs de la séance de travail :* 
  * Avancer la mise en place du calendrier 
- * Continuer à vérifier tout en détail la bonne fonctionnalité des modules précédents
- * Commencer la réalisation d'une vrai interface pour nos différents modules
+ * Finir de vérifier tout en détail la bonne fonctionnalité des modules précédents
+ * Commencer la réalisation d'une vraie interface pour nos différents modules
 ----
 
 *Commentaires*
- * Les modules basiques de notre projet *marche correctement désormais*. Ceux-ci ont été révisé en fonction des modifications apportées à notre BDD.
+ * Les modules basiques de notre projet *marchent correctement désormais*. Ceux-ci ont été révisé en fonction des modifications apportées à notre BDD.
 
 
 *Difficultés rencontrées :*
- * Intégration de requête SQL en CakePHP peu élémentaire
+ * Intégration de requêtes SQL en CakePHP peu élémentaire
  * Problème de type de données et de controller lors de la modification de notre BDD
 
 *À faire :*
