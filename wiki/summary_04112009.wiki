@@ -1,4 +1,4 @@
-#summary Compte rendu express de la séance de travail du 30/10/2009.
+#summary Compte rendu express de la séance de travail du 04/11/2009.
 
 = Compte rendu du TP du 04/11/2009 =
 ----
