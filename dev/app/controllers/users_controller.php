@@ -4,7 +4,7 @@ class UsersController extends AppController
 {
     public $name = "Users";
     //public $scaffold;
-	var $helpers = array('Combobox'); 
+	// var $helpers = array('Combobox'); 
 
     public function beforeFilter()
     {
@@ -30,17 +30,18 @@ class UsersController extends AppController
         return $return;
     }
 	
-	public function autoComplete()
-	{
-        $this->set('values',
-			$this->User->find(
-				'all',
-                'fields' => array('username'),
-                'order' => 'username'
-			)
-		);
-         
-	}
+	// public function autoComplete()
+	// {
+        // $this->set('values',
+			// $this->User->find(
+				// 'all',
+				// array(
+					// 'fields' => array('username'),
+					// 'order' => 'username'
+				// )
+			// )
+		// );
+	// }
 
     /**
      *
