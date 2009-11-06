@@ -18,13 +18,18 @@ class ProjectsController extends AppController
 	// AND p.id = pu.project_id
 	// AND r.id = pu.role_id
 	// AND r.name = 'project_admin'
-		$param = array (
+		$params = array (
 			'conditions' => array(
 				'User.project_id' => 'Project.id',
 				'Project.role_id' => 'Role.id',
 				'Role.name' => 'project_admin'
 			),
-			'fields' => array('Project.id', 'Project.name', 'Project.description', 'User.username'), // tableau de nom de champs
+			'fields' => array(
+				'Project.id',
+				'Project.name', 
+				'Project.description', 
+				'User.username'
+			)
 		);
 		
 		$this->set('projects', $this->Project->find('all', $params));
@@ -57,7 +62,7 @@ class ProjectsController extends AppController
 									 $this->data['Project']['name'] . '"',
 					'project_id' => $this->data['Project']['id'],
 					'team_id' => NULL,
-					'user_id' => 0 // TODO: récupérer id utilisateur courant.
+					'user_id' => $this->Auth->user('id')
 				));
 				
 				/* MàJ du projet avec l'id de l'équipe. */
@@ -66,7 +71,6 @@ class ProjectsController extends AppController
 				
 					$retUpProject = $this->Project->save($this->data);
 				}
-				$this->set('combobox', $this->Project->User->find('list'));
 			}
 			
 			/* Message de confirmation en cas de succès. */

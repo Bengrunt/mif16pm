@@ -12,7 +12,6 @@ class Task extends AppModel
     public $hasAndBelongsToMany = "Team";
 	public $belongsTo = "Project";
 	
-	
 	public $validate = array(
 		'task_name' => array(
 			'rule' => array('minLength', 5),
