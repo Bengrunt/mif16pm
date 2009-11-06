@@ -18,21 +18,8 @@ class ProjectsController extends AppController
 	// AND p.id = pu.project_id
 	// AND r.id = pu.role_id
 	// AND r.name = 'project_admin'
-		$params = array (
-			'conditions' => array(
-				'User.project_id' => 'Project.id',
-				'Project.role_id' => 'Role.id',
-				'Role.name' => 'project_admin'
-			),
-			'fields' => array(
-				'Project.id',
-				'Project.name', 
-				'Project.description', 
-				'User.username'
-			)
-		);
 		
-		$this->set('projects', $this->Project->find('all', $params));
+		$this->set('projects', $this->Project->find('all'));
     }
 
 	public function view($id = null)
