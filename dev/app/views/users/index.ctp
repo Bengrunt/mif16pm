@@ -13,7 +13,7 @@
         <tr>
             <td><?php echo $user['User']['id']; ?></td>
             <td><?php echo $html->link(
-                        $user['User']['username'], array('controller'=>'users',
+                        $user['User']['name'], array('controller'=>'users',
                         'action'=>'view',
                         $user['User']['id']));
                     ?></td>
