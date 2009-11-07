@@ -45,7 +45,32 @@ class ProjectsController extends AppController
 			return $resultRole['Role']['id'];
 		}
 	}
-
+	
+	private function flush($projectId, $teamId = null) {
+		if(!is_null($teamId)) {
+			$this->Project->Team->TeamsUser->deleteAll(
+				array('TeamsUser.team_id' => $teamId),
+				false,
+				false
+			);
+			$this->Project->Team->deleteAll(
+				array('Team.id' => $teamId),
+				false,
+				false
+			);
+		}
+		$this->Project->ProjectsUser->deleteAll(
+			array('ProjectsUser.project_id' => $projectId),
+			false,
+			false
+		);
+		$this->Project->deleteAll(
+			array('Project.id' => $projectId),
+			false,
+			false
+		);
+	}
+	
 	/**
 	 * Ajout d'un nouveau projet à la base.
 	 *
@@ -59,6 +84,13 @@ class ProjectsController extends AppController
     {
 		if(!empty($this->data))
 		{
+			/* 0 - Variables locales. --------------------------------------- */
+			$userId = $this->Auth->user('id'); /*< Id de l'utilisateur courant. */
+			$projectId = -1; /*< Id du projet créé. */
+			$teamId = -1; /*< Id de l'équipe créée. */
+			$idRoleProjectAdmin = -1; /*< Id du rôle d'admin de projet. */
+			$idRoleTeamAdmin = -1; /*< Id du rôle d'admin d'équipe.*/
+			
 			/* 1 - Recherche des id des rôles propres à un chef de projet. -- */
 			$this->loadModel('Role');
 		
@@ -94,16 +126,18 @@ class ProjectsController extends AppController
 				return;
 			}
 			
+			$projectId = $this->Project->id;
+			
 			/* Création de l'équipe mère du projet. */
 			if(!$this->Project->Team->save(Array(
 				'name' => 'Equipe ' . $this->data['Project']['name'],
 				'description' => 'Equipe du projet [' .
-								 $this->data['Project']['id'] . '] "' .
+								 $projectId . '] "' .
 								 $this->data['Project']['name'] . '"',
-				'project_id' => $this->Project->id,
+				'project_id' => $projectId,
 				'user_id' => $this->Auth->user('id')
 			))) {
-				$this->Project->del($this->Project->id);
+				$this->flush($projectId);
 				$this->flash(
 					'L\'équipe associée au projet n\'a pu être créée.',
 					'/projects'
@@ -111,12 +145,14 @@ class ProjectsController extends AppController
 				return;
 			}
 			
+			$teamId = $this->Project->Team->id;
+			
 			/* 3 - Association du projet et de l'équipe. -------------------- */
-			$this->data['Project']['id'] = $this->Project->id;
-			$this->data['Project']['team_id'] = $this->Project->Team->id;
+			$this->data['Project']['id'] = $projectId;
+			$this->data['Project']['team_id'] = $teamId;
+			
 			if(!$this->Project->save($this->data)) {
-				$this->Project->Team->del($this->Project->Team->id);
-				$this->Project->del($this->Project->id);
+				$this->flush($projectId, $teamId);
 				$this->flash(
 					'L\'équipe mère n\'a pu être associée au proket.',
 					'/projects'
@@ -127,12 +163,11 @@ class ProjectsController extends AppController
 			/* 4 - Association utilisateur comme chef de projet et d'équipe.  */
 			/* Association du chef de projet. */
 			if(!$this->Project->ProjectsUser->save(Array(
-				'project_id' => $this->Project->id,
-				'user_id' => $this->Auth->user('id'),
+				'project_id' => $projectId,
+				'user_id' => $userId,
 				'role_id' => $idRoleProjectAdmin
 			))) {
-				$this->Project->Team->del($this->Project->Team->id);
-				$this->Project->del($this->Project->id);
+				$this->flush($projectId, $teamId);
 				$this->flash(
 					'L\'utilisateur courant n\'a pu être associé comme chef ' +
 					' de projet.',
@@ -143,12 +178,11 @@ class ProjectsController extends AppController
 			
 			/* Association du chef d'équipe. */
 			if(!$this->Project->Team->TeamsUser->save(Array(
-				'team_id' => $this->Project->Team->id,
-				'user_id' => $this->Auth->user('id'),
+				'team_id' => $teamId,
+				'user_id' => $userId,
 				'role_id' => $idRoleTeamAdmin
 			))) {
-				$this->Project->Team->del($this->Project->Team->id);
-				$this->Project->del($this->Project->id, true);
+				$this->flush($projectId, $teamId);
 				$this->flash(
 					'L\'utilisateur courant n\'a pu être associé comme chef ' +
 					' d\équipe.',
