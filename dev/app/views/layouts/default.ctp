@@ -43,7 +43,7 @@
             <?php echo $content_for_layout ?>
         </div>
 
-        <div id="footer">This is a footer :)</div>
+        <div id="footer">This is a footer :) And it may kick your ass!</div>
 
     </body>
 </html>
