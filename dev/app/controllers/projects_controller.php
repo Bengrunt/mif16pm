@@ -33,27 +33,86 @@ class ProjectsController extends AppController
     {
 		if(!empty($this->data))
 		{
+			/* On cherche l'ID du rôle correspondant à un chef de projet. */
+			$this->loadModel('Role');
+			$paramsProjectAdmin = array (
+				'conditions' => array(
+					'Role.name' => 'project_admin'
+				),
+				'fields' => array('Role.id')
+			);
+			$resultRole = $this->Role->find('first', $paramsProjectAdmin);
+			
+			/* Test si un id de rôle a bien été retourné. */
+			if(empty($resultRole)) {
+				$this->flash(
+					'Le projet n\'a pu être créé car aucun rôle ' +
+					'`project_admin` n\'existe dans la base.',
+					'/projects'
+				);
+				return;
+			}
+			$idRoleProjectAdmin = $resultRole['Role']['id'];
+			
+			
 			/* Ajout du projet à la BDD. */
 			$retAddProject = $this->Project->save($this->data);
+			$retAddProjectAdmin = false;
 			$retAddTeam = false;
 			$retUpProject = false;
 			
-			/* Ajout de l'équipe mère du projet. */
 			if($retAddProject) {
 				$this->data['Project']['id'] = $this->Project->id;
 				
+				/* 
+				 * On ajoute le chef de projet :
+				 *  - ID utilisateur courant
+				 *  - ID du rôle 'project_admin'
+				 */
+				$retAddProjectAdmin = $this->Project->ProjectsUser->save(Array(
+					'project_id' => $this->Project->id,
+					'user_id' => $this->Auth->user('id'),
+					'role_id' => $idRoleProjectAdmin
+				));
+				
+				/* Ajout de l'équipe mère du projet. */
 				$retAddTeam = $this->Project->Team->save(Array(
 					'name' => 'Equipe ' . $this->data['Project']['name'],
 					'description' => 'Equipe du projet [' .
 									 $this->data['Project']['id'] . '] "' .
 									 $this->data['Project']['name'] . '"',
 					'project_id' => $this->data['Project']['id'],
-					'team_id' => NULL,
 					'user_id' => $this->Auth->user('id')
 				));
 				
-				/* MàJ du projet avec l'id de l'équipe. */
 				if($retAddTeam) {
+					/* On cherche l'ID du rôle correspondant à un chef d'équipe. */
+					$paramsTeamAdmin = array (
+						'conditions' => array(
+							'Role.name' => 'team_admin'
+						),
+						'fields' => array('Role.id')
+					);
+					$resultRole = $this->Role->find('first', $paramsTeamAdmin);
+					
+					/* Test si un id de rôle a bien été retourné. */
+					if(empty($resultRole)) {
+						$this->flash(
+							'Le projet n\'a pu être créé car aucun rôle ' +
+							'`team_admin` n\'existe dans la base.',
+							'/projects'
+						);
+						return;
+					}
+					$idRoleTeamAdmin = $resultRole['Role']['id'];
+					
+					$retAddTeamAdmin = $this->Project->Team->TeamsUser->save(Array(
+						'team_id' => $this->Project->Team->id,
+						'user_id' => $this->Auth->user('id'),
+						'role_id' => $idRoleTeamAdmin
+					));
+				
+					/* MàJ du projet avec l'id de l'équipe. */	
 					$this->data['Project']['team_id'] = $this->Project->Team->id;
 				
 					$retUpProject = $this->Project->save($this->data);
