@@ -13,7 +13,7 @@ DROP TABLE `projects`;
 -- --------------------------------------------------------
 
 --
--- Contenu de la table `roles`
+-- Table `roles`
 --
 
 DROP TABLE `roles`;
@@ -21,7 +21,7 @@ DROP TABLE `roles`;
 -- --------------------------------------------------------
 
 --
--- Contenu de la table `tasks`
+-- Table `tasks`
 --
 
 DROP TABLE `tasks`;
@@ -29,7 +29,7 @@ DROP TABLE `tasks`;
 -- --------------------------------------------------------
 
 --
--- Contenu de la table `teams`
+-- Table `teams`
 --
 
 DROP TABLE `teams`;
@@ -37,7 +37,7 @@ DROP TABLE `teams`;
 -- --------------------------------------------------------
 
 --
--- Contenu de la table `tasks_teams`
+-- Table `tasks_teams`
 --
 
 DROP TABLE `tasks_teams`;
@@ -45,7 +45,7 @@ DROP TABLE `tasks_teams`;
 -- --------------------------------------------------------
 
 --
--- Contenu de la table `users`
+-- Table `users`
 --
 
 DROP TABLE `users`;
@@ -53,7 +53,15 @@ DROP TABLE `users`;
 -- --------------------------------------------------------
 
 --
--- Contenu de la table `teams_users`
+-- Table `teams_users`
 --
 
 DROP TABLE `teams_users`;
+
+-- --------------------------------------------------------
+
+--
+-- Table `projects_users`
+--
+
+DROP TABLE `projects_users`;
