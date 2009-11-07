@@ -2,7 +2,7 @@
 
 class UsersController extends AppController
 {
-    public $name = "Users";
+    public $name = 'Users';
     //public $scaffold;
 	// var $helpers = array('Combobox'); 
 
@@ -11,6 +11,10 @@ class UsersController extends AppController
         //Configure AuthComponent
         $this->Auth->authorize = 'controller';
         $this->Auth->allow('register', 'login');
+		$this->Auth->fields = array(
+			'username' => 'name',
+			'password' => 'password'
+		);
     }
 
     public function isAuthorized()
