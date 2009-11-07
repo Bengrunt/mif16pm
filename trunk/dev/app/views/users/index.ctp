@@ -13,7 +13,7 @@
         <tr>
             <td><?php echo $user['User']['id']; ?></td>
             <td><?php echo $html->link(
-                        $user['User']['username'], array(  'controller'=>'users',
+                        $user['User']['username'], array('controller'=>'users',
                         'action'=>'view',
                         $user['User']['id']));
                     ?></td>
@@ -23,8 +23,8 @@
             <td><?php echo $user['User']['created']; ?></td>
             <td><?php echo $user['User']['modified']; ?></td>
             <td>
-                <?php echo $html->link( $html->image('icone_effacer.png'),
-                            array(  'controller'=>'users',
+                <?php echo $html->link( $html->image('delete.png'),
+                            array('controller'=>'users',
                                 'action'=>'delete',
                                 $user['User']['id']),
                             array('escape' => false) ); ?>
