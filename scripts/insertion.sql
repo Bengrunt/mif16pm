@@ -57,7 +57,7 @@ INSERT INTO `teams` (`id`, `name`, `description`, `project_id`, `created`, `modi
 -- Contenu de la table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `firstname`, `lastname`, `password`, `role_id`) VALUES
+INSERT INTO `users` (`id`, `name`, `firstname`, `lastname`, `password`, `role_id`) VALUES
 (1, 'root', 'PROUT', 'Projet Regroupant Les Outils Utiles a Tous', '0da5dbfe3807a49b6fa3a7c08e4ce9a7c9e096c6', 2);
 
 -- --------------------------------------------------------

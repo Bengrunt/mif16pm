@@ -86,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `tasks_teams` (
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL auto_increment,
-  `username` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `role_id` int(11) NOT NULL DEFAULT 1,
   `firstname` varchar(30) NOT NULL,
@@ -101,7 +101,6 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 -- Structure de la table `teams_users`
 --
-
 CREATE TABLE IF NOT EXISTS `teams_users` (
   `team_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -109,6 +108,11 @@ CREATE TABLE IF NOT EXISTS `teams_users` (
   PRIMARY KEY  (`team_id`,`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `projects_users`
+--
 CREATE TABLE IF NOT EXISTS `projects_users` (
   `project_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,

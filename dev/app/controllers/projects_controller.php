@@ -208,6 +208,7 @@ class ProjectsController extends AppController
     public function edit($id = null)
     {
 		$this->set('teams', $this->Project->Team->find('list'));
+		$this->set('users', $this->Project->User->find('list'));
 		if(empty($this->data))
 		{
 			$this->Project->id = $id; 
