@@ -14,7 +14,7 @@
                         ); ?>
         </td>
         <td><?php echo $project['Project']['description']; ?></td>
-		<td><?php echo $project['User'][0]['username'];?></td>
+		<td><?php echo $project['User'][0]['name'];?></td>
 		<td>
 				<?php echo $html->link(	$html->image('delete.png'),
 							array(	'controller'=>'projects',
