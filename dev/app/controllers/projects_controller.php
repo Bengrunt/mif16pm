@@ -209,7 +209,25 @@ class ProjectsController extends AppController
     public function edit($id = null)
     {
 		$this->set('teams', $this->Project->Team->find('list'));
-		$this->set('users', $this->Project->Team->User->find('list'));
+
+		$projectUsersQuery1 = $this->Project->ProjectsUser->find(
+			'all', array('conditions' => array('project_id' => $id))
+		);
+
+		
+		$projectUsersQuery2 = $this->Project->query(
+			'SELECT `User`.name FROM `users` AS `User`
+			WHERE `User`.id IN (
+				SELECT `ProjectsUser`.user_id
+				FROM `projects_users` AS `ProjectsUser`
+				WHERE `ProjectsUser`.project_id = ' . $id .
+			')'
+		);
+		echo '<pre>';
+		var_dump($projectUsersQuery1,$projectUsersQuery2);
+		echo '</pre>';
+		exit(0);
+		//$this->set('users', );
 		if(empty($this->data))
 		{
 			$this->Project->id = $id; 
@@ -223,7 +241,6 @@ class ProjectsController extends AppController
 			}
 		}
 		$this->set('projects', $this->Project->Team->find('list'));
-		$this->set('users', $this->Project->Team->User->find('list'));
     }
 	
 	/*Gérer les droits
