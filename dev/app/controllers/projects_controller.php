@@ -9,31 +9,6 @@ class ProjectsController extends AppController
 {
 
 	public $name = "Projects";
-	
-	public function index()
-    {	
-		$idRoleProjectAdmin = -1; /*< Id du rôle d'admin de projet. */
-		$this->loadModel('Role');
-		$idRoleProjectAdmin = $this->getRoleId('project_admin');
-		
-		if($idRoleProjectAdmin == -1) {
-			$this->flash(
-				'Erreur : Il n\'y aucun rôle ' +
-				'`project_admin` n\'existe dans la base.',
-				'/projects'
-			);
-			return;
-		}
-		
-		$projects = $this->Project->find('all');
-		
-		foreach($projects as &$project) {
-			$projectAdmin = $this->getProjectAdmin($project, $idRoleProjectAdmin);
-			$project['admin'] = $projectAdmin;
-		}
-		
-		$this->set('projects', $projects);
-    }
 
 	private function getProjectAdmin($project, $idRoleProjectAdmin) {
 		foreach($project['User'] as $user):
@@ -42,14 +17,6 @@ class ProjectsController extends AppController
 			endif;
 		endforeach;
 	}
-
-	public function view($id = null)
-    {
-        $this->Project->id = $id;
-        $this->set('project', $this->Project->read());
-		$this->Project->Team->find('first',name);
-		$this->Project->Team->User->find('first',name);
-    }	
 	
 	private function getRoleId($roleName) {
 		$params = array (
@@ -92,6 +59,39 @@ class ProjectsController extends AppController
 			false
 		);
 	}
+	
+	public function index()
+    {	
+		$idRoleProjectAdmin = -1; /*< Id du rôle d'admin de projet. */
+		$this->loadModel('Role');
+		$idRoleProjectAdmin = $this->getRoleId('project_admin');
+		
+		if($idRoleProjectAdmin == -1) {
+			$this->flash(
+				'Erreur : Il n\'y aucun rôle ' +
+				'`project_admin` n\'existe dans la base.',
+				'/projects'
+			);
+			return;
+		}
+		
+		$projects = $this->Project->find('all');
+		
+		foreach($projects as &$project) {
+			$projectAdmin = $this->getProjectAdmin($project, $idRoleProjectAdmin);
+			$project['admin'] = $projectAdmin;
+		}
+		
+		$this->set('projects', $projects);
+    }
+
+	public function view($id = null)
+    {
+        $this->Project->id = $id;
+        $this->set('project', $this->Project->read());
+		$this->Project->Team->find('first',name);
+		$this->Project->Team->User->find('first',name);
+    }
 	
 	/**
 	 * Ajout d'un nouveau projet à la base.
@@ -230,25 +230,20 @@ class ProjectsController extends AppController
     public function edit($id = null)
     {
 		$this->set('teams', $this->Project->Team->find('list'));
-
-		$projectUsersQuery1 = $this->Project->ProjectsUser->find(
-			'all', array('conditions' => array('project_id' => $id))
-		);
-
 		
-		$projectUsersQuery2 = $this->Project->query(
-			'SELECT `User`.name FROM `users` AS `User`
+		$projectUsersResult = $this->Project->query(
+			'SELECT `User`.id, `User`.name FROM `users` AS `User`
 			WHERE `User`.id IN (
 				SELECT `ProjectsUser`.user_id
 				FROM `projects_users` AS `ProjectsUser`
 				WHERE `ProjectsUser`.project_id = ' . $id .
 			')'
 		);
-		echo '<pre>';
-		var_dump($projectUsersQuery1,$projectUsersQuery2);
-		echo '</pre>';
-		exit(0);
-		//$this->set('users', );
+		$users = array();
+		foreach($projectUsersResult as $row) {
+			$users[$row['User']['id']] = $row['User']['name'];
+		}
+		$this->set('users', $users);
 		if(empty($this->data))
 		{
 			$this->Project->id = $id; 
