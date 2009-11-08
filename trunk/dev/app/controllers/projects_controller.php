@@ -27,6 +27,7 @@ class ProjectsController extends AppController
         $this->Project->id = $id;
         $this->set('project', $this->Project->read());
 		$this->Project->Team->find('first',name);
+		$this->Project->Team->User('first',username);
     }	
 	
 	private function getRoleId($roleName) {
@@ -221,7 +222,8 @@ class ProjectsController extends AppController
 				$this->flash('Les attributs du projet ont bien été modifiés.', '/project');
 			}
 		}
-		$this->set('projects', $this->Project->Team->find('list'));		
+		$this->set('projects', $this->Project->Team->find('list'));
+		$this->set('users', $this->Project->User->find('list'));
     }
 	
 	/*Gérer les droits
