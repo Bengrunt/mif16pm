@@ -34,19 +34,6 @@ class UsersController extends AppController
         return $return;
     }
 	
-	// public function autoComplete()
-	// {
-        // $this->set('values',
-			// $this->User->find(
-				// 'all',
-				// array(
-					// 'fields' => array('username'),
-					// 'order' => 'username'
-				// )
-			// )
-		// );
-	// }
-
     /**
      *
      */

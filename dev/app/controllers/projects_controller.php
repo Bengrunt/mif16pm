@@ -11,16 +11,37 @@ class ProjectsController extends AppController
 	public $name = "Projects";
 	
 	public function index()
-    {
-	// SELECT p.id, p.name, p.description, u.username
-	// FROM users u, projects p, projects_users pu, roles r
-	// WHERE u.id = pu.user_id
-	// AND p.id = pu.project_id
-	// AND r.id = pu.role_id
-	// AND r.name = 'project_admin'
+    {	
+		$idRoleProjectAdmin = -1; /*< Id du rôle d'admin de projet. */
+		$this->loadModel('Role');
+		$idRoleProjectAdmin = $this->getRoleId('project_admin');
 		
-		$this->set('projects', $this->Project->find('all'));
+		if($idRoleProjectAdmin == -1) {
+			$this->flash(
+				'Erreur : Il n\'y aucun rôle ' +
+				'`project_admin` n\'existe dans la base.',
+				'/projects'
+			);
+			return;
+		}
+		
+		$projects = $this->Project->find('all');
+		
+		foreach($projects as &$project) {
+			$projectAdmin = $this->getProjectAdmin($project, $idRoleProjectAdmin);
+			$project['admin'] = $projectAdmin;
+		}
+		
+		$this->set('projects', $projects);
     }
+
+	private function getProjectAdmin($project, $idRoleProjectAdmin) {
+		foreach($project['User'] as $user):
+			if($user['ProjectsUser']['role_id'] == $idRoleProjectAdmin):
+				return $user;
+			endif;
+		endforeach;
+	}
 
 	public function view($id = null)
     {
