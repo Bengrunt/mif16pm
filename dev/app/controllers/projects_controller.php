@@ -27,7 +27,7 @@ class ProjectsController extends AppController
         $this->Project->id = $id;
         $this->set('project', $this->Project->read());
 		$this->Project->Team->find('first',name);
-		$this->Project->Team->User('first',username);
+		$this->Project->Team->User->find('first',username);
     }	
 	
 	private function getRoleId($roleName) {
