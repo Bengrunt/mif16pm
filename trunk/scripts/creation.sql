@@ -120,3 +120,17 @@ CREATE TABLE IF NOT EXISTS `projects_users` (
   `role_id` int(11) NOT NULL,
   PRIMARY KEY  (`project_id`,`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `tasks_users`
+--
+
+CREATE TABLE IF NOT EXISTS `tasks_users` (
+  `task_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY  (`task_id`,`user_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
