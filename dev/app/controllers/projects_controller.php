@@ -27,7 +27,7 @@ class ProjectsController extends AppController
         $this->Project->id = $id;
         $this->set('project', $this->Project->read());
 		$this->Project->Team->find('first',name);
-		$this->Project->Team->User->find('first',username);
+		$this->Project->Team->User->find('first',name);
     }	
 	
 	private function getRoleId($roleName) {
@@ -209,7 +209,7 @@ class ProjectsController extends AppController
     public function edit($id = null)
     {
 		$this->set('teams', $this->Project->Team->find('list'));
-		$this->set('users', $this->Project->User->find('list'));
+		$this->set('users', $this->Project->Team->User->find('list'));
 		if(empty($this->data))
 		{
 			$this->Project->id = $id; 
@@ -223,7 +223,7 @@ class ProjectsController extends AppController
 			}
 		}
 		$this->set('projects', $this->Project->Team->find('list'));
-		$this->set('users', $this->Project->User->find('list'));
+		$this->set('users', $this->Project->Team->User->find('list'));
     }
 	
 	/*Gérer les droits
