@@ -9,12 +9,12 @@
     <tr>
         <td>
             <?php echo $html->link(
-                            $project['Project']['name'],
-                            array('controller' => 'projects', 'action' => 'view', $project['Project']['id'])
-                        ); ?>
+				$project['Project']['name'],
+				array('controller' => 'projects', 'action' => 'view', $project['Project']['id'])
+			); ?>
         </td>
         <td><?php echo $project['Project']['description']; ?></td>
-		<td><?php echo $project['User'][0]['name'];?></td>
+		<td><?php echo $project['admin']['name'];?></td>
 		<td>
 				<?php echo $html->link(	$html->image('delete.png'),
 							array(	'controller'=>'projects',
