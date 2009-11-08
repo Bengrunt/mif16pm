@@ -42,6 +42,7 @@ CREATE TABLE IF NOT EXISTS `tasks` (
   `name` varchar(30) NOT NULL,
   `project_id` int(11) NOT NULL,
   `task_id` int(11) NULL,
+  `description` text collate utf8_unicode_ci NOT NULL,
   `duration` int(11) NOT NULL COMMENT 'durée en jours',
   `begin_date` DATETIME NOT NULL COMMENT 'date de début',
   `created` DATETIME,
