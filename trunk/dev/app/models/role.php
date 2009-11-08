@@ -7,9 +7,9 @@
  */
 class Role extends AppModel
 {
-    public $name = "Role";
+    //public $name = "Role";
 
-    public $hasOne = "User";
+    //public $hasOne = "User";
 
     /*public $validate = array(
         'name' => array(
