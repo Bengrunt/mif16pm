@@ -5,19 +5,32 @@
  * @author Benjamin Guillon - bengrunt@gmail.com
  * @see http://code.google.com/p/mif16pm/
  */
-class ProjectsController extends AppController
-{
-
+class ProjectsController extends AppController {
+	
 	public $name = "Projects";
 
+	/**
+	 * Méthode utilitaire donnant le nom du chef d'un projet.
+	 *
+	 * @param project {Project} Un projet.
+	 * @param idRoleProjectAdmin {int} Id du rôle d'un chef de projet.
+	 * @return {User} Chef de projet.
+	 */
 	private function getProjectAdmin($project, $idRoleProjectAdmin) {
-		foreach($project['User'] as $user):
-			if($user['ProjectsUser']['role_id'] == $idRoleProjectAdmin):
+		foreach($project['User'] as $user)
+			if($user['ProjectsUser']['role_id'] == $idRoleProjectAdmin)
 				return $user;
-			endif;
-		endforeach;
 	}
 	
+	/**
+	 * Méthode utilitaire donnant l'id d'un rôle à partir de son nom.
+	 *
+	 * @pre		Nécessite une instantiation du modèle Role.
+	 * @post	Id du rôle correspondant retourné.
+	 *
+	 * @param roleName {String} Nom d'un rôle.
+	 * @return {int} Id du rôle associé.
+	 */
 	private function getRoleId($roleName) {
 		$params = array (
 			'conditions' => array(
@@ -35,6 +48,38 @@ class ProjectsController extends AppController
 		}
 	}
 	
+	/**
+	 * Méthode utilitaire donnant le nom d'un rôle à partir de son id.
+	 *
+	 * @pre		Nécessite une instantiation du modèle Role.
+	 * @post	Nom du rôle correspondant retourné.
+	 *
+	 * @param	roleId {int} Id d'un rôle.
+	 * @return	{String} Nom du rôle associé.
+	 */
+	private function getRoleName($roleId) {
+		$params = array (
+			'conditions' => array(
+				'Role.id' => $roleId
+			),
+			'fields' => array('Role.name')
+		);
+		$resultRole = $this->Role->find('first', $params);
+		
+		/* Test si un nom de rôle a bien été retourné. */
+		if(empty($resultRole)) {
+			return null;
+		} else {
+			return $resultRole['Role']['name'];
+		}
+	}
+	
+	/**
+	 * Méthode utilitaire supprimant les données insérées pour un projet.
+	 *
+	 * @param projectId {int} Id du projet à supprimer.
+	 * @param teamId {int} Id de l'équipe mère associée.
+	 */
 	private function flush($projectId, $teamId = null) {
 		if(!is_null($teamId)) {
 			$this->Project->Team->TeamsUser->deleteAll(
@@ -60,6 +105,9 @@ class ProjectsController extends AppController
 		);
 	}
 	
+	/**
+	 * Affiche un listing des entrées de projets.
+	 */
 	public function index()
     {	
 		$idRoleProjectAdmin = -1; /*< Id du rôle d'admin de projet. */
@@ -84,13 +132,28 @@ class ProjectsController extends AppController
 		
 		$this->set('projects', $projects);
     }
-
-	public function view($id = null)
-    {
+	
+	/**
+	 * Affiche le détail d'un projet.
+	 *
+	 * @param id {int} Id du projet à consulter
+	 */
+	public function view($id = null) {
+		/* Récupération du projet d'id id. */
         $this->Project->id = $id;
-        $this->set('project', $this->Project->read());
-		$this->Project->Team->find('first',name);
-		$this->Project->Team->User->find('first',name);
+		$project = $this->Project->read();
+
+		/* Recherche des noms de rôles correspondant. */
+		$this->loadModel('Role');
+		$roles = array();
+		foreach($project['User'] as &$user) {
+			$roleId = $user['ProjectsUser']['role_id'];
+			if(!isset($roles[$roleId]))
+				$roles[$roleId] = $this->getRoleName($roleId);
+			$user['role_name'] = $roles[$roleId];
+		}
+		
+        $this->set('project', $project);
     }
 	
 	/**
@@ -221,12 +284,30 @@ class ProjectsController extends AppController
 		}
     }
 
+	/**
+	 * Suppression d'un projet à la base.
+	 *
+	 * @pre		Demande de suppression d'un projet.
+	 * @post	Supprime le projet de la base ainsi que l'ensemble des équipes
+	 * 			associées.
+	 *
+	 * @param id {int} Id du projet à supprimer.
+	 */
     public function delete($id = null)
     {
 		$this->Project->del($id);
 		$this->flash('Le projet avec l\'id: ' . $id . ' a été supprimé.', '/projects');
     }
 
+	/**
+	 * Modification d'un projet à la base.
+	 *
+	 * @pre		Demande de modification d'un projet.
+	 * @post	Modifie les données relatives à un projet : nom, description,
+	 * 			chef de projet, utilisateurs, équipes.
+	 *
+	 * @param id {int} Id du projet à supprimer.
+	 */
     public function edit($id = null)
     {
 		$this->set('teams', $this->Project->Team->find('list'));
