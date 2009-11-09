@@ -5,7 +5,6 @@
 <table>
 	<thead>
 		<tr>
-			<th>Id</th>
 			<th>Name</th>
 		</tr>
 	</thead>
@@ -13,8 +12,7 @@
 	foreach($project['Team'] as $team):
 ?>
 		<tr>
-			<td><?php echo $team['id']; ?></td>
-			<td><?php echo $team['name']; ?></td>
+			<td><?php echo $html->link($team['name'],'/teams/view/'.$team['id']);?></td>
 		</tr><?php
 	endforeach;
 ?>
@@ -24,9 +22,8 @@
 <table>
 	<thead>
 		<tr>
-			<th>Id</th>
 			<th>Name</th>
-			<th>Role</th>
+			<th> Role</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -34,8 +31,7 @@
 	foreach($project['User'] as $user):
 ?>
 		<tr>
-			<td><?php echo $user['id']; ?></td>
-			<td><?php echo $user['name']; ?></td>
+			<td><?php echo $html->link($user['name'],'/users/view/'.$user['id']);?></td>
 			<td><?php echo $user['role_name']; ?></td>
 		</tr><?php
 	endforeach;
