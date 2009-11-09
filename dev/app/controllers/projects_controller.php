@@ -139,21 +139,23 @@ class ProjectsController extends AppController {
 	 * @param id {int} Id du projet à consulter
 	 */
 	public function view($id = null) {
-		/* Récupération du projet d'id id. */
-        $this->Project->id = $id;
-		$project = $this->Project->read();
+		if(!is_null($id)) {
+			/* Récupération du projet d'id id. */
+			$this->Project->id = $id;
+			$project = $this->Project->read();
 
-		/* Recherche des noms de rôles correspondant. */
-		$this->loadModel('Role');
-		$roles = array();
-		foreach($project['User'] as &$user) {
-			$roleId = $user['ProjectsUser']['role_id'];
-			if(!isset($roles[$roleId]))
-				$roles[$roleId] = $this->getRoleName($roleId);
-			$user['role_name'] = $roles[$roleId];
+			/* Recherche des noms de rôles correspondant. */
+			$this->loadModel('Role');
+			$roles = array();
+			foreach($project['User'] as &$user) {
+				$roleId = $user['ProjectsUser']['role_id'];
+				if(!isset($roles[$roleId]))
+					$roles[$roleId] = $this->getRoleName($roleId);
+				$user['role_name'] = $roles[$roleId];
+			}
+			
+			$this->set('project', $project);
 		}
-		
-        $this->set('project', $project);
     }
 	
 	/**
