@@ -23,20 +23,20 @@
         <div id="header">
             <div id="logo">PROUT</div>
             <ul id="menu">
-                <li><?php echo $html->link("Users", array("controller" => "users")); ?></li>
-                <li><?php echo $html->link("Teams", array("controller" => "teams")); ?></li>
-                <li><?php echo $html->link("Projects", array("controller" => "projects")); ?></li>
-                <li><?php echo $html->link("Roles", array("controller" => "roles")); ?></li>
-                <li><?php echo $html->link("Tasks", array("controller" => "tasks")); ?></li>
+                <li><?php echo $html->link("Users", array("controller" => "users", "action" => "index")); ?></li>
+                <li><?php echo $html->link("Teams", array("controller" => "teams", "action" => "index")); ?></li>
+                <li><?php echo $html->link("Projects", array("controller" => "projects", "action" => "index")); ?></li>
+                <li><?php echo $html->link("Roles", array("controller" => "roles", "action" => "index")); ?></li>
+                <li><?php echo $html->link("Tasks", array("controller" => "tasks", "action" => "index")); ?></li>
             </ul>
         </div>
 
         <ul id="nav">
-            <li><?php echo $html->link("Users", array("controller" => "users")); ?></li>
-            <li><?php echo $html->link("Teams", array("controller" => "teams")); ?></li>
-            <li><?php echo $html->link("Projects", array("controller" => "projects")); ?></li>
-            <li><?php echo $html->link("Roles", array("controller" => "roles")); ?></li>
-            <li><?php echo $html->link("Tasks", array("controller" => "tasks")); ?></li>
+            <li><?php echo $html->link("Users", array("controller" => "users", "action" => "index")); ?></li>
+            <li><?php echo $html->link("Teams", array("controller" => "teams", "action" => "index")); ?></li>
+            <li><?php echo $html->link("Projects", array("controller" => "projects", "action" => "index")); ?></li>
+            <li><?php echo $html->link("Roles", array("controller" => "roles", "action" => "index")); ?></li>
+            <li><?php echo $html->link("Tasks", array("controller" => "tasks", "action" => "index")); ?></li>
         </ul>
 
         <div id="content">
