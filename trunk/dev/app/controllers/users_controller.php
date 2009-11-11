@@ -30,6 +30,13 @@ class UsersController extends AppController
                     $return = false;
                 }
                 break;
+			case 'edit':
+				if ($user['Role']['name'] != 'site_admin') {
+                    if($user['Id'] != $this->Auth->user('id')) {
+						$return = false;
+					}
+                }
+                break;
         }
         return $return;
     }
@@ -40,6 +47,8 @@ class UsersController extends AppController
     public function index()
     {
         $this->set('users', $this->User->find('all'));
+		$this->set('id', $this->Auth->user('id'));
+		$this->set('role', $this->Auth->user('role_id'));
     }
 
     /**
