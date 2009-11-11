@@ -24,15 +24,7 @@
 				<td><?php echo $user['User']['created']; ?></td>
 				<td><?php echo $user['User']['modified']; ?></td>
 				<td>
-					<?php if ($role != 2): ?>
-						<?php if ($user['User']['id'] == $id): ?>
-							<?php echo $html->link( $html->image('delete.png'),
-										array('controller'=>'users',
-											'action'=>'delete',
-											$user['User']['id']),
-										array('escape' => false) ); ?>
-						<?php endif; ?>
-					<?php else : ?>
+					<?php if ($role == 2): ?>
 						<?php echo $html->link( $html->image('delete.png'),
 										array('controller'=>'users',
 											'action'=>'delete',
