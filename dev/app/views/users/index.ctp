@@ -8,7 +8,6 @@
         <th>Date d'inscription</th>
         <th>Date derni&egrave;re modif</th>
         <th>Options</th>
-		<th>Options</th>
     </tr>
 		<?php foreach($users as $user): ?>
 			<tr>
