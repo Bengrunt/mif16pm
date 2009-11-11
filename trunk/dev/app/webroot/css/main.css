@@ -1,38 +1,102 @@
-/* Main design */
 
-#header
-{
+.container_12 {
 }
-    #header #logo
-    {
-        background: url('../img/logo.png');
-        text-indent: -9999;
+
+.container_16 {
+    background: #fff url(../../img/16_col.gif) repeat-y;
+}
+
+.container_24 {
+    background: #fff url(../../img/24_col.gif) repeat-y;
+}
+
+/*****************************
+ * Header
+*****************************/
+#logo {
+    background: url('../img/logo.png') no-repeat;
+}
+    #logo,
+    #logo a {
+        height: 133px;
+        width: 374px;
     }
-    #header #menu
-    {
-        text-align: right;
+    #logo a {
+        display: inline-block;
     }
-        #header #menu li
-        {
-            display: inline;
+
+#user-info {
+    height: 150px;
+}
+
+/*****************************
+ * Menu
+*****************************/
+#menu {
+    height: 60px;
+    margin-bottom: 10px;
+    text-align: center;
+    vertical-align: bottom;
+}
+    #menu li {
+        position: relative;
+        top: -10px;
+        vertical-align: bottom;
+    }
+        #menu li img {
+            display: block;
+            margin: 0 auto 5px;
+        }
+        #menu li a {
+            color: white;
+            font-weight: bold;
         }
 
-#nav
-{
-    float: left;
-    width: 15%;
+/*****************************
+ * Navigation
+*****************************/
+#nav {
+    background-color: #e8ecf3;
+    border: 1px solid #bdbdbd;
+    margin-bottom: 10px;
 }
-    #nav li
-    {
+    #nav h2 {
+        background: url('../img/nav-header-background.png') repeat-x;
+        border-bottom: 1px solid #d4d6db;
+        color: white;
+        font-size: 1.4em;
+        height: 31px;
+        margin: 0;
+        padding: 6px 0 0 10px;
     }
+    #nav ul {
+        list-style: none outside;
+    }
+        #nav ul li {
+            background: url('../img/nav-li-background.png') no-repeat 0px 6px;
+            border-top: 1px solid white;
+            border-bottom: 1px solid #d4d6db;
+            padding: 0;
+        }
+        #nav ul li:hover {
+            background-color: #feffe3;
+        }
+            #nav ul li a {
+                display: inline-block;
+                height: 100%;
+                padding: 5px 0 5px 25px;
+                width: 100%;
+            }
 
-#content
-{
-    float: right;
-    width: 84%;
+/*****************************
+ * Footer
+*****************************/
+#footer {
+    background: #272727 url('../img/footer-background.png') repeat-x;
+    color: white;
+    padding: 15px 0 15px 0;
+    text-align: justify;
 }
-
-#footer
-{
-    clear: both;
-}
+    #footer h3 {
+        text-align: center;
+    }
