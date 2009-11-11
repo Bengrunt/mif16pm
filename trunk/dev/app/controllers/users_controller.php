@@ -25,6 +25,7 @@ class UsersController extends AppController
         switch ($this->action)
         {
             case 'index':
+				break;
             case 'delete':
                 if ($user['Role']['name'] != 'site_admin') {
                     $return = false;

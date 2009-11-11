@@ -14,6 +14,8 @@ class TasksController extends AppController
 	public function index()
     {
         $this->set('tasks', $this->Task->find('all'));
+		$this->set('project_id', $this->Task->task('project_id'));
+		$this->set('chief', $this);
     }
 
 	public function view($id = null)
