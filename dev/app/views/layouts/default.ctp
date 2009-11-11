@@ -1,49 +1,130 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title><?php echo $title_for_layout; ?></title>
 
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-		<link rel="stylesheet" href="css/cake.generic.css" type="text/css" />
 
-        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />
+        <?php echo $html->css(array("reset", "960", "global", "main")); ?>
+
+        <!--<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />
         <link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
-
-        <?php echo $html->css(array("reset", "global", "main")); ?>
 
         <script type="text/javascript" src="http://jqueryui.com/latest/jquery-1.3.2.js"></script>
         <script type="text/javascript" src="http://jqueryui.com/latest/ui/ui.core.js"></script>
-        <script type="text/javascript" src="http://jqueryui.com/latest/ui/ui.datepicker.js"></script>
+        <script type="text/javascript" src="http://jqueryui.com/latest/ui/ui.datepicker.js"></script>-->
 
         <?php echo $scripts_for_layout ?>
     </head>
     <body>
+        <div class="container_12">
+            <div class="grid_8">
+                <div id="logo"><?php echo $html->link("", "/"); ?></div>
+            </div>
+            <div id="user-info" class="grid_4">
+                <p>Bienvenue, <strong>Adrian</strong> !</p>
+            </div>
+            <div class="clear"></div>
 
-        <div id="header">
-            <div id="logo">PROUT</div>
             <ul id="menu">
-                <li><?php echo $html->link("Users", array("controller" => "users", "action" => "index")); ?></li>
-                <li><?php echo $html->link("Teams", array("controller" => "teams", "action" => "index")); ?></li>
-                <li><?php echo $html->link("Projects", array("controller" => "projects", "action" => "index")); ?></li>
-                <li><?php echo $html->link("Roles", array("controller" => "roles", "action" => "index")); ?></li>
-                <li><?php echo $html->link("Tasks", array("controller" => "tasks", "action" => "index")); ?></li>
+                <li class="grid_2">
+                    <a href="#">
+                        <?php echo $html->image("menu/home.png"); ?>
+                        <span>Accueil</span>
+                    </a>
+                </li>
+                <li class="grid_2">
+                    <a href="#">
+                        <?php echo $html->image("menu/project.png"); ?>
+                        <span>Projets</span>
+                    </a>
+                </li>
+                <li class="grid_2">
+                    <a href="#">
+                        <?php echo $html->image("menu/team.png"); ?>
+                        <span>&Eacute;quipes</span>
+                    </a>
+                </li>
+                <li class="grid_2">
+                    <a href="#">
+                        <?php echo $html->image("menu/task.png"); ?>
+                        <span>T&acirc;ches</span>
+                    </a>
+                </li>
+                <li class="grid_2">
+                    <a href="#">
+                        <?php echo $html->image("menu/planning.png"); ?>
+                        <span>Planning</span>
+                    </a>
+                </li>
+                <li class="grid_2">
+                    <a href="#">
+                        <?php echo $html->image("menu/about.png"); ?>
+                        <span>&Agrave; propos</span>
+                    </a>
+                </li>
             </ul>
+
+            <div class="clear"></div>
+
+            <div class="grid_3">
+                <div id="nav">
+                    <h2>Projets</h2>
+                    <ul>
+                        <li><a href="#">Créer un projet</a></li>
+                        <li><a href="#">Créer un projet</a></li>
+                    </ul>
+                    <h2>Projets</h2>
+                    <ul>
+                        <li><a href="#">Créer un projet</a></li>
+                        <li><a href="#">Créer un projet</a></li>
+                    </ul>
+                    <h2>Projets</h2>
+                    <ul>
+                        <li><a href="#">Créer un projet</a></li>
+                        <li><a href="#">Créer un projet</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="content" class="grid_9">
+                <p>
+                    <?php echo $content_for_layout; ?>
+                </p>
+            </div>
+
+            <div class="clear"></div>
+
         </div>
 
-        <ul id="nav">
-            <li><?php echo $html->link("Users", array("controller" => "users", "action" => "index")); ?></li>
-            <li><?php echo $html->link("Teams", array("controller" => "teams", "action" => "index")); ?></li>
-            <li><?php echo $html->link("Projects", array("controller" => "projects", "action" => "index")); ?></li>
-            <li><?php echo $html->link("Roles", array("controller" => "roles", "action" => "index")); ?></li>
-            <li><?php echo $html->link("Tasks", array("controller" => "tasks", "action" => "index")); ?></li>
-        </ul>
-
-        <div id="content">
-            <?php echo $content_for_layout ?>
+        <div id="footer">
+            <div class="container_12">
+                <div class="grid_4">
+                    <h3>Try it for free!</h3>
+                    <p>
+                        PROUT is absolutely free for everyone.
+                        Just register, create a new project and enjoy!
+                    </p>
+                </div>
+                <div class="grid_4">
+                    <h3>Contact us</h3>
+                    <p>
+                        Feel free to tell us everything you want about
+                        PROUT.
+                    </p>
+                </div>
+                <div class="grid_4">
+                    <h3>Who are we?</h3>
+                    <p>
+                        Except for Manu, we are all normal guys,
+                        students in computer science. We love coding,
+                        girls and beers. We hate Windows. \o/
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
         </div>
-
-        <div id="footer">This is a footer :) And it may kick your ass!</div>
-
     </body>
 </html>
