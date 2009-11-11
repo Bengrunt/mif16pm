@@ -97,4 +97,20 @@ class UsersController extends AppController
     {
         $this->redirect(array('controller' => 'users', 'action' => 'index'));
     }
+	
+	public function edit($id = null) {
+	
+		if(empty($this->data))
+		{
+			$this->User->id = $id; 
+			$this->data = $this->User->read();
+		}
+		else
+		{
+			if($this->User->save($this->data['User']))
+			{
+				$this->flash('Le profil Utilisateur a été mis à jour ');
+			}
+		}
+	}
 }
