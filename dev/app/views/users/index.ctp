@@ -23,7 +23,7 @@
 				<td><?php echo $user['User']['created']; ?></td>
 				<td><?php echo $user['User']['modified']; ?></td>
 				<td>
-					<?php if ($role == 2): ?>
+					<?php if ($role == 'site_admin'): ?>
 						<?php echo $html->link( $html->image('delete.png'),
 										array('controller'=>'users',
 											'action'=>'delete',
@@ -33,7 +33,7 @@
 					
 				</td>
 				<td>
-					<?php if ($role != 2): ?>
+					<?php if ($role != 'site_admin'): ?>
 						<?php if ($user['User']['id'] == $id): ?>
 							<?php echo $html->link( $html->image('edit.png'),
 									array('controller'=>'users',
