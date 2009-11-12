@@ -1,6 +1,6 @@
 #summary Compte rendu express de la séance de travail du 04/11/2009.
 
-= Compte rendu du TP du 04/11/2009 =
+= Compte rendu du TP n°4 du 04/11/2009 =
 ----
 *Membres présents:* Benjamin GUILLON, Adrian GAUDEBERT, Emmanuel GAUDE , Emmanuel HALTER
 
