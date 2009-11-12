@@ -15,10 +15,23 @@ class TasksController extends AppController
     {
 		
 		$this->Task->User->id = $this->Auth->user('id');
-        $user = $this->Task->read();
+        $user = $this->Task->User->read();
 	
-        $this->set('tasks', $this->Task->find('all'));
-		$this->set('id', $this->Auth->user('id'));
+		$tasks = $this->Task->find('all');
+		
+		foreach($tasks as &$task) {
+			$task['isMyBusiness'] = false;
+			foreach($task['User'] as $taskUser) {
+				if($this->Task->User->id == $taskUser['id']) {
+					$task['isMyBusiness'] = true;
+					break;
+				}
+			}
+		}
+		
+        $this->set('tasks', $tasks);
+		
+		//$this->set('id', $id);
 		$this->set('role' , $user['Role']['name']);
     }
 

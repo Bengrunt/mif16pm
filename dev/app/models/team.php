@@ -11,7 +11,7 @@ class Team extends AppModel
 
     public $hasAndBelongsToMany = 'User';
     public $belongsTo = 'Project';
-	//public $hasAndBelongsToMany = 'Task';
+	public $hasMany = 'Task';
 
     /*public $validate = array(
         'name' => array(
