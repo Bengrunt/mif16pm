@@ -83,23 +83,6 @@ CREATE TABLE IF NOT EXISTS `Tasks` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Tasks_Teams`
---
-
-CREATE TABLE IF NOT EXISTS `Tasks_Teams` (
-  `task_id` int(11) NOT NULL,
-  `team_id` int(11) NOT NULL,
-  PRIMARY KEY  (`task_id`,`team_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Contenu de la table `Tasks_Teams`
---
-
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `Teams`
 --
 
