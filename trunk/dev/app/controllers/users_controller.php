@@ -47,9 +47,12 @@ class UsersController extends AppController
      */
     public function index()
     {
+		$this->User->id = $this->Auth->user('id');
+        $user = $this->User->read();
+	
         $this->set('users', $this->User->find('all'));
 		$this->set('id', $this->Auth->user('id'));
-		$this->set('role', $this->Auth->user('role_id'));
+		$this->set('role', $user['Role']['name']);
     }
 
     /**

@@ -5,6 +5,7 @@
         <th>Duree</th>
     </tr>
     <?php foreach($tasks as $task): ?>
+	<?php if  ?>
     <tr>
         <td>
             <?php echo $html->link(
