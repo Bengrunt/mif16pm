@@ -111,6 +111,7 @@ class ProjectsController extends AppController {
 	public function index()
     {	
 		$idRoleProjectAdmin = -1; /*< Id du rôle d'admin de projet. */
+		$idRoleSiteAdmin = -1; /*< Id du rôle d'admin de l'application. */
 		$this->loadModel('Role');
 		$idRoleProjectAdmin = $this->getRoleId('project_admin');
 		
@@ -118,6 +119,17 @@ class ProjectsController extends AppController {
 			$this->flash(
 				'Erreur : Il n\'y aucun rôle ' +
 				'`project_admin` n\'existe dans la base.',
+				'/projects'
+			);
+			return;
+		}
+		
+		$idRoleSiteAdmin = $this->getRoleId('site_admin');
+		
+		if($idRoleSiteAdmin == -1) {
+			$this->flash(
+				'Erreur : Il n\'y aucun rôle ' +
+				'`site_admin` n\'existe dans la base.',
 				'/projects'
 			);
 			return;
@@ -131,6 +143,7 @@ class ProjectsController extends AppController {
 		}
 		
 		$this->set('projects', $projects);
+		$this->set('isSiteAdmin', $idRoleSiteAdmin == $this->Auth->user("role_id"));
     }
 	
 	/**
