@@ -4,8 +4,9 @@
         <th>Projet</th>
         <th>Duree</th>
     </tr>
+	<?php echo '<pre>';var_dump($tasks, $id); echo '</pre>';?>
     <?php foreach($tasks as $task): ?>
-		<?php if(($task['Task']['User']['id'] == $id): ?> 
+		<?php if(($task['Task']['User']['id'] == $id)): ?> 
 			<tr>
 				<td>
 					<?php echo $html->link(
@@ -25,9 +26,8 @@
 				</td>
 
 			</tr>
-		<?php endif; ?>
 		
-		<?php else if(($role == 'site_admin')): ?>
+		<?php elseif(($role == 'site_admin')): ?>
 			<tr>
 				<td>
 					<?php echo $html->link(
@@ -52,9 +52,8 @@
 				</td>
 
 			</tr>
-		<?php endif; ?>
 		
-		<?php else if(($role != 'site_admin') or ($task->User != $user_id)): ?>
+		<?php elseif(($role != 'site_admin') or ($task['Task']['User']['id'] != $id)): ?>
 			<tr>
 				<td>
 					<?php echo $html->link(

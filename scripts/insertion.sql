@@ -84,3 +84,10 @@ INSERT INTO `projects_users` (`project_id`, `user_id`, `role_id`) VALUES
 (1, 3, 5), (1, 2, 6), (1, 4, 6), (1, 5, 6),
 (6, 4, 5), (6, 3, 6)
 ;
+
+--
+-- Contenu de la table `tasks_users`
+--
+
+INSERT INTO `tasks_users` (`task_id`, `user_id`) VALUES
+(1, 0);
