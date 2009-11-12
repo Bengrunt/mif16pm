@@ -13,7 +13,12 @@ class TasksController extends AppController
 		
 	public function index()
     {
+		$this->User->id = $this->Auth->user('id');
+        $user = $this->User->read();
+	
         $this->set('tasks', $this->Task->find('all'));
+		$this->set('user_id', $this->Auth->user('id'));
+		$this->set('role' , $user['Role']['name']);
     }
 
 	public function view($id = null)
