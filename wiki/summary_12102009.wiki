@@ -1,0 +1,12 @@
+#summary Compte rendu de la séance de travail du 12/11/2009.
+
+= Compte rendu de la séance de travail du 12/11/2009 =
+
+*Membres présents:* Rémi AUDUON, Benjamin GUILLON, Adrian GAUDEBERT, Emmanuel GAUDE, Emmanuel HALTER, Mamy RAMINOSOA.
+
+*Objectifs de la séance de travail :* 
+ * integrer le site correctement avec l'interface
+ * gerer les options/actions utilisateurs selon les droits d'accès dans les différentes sections.
+
+*Commentaires*
+ * L'architecture du dépot SVN a été revue pour mieux intégrer les systèmes de branches et de tags (pour les releases).
