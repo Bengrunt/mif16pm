@@ -5,7 +5,7 @@
         <th>Duree</th>
     </tr>
     <?php foreach($tasks as $task): ?>
-		<?php if($task->User['user_id'] == $user_id or $role != 'site_admin'): ?>
+		<?php if(($task->User == $user_id) or ($role != 'site_admin')): ?>
 			<tr>
 				<td>
 					<?php echo $html->link(
