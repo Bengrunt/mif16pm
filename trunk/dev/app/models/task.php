@@ -8,10 +8,9 @@
  */
 class Task extends AppModel
 {
-    public $name = "Task";
-    public $hasAndBelongsToMany = "Team";
-	public $belongsTo = "Project";
-	public $hasToMany = "User";
+    public $name = 'Task';
+    public $hasAndBelongsToMany = array('Team','User');
+	public $belongsTo = 'Project';
 	
 	public $validate = array(
 		'task_name' => array(
