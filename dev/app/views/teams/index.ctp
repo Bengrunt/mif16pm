@@ -16,7 +16,7 @@
         <td><?php echo $team['Team']['description']; ?></td>
         <td><?php echo $team['Project']['name']; ?></td>
 	
-	<?php if($role == 'site_admin' or $role == 'team_admin'): ?>
+	<?php if($role == 'site_admin'): ?>
 		<td>
 				<?php echo $html->link(	$html->image('delete.png'),
 							array(	'controller'=>'teams',
@@ -29,16 +29,6 @@
 								$team['Team']['id']),
 							array('escape' => false)); ?>
 		</td>
-		
-	<?php elseif($team['isMyTeam']):?> 
-			<td><?php echo $html->link(
-					$html->image('edit.png'),
-					array(
-						'controller'=>'teams',
-						'action'=>'edit', 
-						$team['Team']['id']),
-						array('escape' => false)); ?>
-			</td>
     <?php else:?>
 			<td></td>
 <?php endif;?>
