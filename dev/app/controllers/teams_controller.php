@@ -15,6 +15,25 @@ class TeamsController extends AppController
     public function index()
     {
         $this->set('teams', $this->Team->find('all'));
+		$this->Team->User->id = $this->Auth->user('id');
+        $user = $this->Team->User->read();
+	
+		$teams = $this->Team->find('all');
+		
+		foreach($teams as &$team) {
+			$team['isMyTeam'] = false;
+			foreach($team['User'] as $teamUser) {
+				if($this->Team->User->id == $teamUser['id']) {
+					$team['isMyTeam'] = true;
+					break;
+				}
+			}
+		}
+		
+        $this->set('teams', $teams);
+		
+		//$this->set('id', $id);
+		$this->set('role' , $user['Role']['name']);
     }
 
     /**
