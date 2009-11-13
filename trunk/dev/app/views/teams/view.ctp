@@ -11,8 +11,35 @@
 			$teamUser['User']['name'],
 			array('controller' => 'users', 'action' => 'view', $teamUser['User']['id'])
 		);
-	?></li>
+	?>
+	
+	<?php elseif($teamUser['isMyTeamb'] and $role == 'team_admin'):?> 
+			<td>
+				<?php echo $html->link(
+					$html->image('edit.png'),
+					array(
+						'controller'=>'teams',
+						'action'=>'edit', 
+						$teamUser['User']['id']),
+						array('escape' => false)); ?>
+				<?php echo $html->link(	$html->image('delete.png'),
+							array(	'controller'=>'teams',
+								'action'=>'delete', 
+								$teamUser['User']['id']),
+							array('escape' => false) ); ?>
+			</td>
+			
+	<?php elseif($team['isMyTeamb']):?> 
+			<td><?php echo $html->link(
+					$html->image('edit.png'),
+					array(
+						'controller'=>'teams',
+						'action'=>'edit', 
+						$teamUser['User']['id']),
+						array('escape' => false)); ?>
+			</td>
 	<?php endforeach;?>
+	    </li>
 		</ul>
 	</li>
 </ul>

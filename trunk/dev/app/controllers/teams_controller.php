@@ -80,6 +80,22 @@ class TeamsController extends AppController
 			$this->set('teamAdmin', $teamAdminResult[0]['User']['name']);
 			$this->set('teamUsers', $teamUsers);
 			$this->set('team', $this->Team->read());
+			
+			$this->set('teamUsers', $this->Team->find('all'));
+			$this->Team->User->id = $this->Auth->user('id');
+			$user = $this->Team->User->read();
+		
+			$teamUsers = $this->Team->find('all');
+			
+				foreach($teamUsers as &$teamUser) {
+				$teamUser['isMyTeamb'] = false;
+				foreach($teamUser['User'] as $teamUser) {
+					if($this->Team->User->id == $teamUser['id']) {
+						$teamUser['isMyTeamb'] = true;
+						break;
+					}
+				}
+			}
 		} else {
 			// TODO : mettre un message d'erreur et/ou rediriger sur page d'accueil du controlleur
 			exit(0);
