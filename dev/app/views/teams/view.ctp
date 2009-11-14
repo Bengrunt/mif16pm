@@ -13,7 +13,7 @@
 		);
 	?>
 	
-	<?php elseif($teamUser['isMyTeamb'] and $role == 'team_admin'):?> 
+	<?php else if($team['isMyTeamb'] and $role == 'team_admin'):?> 
 			<td>
 				<?php echo $html->link(
 					$html->image('edit.png'),
@@ -29,7 +29,7 @@
 							array('escape' => false) ); ?>
 			</td>
 			
-	<?php elseif($team['isMyTeamb']):?> 
+	<?php else if($team['isMyTeamb']):?> 
 			<td><?php echo $html->link(
 					$html->image('edit.png'),
 					array(
