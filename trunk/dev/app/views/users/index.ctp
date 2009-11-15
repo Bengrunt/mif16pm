@@ -1,13 +1,13 @@
 <table>
     <tr>
-        <th>Id</th>
-        <th>Nom</th>
-        <th>Role</th>
+        <th>Identifiant</th>
+        <th>Pseudo</th>
+        <th>Rôle</th>
         <th>Pr&eacute;nom</th>
         <th>Nom</th>
         <th>Date d'inscription</th>
         <th>Date derni&egrave;re modif</th>
-        <th>Options</th>
+        <th>Options Admin</th>
     </tr>
 		<?php foreach($users as $user): ?>
 			<tr>
