@@ -23,44 +23,46 @@
             <div class="grid_8">
                 <div id="logo"><?php echo $html->link("", "/"); ?></div>
             </div>
-            <div id="user-info" class="grid_4">
-                <p>Bienvenue, <strong>Adrian</strong> !</p>
+            <div class="grid_4">
+                <div id="user-info">
+                    <p>Bienvenue, <strong>Adrian</strong> !</p>
+                </div>
             </div>
             <div class="clear"></div>
 
             <ul id="menu">
                 <li class="grid_2">
-                    <a href="#">
+                    <a href="<?php echo $html->url( "/" ); ?>">
                         <?php echo $html->image("menu/home.png"); ?>
                         <span>Accueil</span>
                     </a>
                 </li>
                 <li class="grid_2">
-                    <a href="#">
+                    <a href="<?php echo $html->url( array( "controller" => "projects" ) ); ?>">
                         <?php echo $html->image("menu/project.png"); ?>
                         <span>Projets</span>
                     </a>
                 </li>
                 <li class="grid_2">
-                    <a href="#">
+                    <a href="<?php echo $html->url( array( "controller" => "teams" ) ); ?>">
                         <?php echo $html->image("menu/team.png"); ?>
                         <span>&Eacute;quipes</span>
                     </a>
                 </li>
                 <li class="grid_2">
-                    <a href="#">
+                    <a href="<?php echo $html->url( array( "controller" => "tasks" ) ); ?>">
                         <?php echo $html->image("menu/task.png"); ?>
                         <span>T&acirc;ches</span>
                     </a>
                 </li>
                 <li class="grid_2">
-                    <a href="#">
+                    <a href="<?php echo $html->url( array( "controller" => "planning" ) ); ?>">
                         <?php echo $html->image("menu/planning.png"); ?>
                         <span>Planning</span>
                     </a>
                 </li>
                 <li class="grid_2">
-                    <a href="#">
+                    <a href="<?php echo $html->url( array( "controller" => "about" ) ); ?>">
                         <?php echo $html->image("menu/about.png"); ?>
                         <span>&Agrave; propos</span>
                     </a>
