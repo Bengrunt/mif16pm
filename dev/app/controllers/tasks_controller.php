@@ -33,6 +33,9 @@ class TasksController extends AppController
 		
 		//$this->set('id', $id);
 		$this->set('role' , $user['Role']['name']);
+		$this->set('projects',$user['Project']);
+		
+		//$this->set('project', $user['Project']);
     }
 
 	public function view($id = null)
