@@ -27,10 +27,19 @@
                 <div id="user-info">
                     <div class="user-info-content">
 
-                    <?php $session->read("Auth.User.name");// { ?>
+                    <?php
+                    $username = $session->read( "Auth.User.name" );
+                    if ( !empty( $username ) ) { ?>
                         <p>Bienvenue, <strong><?php echo $session->read("Auth.User.name"); ?></strong> !</p>
                         <p><?php echo $html->link("Se déconnecter", array("controller" => "users", "action" => "logout")); ?></p>
-
+                    <?php } else {
+                        echo $form->create('User', array('action' => 'login'));
+                        echo $form->inputs(array(
+                            'legend' => __('Login', true),
+                            'name',
+                            'password'));
+                        echo $form->end('Login');
+                    } ?>
 
                     </div>
                 </div>
