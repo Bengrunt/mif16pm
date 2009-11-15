@@ -58,31 +58,31 @@
                     </a>
                 </li>
                 <li class="grid_2">
-                    <a href="<?php echo $html->url( array( "controller" => "projects" ) ); ?>">
+                    <a href="<?php echo $html->url( array( "controller" => "projects", "action" => "index" ) ); ?>">
                         <?php echo $html->image("menu/project.png"); ?>
                         <span>Projets</span>
                     </a>
                 </li>
                 <li class="grid_2">
-                    <a href="<?php echo $html->url( array( "controller" => "teams" ) ); ?>">
+                    <a href="<?php echo $html->url( array( "controller" => "teams", "action" => "index" ) ); ?>">
                         <?php echo $html->image("menu/team.png"); ?>
                         <span>&Eacute;quipes</span>
                     </a>
                 </li>
                 <li class="grid_2">
-                    <a href="<?php echo $html->url( array( "controller" => "tasks" ) ); ?>">
+                    <a href="<?php echo $html->url( array( "controller" => "tasks", "action" => "index" ) ); ?>">
                         <?php echo $html->image("menu/task.png"); ?>
                         <span>T&acirc;ches</span>
                     </a>
                 </li>
                 <li class="grid_2">
-                    <a href="#<?php //echo $html->url( array( "controller" => "planning" ) ); ?>" class="disable">
+                    <a href="#<?php //echo $html->url( array( "controller" => "planning", "action" => "index" ) ); ?>" class="disable">
                         <?php echo $html->image("menu/planning.png"); ?>
                         <span>Planning</span>
                     </a>
                 </li>
                 <li class="grid_2">
-                    <a href="#<?php //echo $html->url( array( "controller" => "about" ) ); ?>" class="disable">
+                    <a href="#<?php //echo $html->url( array( "controller" => "about", "action" => "index" ) ); ?>" class="disable">
                         <?php echo $html->image("menu/about.png"); ?>
                         <span>&Agrave; propos</span>
                     </a>
