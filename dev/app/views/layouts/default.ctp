@@ -25,7 +25,14 @@
             </div>
             <div class="grid_4">
                 <div id="user-info">
-                    <p>Bienvenue, <strong>Adrian</strong> !</p>
+                    <div class="user-info-content">
+
+                    <?php $session->read("Auth.User.name");// { ?>
+                        <p>Bienvenue, <strong><?php echo $session->read("Auth.User.name"); ?></strong> !</p>
+                        <p><?php echo $html->link("Se déconnecter", array("controller" => "user", "action" => "logout")); ?></p>
+
+
+                    </div>
                 </div>
             </div>
             <div class="clear"></div>
@@ -56,13 +63,13 @@
                     </a>
                 </li>
                 <li class="grid_2">
-                    <a href="<?php echo $html->url( array( "controller" => "planning" ) ); ?>">
+                    <a href="#<?php //echo $html->url( array( "controller" => "planning" ) ); ?>" class="disable">
                         <?php echo $html->image("menu/planning.png"); ?>
                         <span>Planning</span>
                     </a>
                 </li>
                 <li class="grid_2">
-                    <a href="<?php echo $html->url( array( "controller" => "about" ) ); ?>">
+                    <a href="#<?php //echo $html->url( array( "controller" => "about" ) ); ?>" class="disable">
                         <?php echo $html->image("menu/about.png"); ?>
                         <span>&Agrave; propos</span>
                     </a>
@@ -71,7 +78,7 @@
 
             <div class="clear"></div>
 
-            <div class="grid_3">
+            <!--<div class="grid_3">
                 <div id="nav">
                     <h2>Projets</h2>
                     <ul>
@@ -89,9 +96,10 @@
                         <li><a href="#">Créer un projet</a></li>
                     </ul>
                 </div>
-            </div>
+            </div>-->
 
-            <div id="content" class="grid_9">
+            <!--<div id="content" class="grid_9">-->
+            <div id="content" class="grid_12">
                 <p>
                     <?php echo $content_for_layout; ?>
                 </p>
