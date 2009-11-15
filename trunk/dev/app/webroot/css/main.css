@@ -27,12 +27,17 @@
 
 #user-info {
     height: 150px;
+    text-align: right;
 }
 #user-info:before {
     content: url('../img/header-sep.png');
+    float: left;
     height: 146px;
     width: 2px;
 }
+    #user-info .user-info-content {
+        padding: 15px 5px;
+    }
 
 /*****************************
  * Menu
@@ -48,6 +53,9 @@
         top: -10px;
         vertical-align: bottom;
     }
+        #menu li .disable {
+            color: gray;
+        }
         #menu li img {
             display: block;
             margin: 0 auto 5px;
@@ -92,6 +100,13 @@
                 padding: 5px 0 5px 25px;
                 width: 100%;
             }
+
+/*****************************
+ * Content
+*****************************/
+#content {
+    margin-bottom: 10px;
+}
 
 /*****************************
  * Footer
