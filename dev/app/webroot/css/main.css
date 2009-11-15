@@ -28,6 +28,11 @@
 #user-info {
     height: 150px;
 }
+#user-info:before {
+    content: url('../img/header-sep.png');
+    height: 146px;
+    width: 2px;
+}
 
 /*****************************
  * Menu
