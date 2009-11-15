@@ -29,7 +29,7 @@
 
                     <?php $session->read("Auth.User.name");// { ?>
                         <p>Bienvenue, <strong><?php echo $session->read("Auth.User.name"); ?></strong> !</p>
-                        <p><?php echo $html->link("Se déconnecter", array("controller" => "user", "action" => "logout")); ?></p>
+                        <p><?php echo $html->link("Se déconnecter", array("controller" => "users", "action" => "logout")); ?></p>
 
 
                     </div>
