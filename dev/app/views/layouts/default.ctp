@@ -30,8 +30,12 @@
                     <?php
                     $username = $session->read( "Auth.User.name" );
                     if ( !empty( $username ) ) { ?>
-                        <p>Bienvenue, <strong><?php echo $session->read("Auth.User.name"); ?></strong> !</p>
-                        <p><?php echo $html->link("Se déconnecter", array("controller" => "users", "action" => "logout")); ?></p>
+                        <p>Bienvenue, <strong><?php echo $html->link($username, array("controller" => "users", "action" => "profile")); ?></strong> !</p>
+                        <p><small><?php echo $html->link(
+                                        $html->image("icons/disconnect.png") . " Se déconnecter",
+                                        array("controller" => "users", "action" => "logout"),
+                                        null, null, false);
+                            ?></small></p>
                     <?php } else {
                         echo $form->create('User', array('action' => 'login'));
                         echo $form->inputs(array(
@@ -121,25 +125,26 @@
         <div id="footer">
             <div class="container_12">
                 <div class="grid_4">
-                    <h3>Try it for free!</h3>
+                    <h3>Qui sommes-nous ?</h3>
                     <p>
-                        PROUT is absolutely free for everyone.
-                        Just register, create a new project and enjoy!
+                        Manu mis à part, nous sommes tous des mecs
+                        normaux, étudiants en informatique. Nous aimons
+                        coder, les filles et la bière. Nous détestons
+                        Windows. \o/
                     </p>
                 </div>
                 <div class="grid_4">
-                    <h3>Contact us</h3>
+                    <h3>Essayez-le gratuitement !</h3>
                     <p>
-                        Feel free to tell us everything you want about
-                        PROUT.
+                        PROUT est totalement gratuit. Enregistrez-vous,
+                        cr&eacute;ez un projet et profitez !
                     </p>
                 </div>
                 <div class="grid_4">
-                    <h3>Who are we?</h3>
+                    <h3>Contactez-nous</h3>
                     <p>
-                        Except for Manu, we are all normal guys,
-                        students in computer science. We love coding,
-                        girls and beers. We hate Windows. \o/
+                        N'hésitez pas à nous dire tout ce que vous
+                        voulez à propos de PROUT.
                     </p>
                 </div>
                 <div class="clear"></div>
