@@ -10,61 +10,83 @@
 	<tbody>
 <?php
 	foreach($tasks as $task):
-?>
-		<tr>
-			<td><?php 
-				echo $html->link(
-					$task['Task']['name'],
-					array('controller' => 'tasks', 'action' => 'view', $task['Task']['id'])
-				);
-			?></td>
-			<td><?php echo $task['Task']['project_id']; ?></td>
-			<td><?php echo $task['Task']['duration']; ?></td>
-<?php
+	
 		if($role == 'site_admin'):
 ?>
-			<td><?php
-				echo $html->link(
-					$html->image('delete.png'),
-					array(
-						'controller'=>'tasks',
-						'action'=>'delete', 
-						$task['Task']['id']
+				<tr>
+				<td><?php 
+					echo $html->link(
+						$task['Task']['name'],
+						array('controller' => 'tasks', 'action' => 'view', $task['Task']['id'])
+					);
+				?></td>
+				<td><?php echo $task['Task']['project_id']; ?></td>
+				<td><?php echo $task['Task']['duration']; ?></td>
+				<td><?php
+					echo $html->link(
+						$html->image('delete.png'),
+						array(
+							'controller'=>'tasks',
+							'action'=>'delete', 
+							$task['Task']['id']
+						),
+						array('escape' => false)
 					),
-					array('escape' => false)
-				),
-				$html->link(
-					$html->image('edit.png'),
-					array(
-						'controller'=>'tasks',
-						'action'=>'edit', 
-						$task['Task']['id']
-					),
-					array('escape' => false)
-				);
-			?></td>
+					$html->link(
+						$html->image('edit.png'),
+						array(
+							'controller'=>'tasks',
+							'action'=>'edit', 
+							$task['Task']['id']
+						),
+						array('escape' => false)
+					);
+				?></td>
 <?php
-		elseif($task['isMyBusiness']):
-?> 
-			<td><?php
-				echo $html->link(
-					$html->image('edit.png'),
-					array(
-						'controller'=>'tasks',
-						'action'=>'edit', 
-						$task['Task']['id']),
-						array('escape' => false
-					)
-				); 
-			?></td>
-<?php
-		else:
+		else :
+		
+			foreach($projects as $project):
+			
+				if($task['Task']['project_id'] == $project['id']):
 ?>
-			<td></td>
+					<tr>
+						<td><?php 
+							echo $html->link(
+								$task['Task']['name'],
+								array('controller' => 'tasks', 'action' => 'view', $task['Task']['id'])
+							);
+						?></td>
+						<td><?php echo $task['Task']['project_id']; ?></td>
+						<td><?php echo $task['Task']['duration']; ?></td>
 <?php
+					if($task['isMyBusiness']):
+?> 
+						<td><?php
+							echo $html->link(
+								$html->image('edit.png'),
+								array(
+									'controller'=>'tasks',
+									'action'=>'edit', 
+									$task['Task']['id']),
+									array('escape' => false
+								)
+							); 
+						?></td>
+<?php
+					else:
+?>
+						<td></td>
+<?php
+					endif;
+?>
+				</tr>
+<?php 
+				endif;
+				
+			endforeach;
+		
 		endif;
 ?>
-		</tr>
 <?php
 	endforeach;
 ?>
