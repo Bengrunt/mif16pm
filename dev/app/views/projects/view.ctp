@@ -1,11 +1,11 @@
 <h1><?php echo $project['Project']['name']; ?></h1>
 <h2>Description</h2>
 <?php echo $project['Project']['description']; ?>
-<h2>Teams</h2>
+<h2>Equipes</h2>
 <table>
 	<thead>
 		<tr>
-			<th>Name</th>
+			<th>Nom</th>
 		</tr>
 	</thead>
 	<tbody><?php
@@ -18,12 +18,12 @@
 ?>
 	</tbody>
 </table>
-<h2>Users</h2>
+<h2>Equipiers</h2>
 <table>
 	<thead>
 		<tr>
-			<th>Name</th>
-			<th>Role</th>
+			<th>Pseudo</th>
+			<th>Rôle</th>
 		</tr>
 	</thead>
 	<tbody>

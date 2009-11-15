@@ -1,10 +1,10 @@
 <table>
 	<thead>
 		<tr>
-			<th>Nom</th>
+			<th>Intitulé</th>
 			<th>Projet</th>
-			<th>Duree</th>
-			<th>Option</th>
+			<th>Durée</th>
+			<th>Options Admin</th>
 		</tr>
 	</thead>
 	<tbody>

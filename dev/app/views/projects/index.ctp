@@ -6,7 +6,7 @@
 <?php
 	if($isSiteAdmin):
 ?>
-		<th>Options</th>
+		<th>Options Admin</th>
 <?php
 	endif;
 ?>

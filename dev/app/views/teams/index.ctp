@@ -3,7 +3,7 @@
         <th>Nom</th>
         <th>Description</th>
         <th>Projet</th>
-		<th>Options</th>
+		<th>Options Admin</th>
     </tr>
     <?php foreach($teams as $team): ?>
     <tr>
