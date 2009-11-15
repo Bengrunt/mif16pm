@@ -44,7 +44,7 @@
 *****************************/
 #menu {
     height: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-align: center;
     vertical-align: bottom;
 }
@@ -71,7 +71,7 @@
 #nav {
     background-color: #e8ecf3;
     border: 1px solid #bdbdbd;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
     #nav h2 {
         background: url('../img/nav-header-background.png') repeat-x;
@@ -105,7 +105,7 @@
  * Content
 *****************************/
 #content {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 /*****************************
@@ -114,6 +114,7 @@
 #footer {
     background: #272727 url('../img/footer-background.png') repeat-x;
     color: white;
+    font-size: 0.9em;
     padding: 15px 0 15px 0;
     text-align: justify;
 }

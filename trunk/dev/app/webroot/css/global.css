@@ -40,7 +40,7 @@ ins {
     text-decoration: underline;
 }
 p {
-    margin: 0 10px;
+    margin: 10px 0px;
 }
 a {
     color: black;
@@ -49,6 +49,9 @@ a {
     a:hover {
         text-decoration: underline;
     }
+small {
+    font-size: 0.8em;
+}
 
 
 /* Tables */
