@@ -1,45 +1,59 @@
-<ul>
-    <li>Nom : <?php echo $team['Team']['name']; ?></li>
-    <li>Description : <?php echo $team['Team']['description']; ?></li>
-    <li>Chef : <?php echo $teamAdmin ?></li>
-    <li>Projet : <?php echo $team['Project']['name']; ?></li>
-	<li>Membres :
-		<ul>
-	<?php foreach($teamUsers as $teamUser): ?>
-	<li><?php
+<h1><?php echo $team['Team']['name']; ?></h1>
+<h2>Description</h2>
+<?php echo $team['Team']['description']; ?>
+<h2>Chef</h2>
+<?php echo $teamAdmin; ?>
+<h2>Projet</h2>
+<?php echo $team['Project']['name'];?>
+<h2>Users</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Nom</th>
+			<th>Rôle</th>
+		</tr>
+	</thead>
+	<tbody>
+<?php
+	foreach($teamUsers as $user):
+?>
+		<tr>
+			<td><?php
+				echo $html->link(
+					$user['User']['name'],
+					array(
+						'controller' => 'users',
+						'action' => 'view',
+						$user['User']['id']
+					)
+				);
+			?></td>
+			<td><?php echo $user['Role']['name'];?></td>
+		</tr>
+<?php
+	endforeach;
+?>
+	</tbody>
+</table>
+<p><?php
+	if($isMyBusiness) {
 		echo $html->link(
-			$teamUser['User']['name'],
-			array('controller' => 'users', 'action' => 'view', $teamUser['User']['id'])
+			$html->image('edit.png') . ' Editer',
+			array(
+				'controller' => 'team',
+				'action' => 'edit',
+				$team['Team']['id']
+			),
+			array('escape' => false)
+		),
+		$html->link(
+			$html->image('delete.png') . 'Supprimer',
+			array(
+				'controller' => 'team',
+				'action' => 'delete',
+				$team['Team']['id']
+			),
+			array('escape' => false)
 		);
-	?>
-	
-	<?php else if($team['isMyTeamb'] and $role == 'team_admin'):?> 
-			<td>
-				<?php echo $html->link(
-					$html->image('edit.png'),
-					array(
-						'controller'=>'teams',
-						'action'=>'edit', 
-						$teamUser['User']['id']),
-						array('escape' => false)); ?>
-				<?php echo $html->link(	$html->image('delete.png'),
-							array(	'controller'=>'teams',
-								'action'=>'delete', 
-								$teamUser['User']['id']),
-							array('escape' => false) ); ?>
-			</td>
-			
-	<?php else if($team['isMyTeamb']):?> 
-			<td><?php echo $html->link(
-					$html->image('edit.png'),
-					array(
-						'controller'=>'teams',
-						'action'=>'edit', 
-						$teamUser['User']['id']),
-						array('escape' => false)); ?>
-			</td>
-	<?php endforeach;?>
-	    </li>
-		</ul>
-	</li>
-</ul>
+	}
+?></p>

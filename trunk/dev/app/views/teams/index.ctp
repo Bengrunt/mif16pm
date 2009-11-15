@@ -19,14 +19,18 @@
 	<?php if($role == 'site_admin'): ?>
 		<td>
 				<?php echo $html->link(	$html->image('delete.png'),
-							array(	'controller'=>'teams',
+							array(
+								'controller'=>'teams',
 								'action'=>'delete', 
-								$team['Team']['id']),
+								$team['Team']['id']
+							),
 							array('escape' => false) ); ?>
 				<?php echo $html->link(	$html->image('edit.png'),
-							array(	'controller'=>'teams',
+							array(
+								'controller'=>'teams',
 								'action'=>'edit', 
-								$team['Team']['id']),
+								$team['Team']['id']
+							),
 							array('escape' => false)); ?>
 		</td>
     <?php else:?>
