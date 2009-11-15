@@ -41,7 +41,7 @@ class TasksController extends AppController
 	public function view($id = null)
     {
         $this->Task->id = $id;
-        $this->set('tasks', $this->Task->read());
+        $this->set('task', $this->Task->read());
     }	
 	
     public function add()
