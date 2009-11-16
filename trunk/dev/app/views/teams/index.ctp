@@ -3,7 +3,13 @@
         <th>Nom</th>
         <th>Description</th>
         <th>Projet</th>
+<?php
+	if($isSiteAdmin):
+?>
 		<th>Options Admin</th>
+<?php
+	endif;
+?>
     </tr>
     <?php foreach($teams as $team): ?>
     <tr>
@@ -16,7 +22,7 @@
         <td><?php echo $team['Team']['description']; ?></td>
         <td><?php echo $team['Project']['name']; ?></td>
 	
-	<?php if($role == 'site_admin'): ?>
+	<?php if($role == 'site_admin' && $isSiteAdmin ): ?>
 		<td>
 				<?php echo $html->link(	$html->image('delete.png'),
 							array(
@@ -25,6 +31,17 @@
 								$team['Team']['id']
 							),
 							array('escape' => false) ); ?>
+				<?php echo $html->link(	$html->image('edit.png'),
+							array(
+								'controller'=>'teams',
+								'action'=>'edit', 
+								$team['Team']['id']
+							),
+							array('escape' => false)); ?>
+		</td>
+		
+	<?php if($role == 'team_admin' && $isSiteAdmin ): ?>
+		<td>
 				<?php echo $html->link(	$html->image('edit.png'),
 							array(
 								'controller'=>'teams',

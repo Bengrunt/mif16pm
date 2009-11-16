@@ -4,14 +4,21 @@
 			<th>Intitulé</th>
 			<th>Projet</th>
 			<th>Durée</th>
-			<th>Options Admin</th>
 		</tr>
 	</thead>
 	<tbody>
+	
+<?php
+	if($isSiteAdmin):
+?>
+		<th>Options Admin</th>
+<?php
+	endif;
+?>
 <?php
 	foreach($tasks as $task):
 	
-		if($role == 'site_admin'):
+		if($role == 'site_admin' && isSiteAdmin):
 ?>
 				<tr>
 				<td><?php 
