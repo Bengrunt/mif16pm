@@ -64,7 +64,6 @@
 <?php
 		else:
 ?>
-		<td></td>
 <?php 
 		endif;
 ?>
