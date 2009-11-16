@@ -8,17 +8,55 @@
 class TeamsController extends AppController
 {
     public $name = "Teams";
+	
+	/**
+	 * Méthode utilitaire donnant l'id d'un rôle à partir de son nom.
+	 *
+	 * @pre		Nécessite une instantiation du modèle Role.
+	 * @post	Id du rôle correspondant retourné.
+	 *
+	 * @param roleName {String} Nom d'un rôle.
+	 * @return {int} Id du rôle associé.
+	 */
+	
+	private function getRoleId($roleName) {
+		$params = array (
+			'conditions' => array(
+				'Role.name' => $roleName
+			),
+			'fields' => array('Role.id')
+		);
+		$resultRole = $this->Role->find('first', $params);
+		
+		/* Test si un id de rôle a bien été retourné. */
+		if(empty($resultRole)) {
+			return -1;
+		} else {
+			return $resultRole['Role']['id'];
+		}
+	}
 
     /**
      *
      */
     public function index()
     {
+		$idRoleSiteAdmin = -1; /*< Id du rôle d'admin de l'application. */
         $this->set('teams', $this->Team->find('all'));
         $this->Team->User->id = $this->Auth->user('id');
         $user = $this->Team->User->read();
 
         $teams = $this->Team->find('all');
+		$idRoleSiteAdmin = $this->getRoleId('site_admin');
+		
+		if($idRoleSiteAdmin == -1) {
+			$this->flash(
+				'Erreur : Il n\'y aucun rôle ' +
+				'`site_admin` n\'existe dans la base.',
+				'/projects'
+			);
+			return;
+		}
 
         foreach($teams as &$team) {
             $team['isMyTeam'] = false;
@@ -40,9 +78,9 @@ class TeamsController extends AppController
             ); */
 
         $this->set('teams', $teams);
-
         //$this->set('id', $id);
         $this->set('role' , $user['Role']['name']);
+		$this->set('isSiteAdmin', $idRoleSiteAdmin == $this->Auth->user("role_id"));
     }
 
     /**

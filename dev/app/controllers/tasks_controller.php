@@ -10,14 +10,40 @@ class TasksController extends AppController
 {
 
 	public $name = "Tasks";
+	
+	private function getRoleId($roleName) {
+		$params = array (
+			'conditions' => array(
+				'Role.name' => $roleName
+			),
+			'fields' => array('Role.id')
+		);
+		$resultRole = $this->Role->find('first', $params);
+		
+		/* Test si un id de rôle a bien été retourné. */
+		if(empty($resultRole)) {
+			return -1;
+		} else {
+			return $resultRole['Role']['id'];
+		}
+	}
 		
 	public function index()
     {
-		
+		$idRoleProjectAdmin = -1; /*< Id du rôle d'admin de projet. */
 		$this->Task->User->id = $this->Auth->user('id');
         $user = $this->Task->User->read();
 	
 		$tasks = $this->Task->find('all');
+		
+		if($idRoleSiteAdmin == -1) {
+			$this->flash(
+				'Erreur : Il n\'y aucun rôle ' +
+				'`site_admin` n\'existe dans la base.',
+				'/projects'
+			);
+			return;
+		}
 		
 		foreach($tasks as &$task) {
 			$task['isMyBusiness'] = false;
@@ -34,6 +60,7 @@ class TasksController extends AppController
 		//$this->set('id', $id);
 		$this->set('role' , $user['Role']['name']);
 		$this->set('projects',$user['Project']);
+		$this->set('isSiteAdmin', $idRoleSiteAdmin == $this->Auth->user("role_id"));
 		
 		//$this->set('project', $user['Project']);
     }
