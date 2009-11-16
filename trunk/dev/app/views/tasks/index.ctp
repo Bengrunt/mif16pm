@@ -18,7 +18,7 @@
 <?php
 	foreach($tasks as $task):
 	
-		if($role == 'site_admin' && isSiteAdmin):
+		if($role == 'site_admin' && $isSiteAdmin):
 ?>
 				<tr>
 				<td><?php 
@@ -82,7 +82,6 @@
 <?php
 					else:
 ?>
-						<td></td>
 <?php
 					endif;
 ?>
