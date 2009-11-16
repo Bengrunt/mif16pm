@@ -1,13 +1,8 @@
 <table>
-	<thead>
 		<tr>
 			<th>Intitulé</th>
 			<th>Projet</th>
 			<th>Durée</th>
-		</tr>
-	</thead>
-	<tbody>
-	
 <?php
 	if($isSiteAdmin):
 ?>
@@ -15,6 +10,7 @@
 <?php
 	endif;
 ?>
+	</tr>
 <?php
 	foreach($tasks as $task):
 	
