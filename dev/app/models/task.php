@@ -25,6 +25,12 @@ class Task extends AppModel
 			'allowEmpty' => false,
 			'message' => 'La durée de la tâche ne peut être vide.'
 		)
+		/*'description' => array(
+			'rule' => array('minLength', 10),
+			'required' => true,
+			'allowEmpty' => false,
+			'message' => 'La description de la tâche ne peut être vide.'
+		)*/
 	);
 
 }

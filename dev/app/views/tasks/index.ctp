@@ -58,7 +58,7 @@
 						?></td>
 						<td><?php echo $task['Task']['project_id']; ?></td>
 						<td><?php echo $task['Task']['duration']; ?></td>
-<?php
+						<?php
 					if($task['isMyBusiness']):
 ?> 
 						<td><?php
