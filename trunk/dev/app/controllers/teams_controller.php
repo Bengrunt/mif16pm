@@ -45,6 +45,7 @@ class TeamsController extends AppController
         $this->set('teams', $this->Team->find('all'));
         $this->Team->User->id = $this->Auth->user('id');
         $user = $this->Team->User->read();
+		$this->loadModel('Role');
 
         $teams = $this->Team->find('all');
 		$idRoleSiteAdmin = $this->getRoleId('site_admin');

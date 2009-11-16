@@ -30,11 +30,13 @@ class TasksController extends AppController
 		
 	public function index()
     {
-		$idRoleProjectAdmin = -1; /*< Id du rôle d'admin de projet. */
+		$idRoleSiteAdmin = -1; /*< Id du rôle d'admin de projet. */
 		$this->Task->User->id = $this->Auth->user('id');
         $user = $this->Task->User->read();
-	
+		
+		$this->loadModel('Role');	
 		$tasks = $this->Task->find('all');
+		$idRoleSiteAdmin = $this->getRoleId('site_admin');
 		
 		if($idRoleSiteAdmin == -1) {
 			$this->flash(
