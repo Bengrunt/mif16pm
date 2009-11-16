@@ -93,10 +93,10 @@ class TeamsController extends AppController
             $this->Team->User->id = $this->Auth->user('id');
             $user = $this->Team->User->read();
 
-            echo '<pre>';
-            var_dump($teamAdminResult);
-            echo '</pre>';
-            exit(0);
+            //echo '<pre>';
+            //var_dump($teamAdminResult);
+            //echo '</pre>';
+            //exit(0);
 
             $isMyBusiness;
             if(
@@ -134,7 +134,7 @@ class TeamsController extends AppController
              *
              * Code modifié par Adrian
              * Code original :
-             * if ($this->Team->save($this->data) && $this->Team->User->($this->data))
+             *if ($this->Team->save($this->data) && $this->Team->User->($this->data))
              *
              * Merci de valider cette modification en supprimant ce commentaire
              *
