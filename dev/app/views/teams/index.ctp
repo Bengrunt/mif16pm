@@ -22,7 +22,12 @@
 			);
 		?></td>
         <td><?php echo $team['Team']['description']; ?></td>
-        <td><?php echo $team['Project']['name']; ?></td>
+        <td><?php 
+				echo $html->link(
+				$team['Project']['name'],
+				array('controller'=>'projects', 'action' => 'view', $team['Project']['id'])
+				);
+		?></td>
 	
 <?php
 		if($role == 'site_admin' && $isSiteAdmin):
