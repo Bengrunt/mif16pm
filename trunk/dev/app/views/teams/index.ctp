@@ -25,7 +25,7 @@
         <td><?php echo $team['Project']['name']; ?></td>
 	
 <?php
-		if($role == 'site_admin' && $isSiteAdmin || $role == 'project_admin' && $isSiteAdmin):
+		if($role == 'site_admin' && $isSiteAdmin):
 ?>
 		<td><?php
 			echo $html->link(
@@ -38,20 +38,6 @@
 				array('escape' => false)
 			),
 			$html->link(
-				$html->image('edit.png'),
-				array(
-					'controller'=>'teams',
-					'action'=>'edit', 
-					$team['Team']['id']
-				),
-				array('escape' => false)
-			);
-		?></td>
-<?php
-			elseif($role == 'team_admin' && $isSiteAdmin):
-?>
-		<td><?php
-			echo $html->link(
 				$html->image('edit.png'),
 				array(
 					'controller'=>'teams',

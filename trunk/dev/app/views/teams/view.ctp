@@ -36,7 +36,7 @@
 	</tbody>
 </table>
 <p><?php
-	if($isMyBusiness) {
+	if($isMyBusiness || $isProjectAdmin) {
 		echo $html->link(
 			$html->image('edit.png') . ' Editer',
 			array(
@@ -56,4 +56,16 @@
 			array('escape' => false)
 		);
 	}
+	
+	elseif($role = 'team_admin' && $isTeamAdmin) {
+		echo $html->link(
+			$html->image('edit.png') . ' Editer',
+			array(
+				'controller' => 'team',
+				'action' => 'edit',
+				$team['Team']['id']
+			),
+			array('escape' => false)
+		);
+	}	
 ?></p>
