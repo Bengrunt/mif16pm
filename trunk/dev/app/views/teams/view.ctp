@@ -4,7 +4,10 @@
 <h2>Chef d'équipe</h2>
 <?php echo $teamAdmin; ?>
 <h2>Projet</h2>
-<?php echo $team['Project']['name'];?>
+<?php echo $html->link(
+			$team['Project']['name'],
+			array('controller'=>'projects', 'action' => 'view', $team['Project']['id']));
+?>
 <h2>Equipiers</h2>
 <table>
 	<thead>
