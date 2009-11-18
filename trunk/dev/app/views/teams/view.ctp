@@ -2,7 +2,7 @@
 <h2>Description</h2>
 <?php echo $team['Team']['description']; ?>
 <h2>Chef d'équipe</h2>
-<?php echo $teamAdmin; ?>
+<?php echo $teamAdmin;?>
 <h2>Projet</h2>
 <?php echo $html->link(
 			$team['Project']['name'],
