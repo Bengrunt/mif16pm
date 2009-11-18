@@ -23,7 +23,12 @@
 						array('controller' => 'tasks', 'action' => 'view', $task['Task']['id'])
 					);
 				?></td>
-				<td><?php echo $task['Task']['project_id']; ?></td>
+				<td><?php 
+					echo $html->link(
+						$task['Project']['name'],
+						array('controller' => 'projects', 'action' => 'view', $task['Project']['id'])
+					);
+				?></td>
 				<td><?php echo $task['Task']['duration']; ?></td>
 				<td><?php
 					echo $html->link(
@@ -59,7 +64,7 @@
 								array('controller' => 'tasks', 'action' => 'view', $task['Task']['id'])
 							);
 						?></td>
-						<td><?php echo $task['Task']['project_id']; ?></td>
+						<td><?php echo $task['Project']['name']; ?></td>
 						<td><?php echo $task['Task']['duration']; ?></td>
 						<?php
 					if($task['isMyBusiness']):
