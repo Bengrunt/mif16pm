@@ -15,3 +15,37 @@
 <?php echo $task['Task']['duration']; ?> jour(s)
 <h2>Date de début</h2>
 <?php echo $task['Task']['begin_date']; ?>
+<?php if($isSiteAdmin):
+	
+			echo $html->link(
+					$html->image('delete.png'),
+					array(
+						'controller'=>'tasks',
+						'action'=>'delete', 
+						$task['Task']['id']
+					),
+					array('escape' => false)
+				),
+				$html->link(
+					$html->image('edit.png'),
+					array(
+						'controller'=>'tasks',
+						'action'=>'edit', 
+						$task['Task']['id']
+					),
+					array('escape' => false)
+				);
+				
+		elseif($task['isMyBusiness']):
+		
+			echo $html->link(
+					$html->image('edit.png'),
+					array(
+						'controller'=>'tasks',
+						'action'=>'edit', 
+						$task['Task']['id']
+					),
+					array('escape' => false)
+				);
+				
+		endif; ?>
