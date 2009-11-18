@@ -43,7 +43,7 @@
 		echo $html->link(
 			$html->image('edit.png') . ' Editer',
 			array(
-				'controller' => 'team',
+				'controller' => 'teams',
 				'action' => 'edit',
 				$team['Team']['id']
 			),
@@ -52,7 +52,7 @@
 		$html->link(
 			$html->image('delete.png') . 'Supprimer',
 			array(
-				'controller' => 'team',
+				'controller' => 'teams',
 				'action' => 'delete',
 				$team['Team']['id']
 			),
@@ -64,7 +64,7 @@
 		echo $html->link(
 			$html->image('edit.png') . ' Editer',
 			array(
-				'controller' => 'team',
+				'controller' => 'teams',
 				'action' => 'edit',
 				$team['Team']['id']
 			),
