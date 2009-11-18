@@ -33,7 +33,8 @@
 		<tr>
 			<td><?php echo $html->link($user['name'],'/users/view/'.$user['id']);?></td>
 			<td><?php echo $user['role_name']; ?></td>
-		</tr><?php
+		</tr>
+<?php
 	endforeach;
 ?>
 	</tbody>
