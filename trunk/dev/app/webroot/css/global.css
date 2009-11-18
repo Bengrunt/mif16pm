@@ -53,6 +53,12 @@ small {
     font-size: 0.8em;
 }
 
+/* Inputs & Buttons */
+button,
+input[type=submit],
+label {
+    cursor: pointer;
+}
 
 /* Tables */
 table {

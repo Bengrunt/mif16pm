@@ -31,20 +31,37 @@
                     $username = $session->read( "Auth.User.name" );
                     if ( !empty( $username ) ) { ?>
                         <p>Bienvenue, <strong><?php echo $html->link($username, array("controller" => "users", "action" => "profile")); ?></strong> !</p>
-                        <p><small><?php echo $html->link(
-                                        $html->image("icons/disconnect.png") . " Se déconnecter",
-                                        array("controller" => "users", "action" => "logout"),
-                                        null, null, false);
-                            ?></small></p>
+                        <p><small>
+                            <?php
+                                echo $html->link(
+                                    $html->image("icons/user.png") . " Profil",
+                                    array("controller" => "users", "action" => "profile"),
+                                    null, null, false);
+                            ?>
+                            -
+                            <?php
+                                echo $html->link(
+                                    $html->image("icons/disconnect.png") . " Se d&eacute;connecter",
+                                    array("controller" => "users", "action" => "logout"),
+                                    null, null, false);
+                            ?>
+                        </small></p>
                     <?php } else {
                         echo $form->create('User', array('action' => 'login'));
                         echo $form->inputs(array(
-                            'legend' => __('Login', true),
+                            'legend' => __('Connexion', true),
                             'name',
                             'password'));
-                        echo $form->end('Login');
-                    } ?>
-
+                    ?><small><?php
+                        echo $html->link(
+                            $html->image("icons/user_silhouette.png") . " S'inscrire",
+                            array("controller" => "users", "action" => "register"),
+                            null, null, false);
+                    ?></small> |
+                    <button type="submit">
+                        <?php echo $html->image("icons/connect.png") ?> Se connecter
+                    </button>
+                    <?php } ?>
                     </div>
                 </div>
             </div>

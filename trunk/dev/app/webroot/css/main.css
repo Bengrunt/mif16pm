@@ -38,6 +38,9 @@
     #user-info .user-info-content {
         padding: 15px 5px;
     }
+        #user-info .input label {
+            margin-right: 10px;
+        }
 
 /*****************************
  * Menu
