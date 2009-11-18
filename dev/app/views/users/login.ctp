@@ -2,8 +2,18 @@
 $session->flash('auth');
 echo $form->create('User', array('action' => 'login'));
 echo $form->inputs(array(
-    'legend' => __('Login', true),
+    'legend' => __('Connexion', true),
     'name',
     'password'));
-echo $form->end('Login');
 ?>
+<small>
+<?php
+    echo $html->link(
+        $html->image("icons/user_silhouette.png") . " S'inscrire",
+        array("controller" => "users", "action" => "register"),
+        null, null, false);
+?>
+</small> |
+<button type="submit">
+    <?php echo $html->image("icons/connect.png") ?> Se connecter
+</button>
