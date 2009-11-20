@@ -9,8 +9,11 @@
 --
 
 INSERT INTO `projects` (`id`, `name`, `description`, `created`) VALUES
-(1, 'Test', 'Ah que c''est un projet de test', NULL),
-(6, 'Projet test équipes', 'PROUT', '2009-10-04 17:37:52');
+(1, 'Fête de la saucisse', 'Projet d''organisation de la fête de la saucisse de Strasbourg à Muflin', '2009-09-01 15:32:52'),
+(2, 'MIF12 : Compilateur CELL', 'Projet de développement d''un compilateur pour processeur CELL', '2009-10-15 22:18:00'),
+(3, 'Championnats intercommunaux de course en sac','Organisation des championnats intercommunaux de course en sac', '2009-06-22'),
+(4, 'Projet Historia', 'Mise en place de cérémonie pour l''anniversaire du débarquement','2009-11-20'),
+(6, 'Projet MIF16 : PROUT', 'Amélioration du projet PROUT', '2009-11-20 6:45:23');
 
 -- --------------------------------------------------------
 
@@ -40,10 +43,11 @@ INSERT INTO `roles` (`id`, `name`) VALUES
 --
 
 INSERT INTO `teams` (`id`, `name`, `description`, `project_id`, `created`, `modified`) VALUES
-(1, 'aaaaa', 'abcdefghijklmnopqrstuvwxyz', 1, '2009-10-11 19:51:19', '2009-10-11 19:51:19'),
-(2, 'Jonlajoie', 'I kill people with gun !', 1, '2009-10-09 22:22:16', '2009-10-09 22:22:16'),
-(3, 'MC UFF', 'I come from behind and make you suffer !!!', 1, '2009-10-11 19:50:10', '2009-10-11 19:50:10'),
-(4, 'MC Motherfucker', 'I''m in your house and I''m screwin'' your mum''s ass !', 6, '2009-10-11 19:51:19', '2009-10-11 19:52:50');
+(1, 'Equipe Sauvigny', 'Gestion des stands', 1, '2009-09-11 19:51:19', '2009-10-11 12:51:19'),
+(2, 'Equipe Tangerine', 'Gestion des entrées', 1, '2009-09-23 22:15:23', '2009-10-09 22:22:16'),
+(3, 'Equipe Damoclès', 'Gestion de la sécurité', 1, '2009-09-16 13:48:03', '2009-09-16 13:48:03'),
+(4, 'MIF12 : CELL', 'Les developpeurs du projet MIF12 : CELL', 2, '2009-10-15 23:12:36', '2009-11-20 19:50:10'),
+(5, 'MC Motherfucker', 'I''m in your house and I''m screwin'' your mum''s ass !', 6, '2009-10-11 19:51:19', '2009-10-11 19:52:50');
 
 -- --------------------------------------------------------
 
