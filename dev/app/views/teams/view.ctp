@@ -60,7 +60,7 @@
 		);
 	}
 	
-	elseif($role = 'team_admin' && $isTeamAdmin) {
+	elseif($role == 'team_admin' || $isTeamAdmin) {
 		echo $html->link(
 			$html->image('edit.png') . ' Editer',
 			array(
