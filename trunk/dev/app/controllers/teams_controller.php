@@ -142,7 +142,7 @@ class TeamsController extends AppController
 				$this->flash(
 					'Erreur : Il n\'y aucun rôle ' +
 					'`team_admin` n\'existe dans la base.',
-					'/projects'
+					'/teams'
 				);
 				return;
 			}
@@ -180,11 +180,12 @@ class TeamsController extends AppController
             $this->set('team', $team);
 			$this->set('teams', $teams);
 			$this->set('role' , $user['Role']['name']);
-			$this->set('isProjectAdmin', $idRoleProjectAdmin == $this->Auth->user("role_id"));
 			$this->set('isTeamAdmin', $idRoleTeamAdmin == $this->Auth->user("role_id"));
+			$this->set('isProjectAdmin', $idRoleProjectAdmin == $this->Auth->user("role_id"));
             $this->set('teamUsers', $teamUsers);
             $this->set('teamAdmin', $teamAdminResult[0]['User']['name']);
             $this->set('isMyBusiness', $isMyBusiness);
+			
         } else {
             // TODO : mettre un message d'erreur et/ou rediriger sur page d'accueil du controlleur
             exit(0);
