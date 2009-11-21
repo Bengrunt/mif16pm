@@ -23,7 +23,7 @@ class Project extends AppModel
         )/*,
         'user_id' => array(
             'rule' => array('minLength',5),
-            'message' => 'Un prÈnom doit au moins se composer de 5 lettres'
+            'message' => 'Un pr√©nom doit au moins se composer de 5 lettres'
         )*/
     );
 }
