@@ -86,6 +86,7 @@ class DATABASE_CONFIG {
         'password' => 'tikiajax',
         'database' => 'adriangaudebert3',
         'prefix' => '',
+		'encoding' => 'utf8'
     );
 
     var $test = array(
@@ -96,6 +97,7 @@ class DATABASE_CONFIG {
         'password' => 'password',
         'database' => 'test_database_name',
         'prefix' => '',
+		'encoding' => 'utf8'
     );
 }
 ?>
