@@ -4,9 +4,15 @@
 <h2>Chef d'équipe</h2>
 <?php echo $teamAdmin;?>
 <h2>Projet</h2>
-<?php echo $html->link(
-			$team['Project']['name'],
-			array('controller'=>'projects', 'action' => 'view', $team['Project']['id']));
+<?php
+	echo $html->link(
+		$team['Project']['name'],
+		array(
+			'controller' => 'projects',
+			'action' => 'view',
+			$team['Project']['id']
+		)
+	);
 ?>
 <h2>Equipiers</h2>
 <table>
@@ -58,9 +64,7 @@
 			),
 			array('escape' => false)
 		);
-	}
-	
-	else if($isMyBusiness || $isTeamAdmin) {
+	} else if($isTeamAdmin) {
 		echo $html->link(
 			$html->image('edit.png') . ' Editer',
 			array(

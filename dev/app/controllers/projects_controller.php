@@ -156,8 +156,8 @@ class ProjectsController extends AppController {
 			/* Récupération du projet d'id id. */
 			$this->Project->id = $id;
 			$project = $this->Project->read();
-
-			/* Recherche des noms de rôles correspondant. */
+			
+			/* Recherche des noms de rôles correspondant à chaque user. */
 			$this->loadModel('Role');
 			$roles = array();
 			foreach($project['User'] as &$user) {
@@ -167,7 +167,35 @@ class ProjectsController extends AppController {
 				$user['role_name'] = $roles[$roleId];
 			}
 			
+			/* Ai-je des droits sur l'édition ? */
+			$isMyBusiness;
+			
+			/* Récupération de l'utilisateur courant. */
+			$this->Project->User->id = $this->Auth->user('id');
+            $currentUser = $this->Project->User->read();
+			
+			/* On récupère l'id de l'admin du projet. */
+            $projectAdminId = $this->Project->query(
+                'SELECT `ProjectsUser`.user_id
+                FROM projects_users AS `ProjectsUser`
+                JOIN roles AS `Role`
+                ON `ProjectsUser`.role_id = `Role`.id
+                AND `ProjectsUser`.project_id = ' . $id . '
+                AND `Role`.name = \'project_admin\''
+            );
+            $projectAdminId = $projectAdminId[0]['ProjectsUser']['user_id'];
+
+            if(
+                $currentUser['Role']['name'] == 'site_admin' ||
+                $currentUser['User']['id'] == $projectAdminId
+            ) {
+                $isMyBusiness = true;
+            } else {
+                $isMyBusiness = false;
+            }
+
 			$this->set('project', $project);
+			$this->set('isMyBusiness', $isMyBusiness);
 		}
     }
 	
