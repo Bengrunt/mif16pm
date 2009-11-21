@@ -105,11 +105,31 @@ class TasksController extends AppController
 	
     public function add()
     {
+		//$this->Task->User->id = $this->Auth->user('id');
+        //$user = $this->Task->User->read();
+		
+		//echo '<pre>', var_dump($user),'</pre>';
+		
+		//$projects = $user['Project'];
+		//$teams = $this->Task->Team->find('list');
+	
+		//echo '<pre>', var_dump($projects),'</pre>';
+		//echo '<pre>', var_dump($teams),'</pre>';
+	
+		//$this->set('teams', $teams);
+		//$this->set('projects', $projects);
+	
 		if(!empty($this->data))
 		{
+			echo "blibli";
 			if ($this->Task->save($this->data)) 
 			{
+				echo "bloblo";
 				$this->flash('La tâche a bien été ajoutée et sauvegardée.','/tasks');
+			}
+			else
+			{
+				$this->flash('La tâche n\' a pas pu être ajoutée', 'tasks');
 			}
 		}
     }
@@ -122,7 +142,16 @@ class TasksController extends AppController
 
     public function edit($id = null)
     {
-		//$this->set('teams', $this->Task->Team->find('list'));
+	
+		$this->Task->User->id = $this->Auth->user('id');
+        $user = $this->Task->User->read();
+		
+		$projects = $user['Project'];
+		$teams = $user['Team'];
+	
+		$this->set('teams', $teams);
+		$this->set('projects', $projects);
+
 		if(empty($this->data))
 		{
 			$this->Task->id = $id; 
