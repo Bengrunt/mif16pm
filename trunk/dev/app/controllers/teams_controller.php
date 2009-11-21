@@ -117,8 +117,6 @@ class TeamsController extends AppController
             $this->Team->id = $id;
             $team = $this->Team->read();
 			
-			$idRoleProjectAdmin = -1;
-			$idRoleTeamAdmin = -1;
 			$this->set('teams', $this->Team->find('all'));
 			$this->Team->User->id = $this->Auth->user('id');
             $user = $this->Team->User->read();
@@ -126,26 +124,6 @@ class TeamsController extends AppController
 			// Récupération du rôle project_admin et du team_admin
 			$this->loadModel('Role');
 			$teams = $this->Team->find('all');
-			$idRoleProjectAdmin = $this->getRoleId('project_admin');
-			$idRoleTeamAdmin = $this->getRoleId('team_admin');
-		
-			if($idRoleProjectAdmin == -1) {
-				$this->flash(
-					'Erreur : Il n\'y aucun rôle ' +
-					'`project_admin` n\'existe dans la base.',
-					'/projects'
-				);
-				return;
-			}
-			
-			if($idRoleTeamAdmin == -1) {
-				$this->flash(
-					'Erreur : Il n\'y aucun rôle ' +
-					'`team_admin` n\'existe dans la base.',
-					'/teams'
-				);
-				return;
-			}
 
             $projectId = $team['Project']['id'];
 
@@ -159,29 +137,26 @@ class TeamsController extends AppController
                 AND `Role`.name = \'project_admin\''
             );
             $projectAdminId = $projectAdminId[0]['ProjectsUser']['user_id'];
-
-            //echo '<pre>';
-            //var_dump($teamAdminResult);
-            //echo '</pre>';
-            //exit(0);
 			
             $isMyBusiness;
+			
             if(
                 $user['Role']['name'] == 'site_admin' ||
-                $user['User']['id'] == $projectAdminId ||
-                $user['User']['id'] == $teamAdminResult[0]['User']['id']
+                $user['User']['id'] == $projectAdminId
             ) {
                 $isMyBusiness = true;
             } else {
                 $isMyBusiness = false;
             }
-
+			
+			// On récupère l'id de l'utilisateur courant qui a le statut de team_admin
+			$isTeamAdmin = $teamAdminResult[0]['User']['id'] == $this->Auth->user("id");
+			
             // Passage des informations à la vue.
             $this->set('team', $team);
 			$this->set('teams', $teams);
 			$this->set('role' , $user['Role']['name']);
-			$this->set('isTeamAdmin', $idRoleTeamAdmin == $this->Auth->user("role_id"));
-			$this->set('isProjectAdmin', $idRoleProjectAdmin == $this->Auth->user("role_id"));
+			$this->set('isTeamAdmin', $isTeamAdmin);
             $this->set('teamUsers', $teamUsers);
             $this->set('teamAdmin', $teamAdminResult[0]['User']['name']);
             $this->set('isMyBusiness', $isMyBusiness);
