@@ -29,7 +29,6 @@ INSERT INTO `roles` (`id`, `name`) VALUES
 (5, 'project_admin'),
 (6, 'project_user');
 
-
 -- --------------------------------------------------------
 
 --
@@ -54,12 +53,6 @@ INSERT INTO `teams` (`id`, `name`, `description`, `project_id`, `created`, `modi
 (9, 'Historia : comité historique', 'Expertise historique', 4, '2009-08-28 18:32:17', '2009-09-22 17:45:12'),
 (10, 'Historia : équipe technique', 'Gestion des aspects techniques du projet', 4, '2009-08-30 16:52:14', '2009-10-12 19:56:42'),
 (11, 'PROUT : l''équipe', 'Developpement de PROUT', 5, '2009-11-20 6:52:01', '2009-11-20 07:23:56');
-
--- --------------------------------------------------------
-
---
--- Contenu de la table `tasks_teams`
---
 
 -- --------------------------------------------------------
 
@@ -112,6 +105,8 @@ INSERT INTO `teams_users` (`team_id`, `user_id`, `role_id`) VALUES
 (10, 23, 3), (10, 19, 4),
 (11, 3, 3), (11, 2, 4), (11, 4, 4), (11, 5, 4), (11, 6, 4), (11, 24, 4);
 
+-- ---------------------------------------------------------
+
 --
 -- Contenu de la table `projects_users`
 --
@@ -121,6 +116,8 @@ INSERT INTO `projects_users` (`project_id`, `user_id`, `role_id`) VALUES
 (3, 11, 5), (3, 12, 6), (3, 13, 6), (3, 14, 6),
 (4, 5, 5), (4, 18, 6), (4, 19, 6), (4, 20, 6), (4, 21, 6), (4, 22, 6), (4, 23, 6),
 (5, 3, 5), (5, 2, 6), (5, 4, 6), (5, 5, 6), (5, 6, 6), (5, 24, 6);
+
+-- ---------------------------------------------------------
 
 --
 -- Contenu de la table `tasks_users`
