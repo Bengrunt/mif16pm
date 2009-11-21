@@ -407,6 +407,7 @@ class ProjectsController extends AppController {
 			}
 		}
 		$this->set('projects', $this->Project->Team->find('list'));
+		$this->set('user_id', 3);
     }
 	
 	/*Gérer les droits
