@@ -1,8 +1,8 @@
 <table>
 		<tr>
-			<th>Intitul&eacute;</th>
+			<th>Intitulé</th>
 			<th>Projet</th>
-			<th>Dur&eacute;e</th>
+			<th>Durée</th>
 <?php
 	if($isSiteAdmin):
 ?>

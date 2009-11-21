@@ -97,7 +97,7 @@ class UsersController extends AppController
             $result = $this->User->save( $this->data );
             if ($result)
             {
-                $this->flash('Inscription valid&eacute;e', array('action'=>'view', $this->User->id));
+                $this->flash('Inscription validée', array('action'=>'view', $this->User->id));
             }
             else
             {
