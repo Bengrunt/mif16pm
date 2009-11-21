@@ -159,8 +159,7 @@ class TeamsController extends AppController
 			$this->set('isTeamAdmin', $isTeamAdmin);
             $this->set('teamUsers', $teamUsers);
             $this->set('teamAdmin', $teamAdminResult[0]['User']['name']);
-            $this->set('isMyBusiness', $isMyBusiness);
-			
+            $this->set('isMyBusiness', $isMyBusiness);			
         } else {
             // TODO : mettre un message d'erreur et/ou rediriger sur page d'accueil du controlleur
             exit(0);
