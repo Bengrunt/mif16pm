@@ -23,7 +23,7 @@
 	<thead>
 		<tr>
 			<th>Pseudo</th>
-			<th>Rôle</th>
+			<th>RÃ´le</th>
 		</tr>
 	</thead>
 	<tbody>
