@@ -97,7 +97,7 @@ class UsersController extends AppController
             $result = $this->User->save( $this->data );
             if ($result)
             {
-                $this->flash('Inscription validÈe', array('action'=>'view', $this->User->id));
+                $this->flash('Inscription valid√©e', array('action'=>'view', $this->User->id));
             }
             else
             {
@@ -122,7 +122,7 @@ class UsersController extends AppController
 		{
 			if($this->User->save($this->data['User']))
 			{
-				$this->flash('Le profil Utilisateur a ÈtÈ mis ‡ jour ');
+				$this->flash('Le profil Utilisateur a √©t√© mis √† jour ');
 			}
 		}
 	}
