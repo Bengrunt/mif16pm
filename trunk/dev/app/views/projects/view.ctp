@@ -39,3 +39,25 @@
 ?>
 	</tbody>
 </table>
+<p><?php
+	if($isMyBusiness) {
+		echo $html->link(
+			$html->image('edit.png') . ' Editer',
+			array(
+				'controller' => 'projects',
+				'action' => 'edit',
+				$project['Project']['id']
+			),
+			array('escape' => false)
+		),
+		$html->link(
+			$html->image('delete.png') . 'Supprimer',
+			array(
+				'controller' => 'projects',
+				'action' => 'delete',
+				$project['Project']['id']
+			),
+			array('escape' => false)
+		);
+	}
+?></p>
