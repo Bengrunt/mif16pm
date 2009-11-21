@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `tasks` (
   `id` int(11) NOT NULL auto_increment,
   `name` varchar(30) NOT NULL,
   `project_id` int(11) NOT NULL,
-  `team_id` int(11) NOT NULL,
+  `team_id` int(11),
   `description` text collate utf8_unicode_ci NOT NULL,
   `duration` int(11) NOT NULL COMMENT 'durée en jours',
   `begin_date` DATETIME NOT NULL COMMENT 'date de début',

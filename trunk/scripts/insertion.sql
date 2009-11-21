@@ -123,5 +123,3 @@ INSERT INTO `projects_users` (`project_id`, `user_id`, `role_id`) VALUES
 -- Contenu de la table `tasks_users`
 --
 
---INSERT INTO `tasks_users` (`task_id`, `user_id`) VALUES
---(1,1), (1,3), (1,4), (1,5);
