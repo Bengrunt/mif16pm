@@ -39,7 +39,7 @@
 	</tbody>
 </table>
 <p><?php
-	if($isMyBusiness || $isProjectAdmin) {
+	if($isMyBusiness) {
 		echo $html->link(
 			$html->image('edit.png') . ' Editer',
 			array(
