@@ -10,8 +10,8 @@
 <?php echo $form->input('task_id', array('type'=>'hidden')); ?>
 <?php echo $form->input('description'); ?>
 <!-- ?php echo $form->input('begin_date', array('label' => 'BeginDate', 'type' => 'text')); ?-->
-<?php echo $form->input('date de début', array('type'=>'hidden', 'value'=>date('MDY'))); ?>
-<?php echo $form->input('durée'); ?>
+<?php echo $form->input('date de dÃ©but', array('type'=>'hidden', 'value'=>date('MDY'))); ?>
+<?php echo $form->input('durÃ©e'); ?>
 <?php echo "<input type='button' value='Annuler' onclick='javascript:history.back();'/>" ?>
 <?php echo $form->end('Ajouter'); ?>
 
