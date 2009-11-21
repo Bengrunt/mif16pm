@@ -2,7 +2,7 @@
     <tr>
         <th>Identifiant</th>
         <th>Pseudo</th>
-        <th>Rôle</th>
+        <th>R&ocirc;le</th>
         <th>Pr&eacute;nom</th>
         <th>Nom</th>
         <th>Date d'inscription</th>
