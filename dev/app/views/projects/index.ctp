@@ -60,7 +60,7 @@
 </table>
 <p><?php
 	echo $html->link(
-		'Cr&eacute;er un projet',
+		'Créer un projet',
 		array(
 			'controller'=>'projects',
 			'action'=>'add'
