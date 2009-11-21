@@ -11,9 +11,9 @@
 ?>
 <h2>Description</h2>
 <?php echo $task['Task']['description']; ?>
-<h2>Durée</h2>
+<h2>Dur&eacute;e</h2>
 <?php echo $task['Task']['duration']; ?> jour(s)
-<h2>Date de début</h2>
+<h2>Date de d&eacute;but</h2>
 <?php echo $task['Task']['begin_date']; ?>
 <?php if($isSiteAdmin):
 	
