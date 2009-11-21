@@ -1,12 +1,11 @@
 <?php
-
 include('../dev/app/config/database.php');
 
 $db = new DATABASE_CONFIG();
 
 $bdd = mysql_connect($db->default['host'], $db->default['login'], $db->default['password']);
 mysql_select_db($db->default['database'], $bdd);
-
+mysql_query("SET NAMES 'utf8'");
 $files = array(
         0 => "suppression.sql",
         1 => "creation.sql",
@@ -19,6 +18,7 @@ foreach ($files as $file)
 
     $sql = file($file); // on charge le fichier SQL
     foreach($sql as $l){ // on le lit
+		echo $l . "\n<br/>";
         if (substr(trim($l),0,2)!="--"){ // suppression des commentaires
             $requetes .= $l;
         }
