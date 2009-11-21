@@ -93,8 +93,6 @@ class TeamsController extends AppController
     public function view($id = null)
     {
         if(!is_null($id)) {
-            // TODO: optimisation. Jointure ? Une seule requete ? Pb : faire une jointure avec Cake ou sous-requetes sur 3 niveaux...
-            // Utiliser uniquements méthodes de Cake... ou centraliser requetes dans le modèle ?
             $teamAdminResult = $this->Team->query(
                 'SELECT `id`, `name`
                 FROM users AS `User`
@@ -161,7 +159,13 @@ class TeamsController extends AppController
 			$this->set('role' , $user['Role']['name']);
 			$this->set('isTeamAdmin', $isTeamAdmin);
             $this->set('teamUsers', $teamUsers);
-            $this->set('teamAdmin', $teamAdminResult[0]['User']['name']);
+            $this->set(
+				'teamAdmin',
+				array(
+					'id' => $teamAdminResult[0]['User']['id'],
+					'name' => $teamAdminResult[0]['User']['name']
+				)
+			);
             $this->set('isMyBusiness', $isMyBusiness);			
         } else {
             // TODO : mettre un message d'erreur et/ou rediriger sur page d'accueil du controlleur
