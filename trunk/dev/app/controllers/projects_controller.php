@@ -106,6 +106,30 @@ class ProjectsController extends AppController {
 	}
 	
 	/**
+	 * Change le chef de projet de l'association ProjectUsers.
+	 *
+	 * @param[in] projectId {int} Id du projet
+	 * @param[in] newProjectAdminId {int} Id du nouveau chef projet
+	 */
+	private function changeProjectAdmin($projectId, $newProjectAdminId) {
+		$projectAdminRoleId = $this->getRoleId('project_admin');
+		$projectUserRoleId = $this->getRoleId('project_user');
+		
+		$this->Project->query(
+			'UPDATE projects_users
+			SET role_id = ' . $projectUserRoleId . '
+			WHERE role_id = ' . $projectAdminRoleId . '
+			AND project_id = ' . $projectId
+		);
+		$this->Project->query(
+			'UPDATE projects_users
+			SET role_id = ' . $projectAdminRoleId . '
+			WHERE user_id = ' . $newProjectAdminId . '
+			AND project_id = ' . $projectId
+		);
+	}
+	
+	/**
 	 * Affiche un listing des entrées de projets.
 	 */
 	public function index()
@@ -375,9 +399,11 @@ class ProjectsController extends AppController {
 		}
 		else
 		{
+			$this->loadModel('Role');
+			$this->changeProjectAdmin($id, $this->data['Project']['user_id']);
 			if($this->Project->save($this->data['Project']))
 			{
-				$this->flash('Les attributs du projet ont bien été modifiés.', '/project');
+				$this->flash('Les attributs du projet ont bien été modifiés.', '/projects');
 			}
 		}
 		$this->set('projects', $this->Project->Team->find('list'));
