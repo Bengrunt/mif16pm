@@ -2,7 +2,15 @@
 <h2>Description</h2>
 <?php echo $team['Team']['description']; ?>
 <h2>Chef d'équipe</h2>
-<?php echo $teamAdmin;?>
+<?php echo $html->link(
+		$teamAdmin['name'],
+		array(
+			'controller' => 'users',
+			'action' => 'view',
+			$teamAdmin['id']
+		)
+	);
+?>
 <h2>Projet</h2>
 <?php
 	echo $html->link(
