@@ -69,6 +69,8 @@ class TeamsController extends AppController
             }
         }
 
+		//echo '<pre>', var_dump($teams) ,'</pre>';
+		
         /*$teamViewTeam = $this->Team->query(
                 'SELECT `name`
                 FROM users AS `User` u
@@ -81,6 +83,7 @@ class TeamsController extends AppController
         $this->set('teams', $teams);
         //$this->set('id', $id);
         $this->set('role' , $user['Role']['name']);
+		$this->set('currentUser', $this->Auth->user("id"));
 		$this->set('isSiteAdmin', $idRoleSiteAdmin == $this->Auth->user("role_id"));
     }
 
