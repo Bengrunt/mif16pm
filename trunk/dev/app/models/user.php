@@ -20,7 +20,7 @@ class User extends AppModel
         ),
         'firstname' => array(
             'rule' => array('minLength', 4),
-            'message' => 'Un prénom doit avoir au moins 4 lettres'
+            'message' => 'Un prÃ©nom doit avoir au moins 4 lettres'
 
         ),
         'lastname' => array(

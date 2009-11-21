@@ -1,7 +1,7 @@
 <h1><?php echo $team['Team']['name']; ?></h1>
 <h2>Description</h2>
 <?php echo $team['Team']['description']; ?>
-<h2>Chef d'équipe</h2>
+<h2>Chef d'Ã©quipe</h2>
 <?php echo $teamAdmin;?>
 <h2>Projet</h2>
 <?php echo $html->link(
@@ -13,7 +13,7 @@
 	<thead>
 		<tr>
 			<th>Pseudo</th>
-			<th>Rôle</th>
+			<th>RÃ´le</th>
 		</tr>
 	</thead>
 	<tbody>

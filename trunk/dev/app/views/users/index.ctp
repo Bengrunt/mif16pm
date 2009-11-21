@@ -2,11 +2,11 @@
     <tr>
         <th>Identifiant</th>
         <th>Pseudo</th>
-        <th>Rôle</th>
-        <th>Prénom</th>
+        <th>RÃ´le</th>
+        <th>PrÃ©nom</th>
         <th>Nom</th>
         <th>Date d'inscription</th>
-        <th>Date dernière modif</th>
+        <th>Date derniÃ¨re modif</th>
         <th>Options Admin</th>
     </tr>
 		<?php foreach($users as $user): ?>
