@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `tasks` (
   `team_id` int(11),
   `description` text collate utf8_unicode_ci NOT NULL,
   `duration` int(11) NOT NULL COMMENT 'durée en jours',
-  `begin_date` DATETIME NOT NULL COMMENT 'date de début',
+  `begin_date` DATE NOT NULL COMMENT 'date de début',
   `created` DATETIME,
   `modified` DATETIME,
   PRIMARY KEY  (`id`)
