@@ -167,7 +167,7 @@ class ProjectsController extends AppController {
 		}
 		
 		$this->set('projects', $projects);
-		$this->set('isSiteAdmin', $idRoleSiteAdmin == $this->Auth->user("role_id"));
+		$this->set('isSiteAdmin', $idRoleSiteAdmin == $this->Auth->user('role_id'));
     }
 	
 	/**
@@ -360,9 +360,13 @@ class ProjectsController extends AppController {
 	 *
 	 * @param id {int} Id du projet à supprimer.
 	 */
-    public function delete($id = null)
-    {
-		$this->Project->del($id);
+    public function delete($id = null) {
+		$this->Project->deleteAll(
+			array('Project.id' => $id),
+			false,
+			false
+		);
+		// Utiliser flush pour nettoyer + enlever assos sur Task, ProjectsTeam...
 		$this->flash('Le projet avec l\'id: ' . $id . ' a été supprimé.', '/projects');
     }
 
@@ -375,40 +379,98 @@ class ProjectsController extends AppController {
 	 *
 	 * @param id {int} Id du projet à supprimer.
 	 */
-    public function edit($id = null)
-    {
-		$this->set('teams', $this->Project->Team->find('list'));
-		
-		$projectUsersResult = $this->Project->query(
-			'SELECT `User`.id, `User`.name FROM `users` AS `User`
-			WHERE `User`.id IN (
-				SELECT `ProjectsUser`.user_id
-				FROM `projects_users` AS `ProjectsUser`
-				WHERE `ProjectsUser`.project_id = ' . $id .
-			')'
-		);
-		$users = array();
-		foreach($projectUsersResult as $row) {
-			$users[$row['User']['id']] = $row['User']['name'];
-		}
-		$this->set('users', $users);
-		if(empty($this->data))
-		{
-			$this->Project->id = $id; 
-			$this->data = $this->Project->read();
-		}
-		else
-		{
+    public function edit($id = null) {	
+		if(!is_null($id)) {
+			/* Récupération du projet d'id id. */
+			$this->Project->id = $id;
+			$project = $this->Project->read();
+			
+			/* 
+			 * Recherche des noms de rôles correspondant à chaque user.
+			 * Extraction des noms d'utilisateurs et de leur id.
+			 * Extraction du chef de projet actuel.
+			 */
 			$this->loadModel('Role');
-			$this->changeProjectAdmin($id, $this->data['Project']['user_id']);
-			if($this->Project->save($this->data['Project']))
-			{
-				$this->flash('Les attributs du projet ont bien été modifiés.', '/projects');
+			$roles = array();
+			$projectUsers = array();
+			$projectAdminId;
+			foreach($project['User'] as &$user) {
+				$roleId = $user['ProjectsUser']['role_id'];
+				if(!isset($roles[$roleId]))
+					$roles[$roleId] = $this->getRoleName($roleId);
+				$user['role_name'] = $roles[$roleId];
+				$projectUsers[$user['id']] = $user['name'];
+				if($user['role_name'] == 'project_admin') {
+					$projectAdminId = $user['id'];
+					$user['dontRemove'] = true;
+				} else {
+					$user['dontRemove'] = false;
+				}
+			}
+			
+			if(empty($this->data)) {
+				$this->Project->id = $id; 
+				$this->data = $this->Project->read();
+			} else {
+				$this->loadModel('Role');
+				$this->changeProjectAdmin($id, $this->data['Project']['user_id']);
+				if($this->Project->save($this->data['Project'])) {
+					$this->flash(
+						'Les attributs du projet ont bien été modifiés.',
+						'/projects'
+					);
+				}
+			}
+			$this->set('project', $project);
+			$this->set('projectUsers', $projectUsers);
+			$this->set('projectAdminId', $projectAdminId);
+		}
+    }
+	
+	public function addUser($id = null) {
+		if(empty($this->data)) {			
+			if(!is_null($id)) {
+				$this->set('projectId', $id);
+				$this->set('users', $this->Project->User->find('list'));
+			} else {
+				$this->flash(
+					'Aucun id de projet n\'a été spécifié !',
+					'/projects'
+				);
+			}
+		} else {
+			$this->loadModel('Role');
+			$this->data['Project']['role_id'] = $this->getRoleId('project_user');
+			if($this->Project->ProjectsUser->save($this->data['Project'])) {
+				$this->flash(
+					'L\'utilisateur a été ajoutée au projet.',
+					'/projects'
+				);
+			} else {
+				$this->flash(
+					'L\'utilisateur n\'a pu être ajoutée au projet.',
+					'/projects'
+				);
 			}
 		}
-		$this->set('projects', $this->Project->Team->find('list'));
-		$this->set('user_id', 3);
-    }
+	}
+	
+	public function removeUser($projectId = null, $userId = null) {
+		$this->Project->ProjectsUser->deleteAll(
+			array(
+				'ProjectsUser.project_id' => $projectId,
+				'ProjectsUser.user_id' => $userId
+			),
+			false,
+			false
+		);
+		$this->flash(
+			'L\'équipier avec l\'id: ' .
+			$userId .
+			' a été retiré du projet.',
+			'/projects'
+		);
+	}
 	
 	/*Gérer les droits
     public function admin()	

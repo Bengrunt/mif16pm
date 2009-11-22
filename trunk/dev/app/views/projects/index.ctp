@@ -26,7 +26,16 @@
 		);
 		?></td>
         <td><?php echo $project['Project']['description']; ?></td>
-		<td><?php echo $project['admin']['name'];?></td>
+		<td><?php
+			echo $html->link(
+				$project['admin']['name'],
+				array(
+					'controller' => 'users',
+					'action' => 'view',
+					$project['admin']['id']
+				)
+			);
+		?></td>
 <?php
 		if($isSiteAdmin):
 ?>
