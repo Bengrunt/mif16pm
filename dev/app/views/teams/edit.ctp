@@ -1,6 +1,14 @@
-<?php echo $form->create('Team', array('action' => 'edit')); ?>
-<?php echo $form->input('name', array('label' => 'Nom')); ?>
-<?php echo $form->input('description'); ?>
-<?php echo $form->input('project_id'); ?>
-<?php echo $form->input('id', array('type'=>'hidden')); ?>
-<?php echo $form->end('Editer'); ?>
+<?php 
+	echo $form->create('Team', array('action' => 'edit')),
+	$form->input('name', array('label' => 'Nom')),
+	$form->input('description'),
+	$form->input(
+		'project_id',
+		array(
+			'type' => 'hidden',
+			'value' => $projectId
+		)
+	),
+	$form->input('id', array('type'=>'hidden')),
+	$form->end('Editer');
+?>

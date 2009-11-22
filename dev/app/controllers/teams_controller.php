@@ -176,27 +176,27 @@ class TeamsController extends AppController
     /**
      *
      */
-    public function add()
-    {
-        $this->set('projects', $this->Team->Project->find('list'));
-        if (!empty($this->data))
-        {
-            /***********************************************************
-             *
-             * ATTENTION
-             *
-             * Code modifié par Adrian
-             * Code original :
-             *if ($this->Team->save($this->data) && $this->Team->User->($this->data))
-             *
-             * Merci de valider cette modification en supprimant ce commentaire
-             *
-             **********************************************************/
-            if ($this->Team->save($this->data) && $this->Team->User->save($this->data))
-            {
-                $this->flash('L\'équipe a bien été ajoutée et sauvegardée.', '/teams');
-            }
-        }
+    public function add($projectId = null) {
+		if($projectId != null) {
+			$this->set('projectId', $projectId);
+		}
+		if (!empty($this->data)) {
+			/***********************************************************
+			 *
+			 * ATTENTION
+			 *
+			 * Code modifié par Adrian
+			 * Code original :
+			 *if ($this->Team->save($this->data) && $this->Team->User->($this->data))
+			 *
+			 * Merci de valider cette modification en supprimant ce commentaire
+			 *
+			 **********************************************************/
+			if ($this->Team->save($this->data) && $this->Team->User->save($this->data))
+			{
+				$this->flash('L\'équipe a bien été ajoutée et sauvegardée.', '/teams');
+			}
+		}
     }
 
     /**
