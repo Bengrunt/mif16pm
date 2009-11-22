@@ -111,14 +111,14 @@ class TasksController extends AppController
 		//echo '<pre>', var_dump($user),'</pre>';
 		
 		//$projects = $user['Project'];
-		$projects = $this->Task->Project->find('list');
-		$teams = $this->Task->Team->find('list');
+		//$projects = $this->Task->Project->find('list');
+		//$teams = $this->Task->Team->find('list');
 	
 		//echo '<pre>', var_dump($projects),'</pre>';
 		//echo '<pre>', var_dump($teams),'</pre>';
 	
-		$this->set('teams', $teams);
-		$this->set('projects', $projects);
+		//$this->set('teams', $teams);
+		//$this->set('projects', $projects);
 	
 		if(!empty($this->data))
 		{
