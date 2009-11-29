@@ -105,34 +105,72 @@ class TasksController extends AppController
 	
     public function add()
     {
+		$this->loadModel('Role');
+	
 		$this->Task->User->id = $this->Auth->user('id');
         $user = $this->Task->User->read();
-		
 		//echo '<pre>', var_dump($user),'</pre>';
 		
-		//$projects = $user['Project'];
-		//$projects = $this->Task->Project->find('list');
-		//$teams = $this->Task->Team->find('list');
-	
+		$idRoleSiteAdmin = $this->getRoleId('site_admin');
+		
+		//$teams = $user['Project']['Team'];
+		$teams = $this->Task->Team->find();
+		
+		echo '<pre>', var_dump($teams),'</pre>';
+		
+		$projects = $user['Project'];
 		//echo '<pre>', var_dump($projects),'</pre>';
-		//echo '<pre>', var_dump($teams),'</pre>';
+		
+		$project_names = array();
+		$project_teams = array();
+		
+		foreach ($projects as $project) {
+		
+			$project_names[$project['id']] = $project['name'];
+			
+			foreach($teams as $team) {
+			
+				//echo '<pre>', var_dump($team),'</pre>';
+				//echo '<pre>', var_dump($project['id']),'</pre>';
+			
+				if($team['project_id'] == $project['id']) {
+				
+					$project_teams[$teams['id']] = $team['name'];
+					
+				}
+			
+			}
+		
+		}
+		
+		//echo '<pre>', var_dump($project_teams),'</pre>';
+		
 	
-		//$this->set('teams', $teams);
-		//$this->set('projects', $projects);
+		//$this->set('teams', $this->Task->Team->find('list'));
+		//$this->set('projects', $this->Task->Project->find('list'));
+		
+		if($idRoleSiteAdmin == $this->Auth->user("role_id")) {
+		
+			$this->set('projects', $this->Task->Project->find('list'));
+			$this->set('teams', $this->Task->Team->find('list'));
+		
+		} else {
+		
+			$this->set('projects', $project_names);
+			$this->set('teams', $project_teams);
+		}
 	
 		if(!empty($this->data))
 		{
-			echo '<pre>', var_dump($this->data),'</pre>';
+			//echo '<pre>', var_dump($this->data),'</pre>';
 		
-			echo "blibli";
-			if ($this->Task->save($this->data)) 
+			if (($this->Task->save($this->data) /*&& ($this->Task->Team->save($this->data)) && ($this->Task->Project->save($this->data))*/)) 
 			{
-				echo "bloblo";
-				$this->flash('La tâche a bien été ajoutée et sauvegardée.','');
+				$this->flash('La tâche a bien été ajoutée et sauvegardée.','/tasks');
 			}
 			else
 			{
-				$this->flash('La tâche n\'a pas pu être ajoutée', '');
+				$this->flash('La tâche n\'a pas pu être ajoutée', '/tasks');
 			}
 		}
     }
