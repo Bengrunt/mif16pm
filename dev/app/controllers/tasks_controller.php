@@ -139,8 +139,17 @@ class TasksController extends AppController
 
     public function delete($id = null)
     {
-		$this->Task->del($id);
-		$this->flash('La tâche avec l\'id: '.$id.' a été supprimée.', '/tasks');
+		$this->Task->deleteAll(
+			array('Task.id' => $id),
+			false,
+			false
+		);
+		$this->Task->TasksUser->deleteAll(
+			array('TasksUser.task_id' => $id),
+			false,
+			false
+		);
+		$this->flash('La tâche ' . $id . ' a été supprimée.', '/tasks');
     }
 
     public function edit($id = null)

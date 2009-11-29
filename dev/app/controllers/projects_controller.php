@@ -366,8 +366,24 @@ class ProjectsController extends AppController {
 			false,
 			false
 		);
-		// Utiliser flush pour nettoyer + enlever assos sur Task, ProjectsTeam...
-		$this->flash('Le projet avec l\'id: ' . $id . ' a été supprimé.', '/projects');
+		$this->Project->ProjectsUser->deleteAll(
+			array('ProjectsUser.project_id' => $id),
+			false,
+			false
+		);
+		$this->Project->Team->deleteAll(
+			array('Team.project_id' => $id),
+			false,
+			false
+		);
+		$this->loadModel('Task');
+		$this->Task->deleteAll(
+			array('Task.project_id' => $id),
+			false,
+			false
+		);
+		
+		$this->flash('Le projet ' . $id . ' a été supprimé.', '/projects');
     }
 
 	/**

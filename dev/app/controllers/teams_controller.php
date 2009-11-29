@@ -203,9 +203,23 @@ class TeamsController extends AppController
      *
      */
     public function delete($id = null)
-    {
-        $this->Team->del($id);
-        $this->flash('L\'equipe avec l\'id: '.$id.' a été supprimée.', '/teams');
+    {		
+		$this->Team->deleteAll(
+			array('Team.id' => $id),
+			false,
+			false
+		);
+		$this->Team->Task->deleteAll(
+			array('Task.team_id' => $id),
+			false,
+			false
+		);
+		$this->Team->TeamsUser->deleteAll(
+			array('TeamsUser.team_id' => $id),
+			false,
+			false
+		);
+		$this->flash('L\'équipe ' . $id . ' a été supprimée.', '/teams');
     }
 
     /**
