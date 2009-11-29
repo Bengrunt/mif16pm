@@ -106,9 +106,30 @@ class UsersController extends AppController
         }
     }
 
-    public function delete()
+    public function delete($id = null)
     {
-        $this->redirect(array('controller' => 'users', 'action' => 'index'));
+		$this->User->deleteAll(
+			array('User.id' => $id),
+			false,
+			false
+		);
+		$this->User->ProjectsUser->deleteAll(
+			array('ProjectsUser.user_id' => $id),
+			false,
+			false
+		);
+		$this->User->TeamsUser->deleteAll(
+			array('TeamsUser.user_id' => $id),
+			false,
+			false
+		);
+		$this->User->TasksUser->deleteAll(
+			array('TasksUser.user_id' => $id),
+			false,
+			false
+		);
+       
+		$this->flash('L\'utilisateur ' . $id . ' a été supprimé.', '/users');
     }
 	
 	public function edit($id = null) {
