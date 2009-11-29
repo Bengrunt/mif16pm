@@ -12,7 +12,7 @@ class Task extends AppModel
     public $hasAndBelongsToMany = 'User';
 	public $belongsTo = array('Team','Project');
 	
-	public $validate = array(
+	/*public $validate = array(
 		'task_name' => array(
 			'rule' => array('minLength', 5),
 			'required' => true,
@@ -25,6 +25,6 @@ class Task extends AppModel
 			'allowEmpty' => false,
 			'message' => 'La durée de la tâche ne peut être vide.'
 		)
-	);
+	);*/
 
 }

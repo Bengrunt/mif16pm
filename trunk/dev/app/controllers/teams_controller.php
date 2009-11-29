@@ -181,6 +181,8 @@ class TeamsController extends AppController
 			$this->set('projectId', $projectId);
 		}
 		if (!empty($this->data)) {
+		
+			//echo '<pre>', var_dump($this->data),'</pre>';
 			/***********************************************************
 			 *
 			 * ATTENTION
