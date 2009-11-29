@@ -432,7 +432,7 @@ class ProjectsController extends AppController {
 				$this->changeProjectAdmin($id, $this->data['Project']['user_id']);
 				if($this->Project->save($this->data['Project'])) {
 					$this->flash(
-						'Les attributs du projet ont bien été modifiés.',
+						'Les attributs du projet ' . $id . ' ont bien été modifiés.',
 						'/projects'
 					);
 				}
