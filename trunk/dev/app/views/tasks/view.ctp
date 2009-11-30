@@ -15,8 +15,10 @@
 <?php echo $task['Task']['duration']; ?> jour(s)
 <h2>Date de début</h2>
 <?php echo $task['Task']['begin_date']; ?>
-<?php if($isSiteAdmin):
+<?php if($isSiteAdmin or $isTeamAdmin):
 	
+			echo '<h2> Options </h2>';
+			
 			echo $html->link(
 					$html->image('delete.png'),
 					array(
@@ -37,6 +39,8 @@
 				);
 				
 		elseif($isMyBusiness):
+		
+			echo '<h2> Options </h2>';
 		
 			echo $html->link(
 					$html->image('edit.png'),

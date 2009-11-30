@@ -86,6 +86,7 @@ class TasksController extends AppController
 			);
 			return;
 		}
+		
 		foreach($task['User'] as $taskUser) {
 		
 			$task['isMyBusiness'] = false;
@@ -96,11 +97,34 @@ class TasksController extends AppController
 			}
 		}
 		
+		$isTeamAdmin = false;
+		$isMyBusiness = false;
+		
+		//echo '<pre>', var_dump($user['Team']),'</pre>';
+		
+		foreach($user['Team'] as $team) {
+		
+			if($team['id'] == $task['Team']['id']) {
+			
+				$isMyBusiness = true;
+				
+				if($team['TeamsUser']['role_id'] == 3) {
+				
+					$isTeamAdmin = true;
+					
+				}
+			}
+		
+		}
+		
 		$this->set('role' , $user['Role']['name']);
 		$this->set('projects',$user['Project']);
 		$this->set('isSiteAdmin', $idRoleSiteAdmin == $this->Auth->user("role_id"));
 	
         $this->set('task', $task);
+		
+		$this->set('isMyBusiness', $isMyBusiness);
+		$this->set('isTeamAdmin', $isTeamAdmin);
     }	
 	
     public function add()
@@ -114,9 +138,9 @@ class TasksController extends AppController
 		$idRoleSiteAdmin = $this->getRoleId('site_admin');
 		
 		//$teams = $user['Project']['Team'];
-		$teams = $this->Task->Team->find();
+		$teams = $this->Task->Team->find('all');
 		
-		echo '<pre>', var_dump($teams),'</pre>';
+		//echo '<pre>', var_dump($teams),'</pre>';
 		
 		$projects = $user['Project'];
 		//echo '<pre>', var_dump($projects),'</pre>';
@@ -133,9 +157,9 @@ class TasksController extends AppController
 				//echo '<pre>', var_dump($team),'</pre>';
 				//echo '<pre>', var_dump($project['id']),'</pre>';
 			
-				if($team['project_id'] == $project['id']) {
+				if($team['Team']['project_id'] == $project['id']) {
 				
-					$project_teams[$teams['id']] = $team['name'];
+					$project_teams[$team['Team']['id']] = $team['Team']['name'];
 					
 				}
 			

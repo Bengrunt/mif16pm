@@ -20,8 +20,7 @@
 <!--?php echo $form->input('team_id', array('value' => 2)); ?-->
 <?php echo $form->input('description'); ?>
 <?php echo $form->input('duration', array('label' => 'Durée')); ?>
-<!----?php echo $form->input('begin_date', array('label' => 'Date de Début', 'type' => 'text')); ?---->
-<?php echo $form->input('begin_date'); ?>
+<?php echo $form->input('begin_date', array('label' => 'Date de Début')); ?>
 <!--?php echo "<input type='button' value='Annuler' onclick='javascript:history.back();'/>" ?-->
 <?php echo $form->end('Ajouter'); ?>
 
