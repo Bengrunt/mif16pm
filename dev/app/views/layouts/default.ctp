@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+        <?php echo $html->css(array("reset", "960", "global", "main")); ?>
+
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title><?php echo $title_for_layout; ?></title>
 
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-
-        <?php echo $html->css(array("reset", "960", "global", "main")); ?>
 
         <!--<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />
         <link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
@@ -47,7 +47,7 @@
                             ?>
                         </small></p>
                     <?php } else {
-                        echo $form->create('User', array('action' => 'login'));
+                        echo $form->create('User', array('url' => array('controller' => 'users', 'action' => 'login')));
                         echo $form->inputs(array(
                             'legend' => __('Connexion', true),
                             'name',
@@ -58,10 +58,10 @@
                             array("controller" => "users", "action" => "register"),
                             null, null, false);
                     ?></small> |
-                    <button type="submit">
-                        <?php echo $html->image("icons/connect.png") ?> Se connecter
-                    </button>
-                    <?php } ?>
+                        <button type="submit">
+                            <?php echo $html->image("icons/connect.png") ?> Se connecter
+                        </button>
+                        <?php echo $form->end(); } ?>
                     </div>
                 </div>
             </div>
