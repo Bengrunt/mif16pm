@@ -233,9 +233,9 @@ class TasksController extends AppController
 		}
 		else
 		{
-			if($this->Task->save($this->data['Task']))
+			if($this->Task->save($this->data))
 			{
-				$this->flash('Les attributs de la tâche ont bien été modifiés. ','/task');
+				$this->flash('Les attributs de la tâche ont bien été modifiés. ','/tasks');
 			}
 		}
 		$this->set('tasks', $this->Task->Team->find('list'));		
