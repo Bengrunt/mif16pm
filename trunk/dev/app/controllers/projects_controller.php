@@ -481,7 +481,7 @@ class ProjectsController extends AppController {
 			false
 		);
 		$this->flash(
-			'L\'équipier avec l\'id: ' .
+			'L\'équipier ' .
 			$userId .
 			' a été retiré du projet.',
 			'/projects'
