@@ -36,7 +36,7 @@
 					array('escape' => false)
 				);
 				
-		elseif($task['isMyBusiness']):
+		elseif($isMyBusiness):
 		
 			echo $html->link(
 					$html->image('edit.png'),

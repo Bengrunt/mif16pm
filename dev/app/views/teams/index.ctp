@@ -84,11 +84,11 @@
 ?>
 </table>
 <p><?php
-	echo $html->link(
+	/*echo $html->link(
 		'Ajouter une Equipe',
 		array(
 			'controller'=>'teams',
 			'action'=>'add'
 		)
-	);
-?></p>
+	); */
+?></p> 
