@@ -18,7 +18,9 @@ class UsersController extends AppController
 
     public function isAuthorized()
     {
-        if ( is_null( $this->Auth->user() ) )
+        $user = $this->Auth->user();
+        echo "<pre>",var_dump($user),"</pre>";
+        if ( is_null( $user ) )
         {
             switch ($this->action)
             {
@@ -55,6 +57,7 @@ class UsersController extends AppController
                     return true;
             }
         }
+        return false;
     }
 
     /**
