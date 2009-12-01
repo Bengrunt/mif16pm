@@ -1,0 +1,30 @@
+/***********************************************************************
+ * Users
+ **********************************************************************/
+
+#content {
+    text-align: center;
+}
+
+.login-form {
+    margin: 0 auto 25px auto;
+    text-align: left;
+    width: 300px;
+}
+    .login-form label {
+        display: inline-block;
+        text-align: right;
+        padding-right: 10px;
+        width: 110px;
+    }
+    .login-form button[type=submit] {
+        margin-left: 120px;
+    }
+
+.register-link {
+    text-align: center;
+}
+    .register-link button {
+        padding: 5px 10px;
+        font-weight: bold;
+    }
