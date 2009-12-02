@@ -9,7 +9,7 @@
     echo $form->create('User', array('action' => 'login'));
     echo $form->inputs(array(
         'legend' => "",
-        'name' => array('label' => "Nom"),
+        'name' => array('label' => "Login"),
         'password' => array('label' => "Mot de passe")));
     ?>
     <button type="submit">

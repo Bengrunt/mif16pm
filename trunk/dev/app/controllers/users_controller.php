@@ -6,6 +6,8 @@ class UsersController extends AppController
     //public $scaffold;
     // var $helpers = array('Combobox');
 
+    private $userRole;
+
     public function beforeFilter()
     {
         //Configure AuthComponent
@@ -19,6 +21,11 @@ class UsersController extends AppController
 
     public function isAuthorized()
     {
+        $this->User->id = $this->Auth->user('id');
+        $user = $this->User->read();
+        $this->userRole = $user['Role']['name'];
+        $this->set("userRole", $this->userRole);
+
         $user = $this->Auth->user();
         if ( is_null( $user ) )
         {
@@ -31,11 +38,8 @@ class UsersController extends AppController
         }
         else
         {
-            $this->User->id = $this->Auth->user('id');
-            $user = $this->User->read();
-
             // Si on est user_admin, on a tous les droits
-            if ($user['Role']['name'] == 'site_admin') {
+            if ($this->userRole == 'site_admin') {
                 return true;
             }
 
@@ -78,6 +82,9 @@ class UsersController extends AppController
      */
     public function view($id = null)
     {
+
+        $this->set("id", $id);
+
         $this->User->id = $id;
         $this->set('user', $this->User->read());
     }
@@ -132,42 +139,33 @@ class UsersController extends AppController
 
     public function delete($id = null)
     {
-        if ($id != $this->Auth->user('id'))
+        // Si on est user_admin, on a tous les droits
+        if ($id != $this->Auth->user('id') && $this->userRole != 'site_admin')
         {
             $this->redirect("/");
             $this->end();
         }
-        $this->User->deleteAll(
-            array('User.id' => $id),
-            false,
-            false
-        );
-        $this->User->ProjectsUser->deleteAll(
-            array('ProjectsUser.user_id' => $id),
-            false,
-            false
-        );
-        $this->User->TeamsUser->deleteAll(
-            array('TeamsUser.user_id' => $id),
-            false,
-            false
-        );
-        $this->User->TasksUser->deleteAll(
-            array('TasksUser.user_id' => $id),
-            false,
-            false
-        );
 
-        $this->flash('L\'utilisateur ' . $id . ' a été supprimé.', '/users');
+        $this->set("id", $id);
+
+        if (!$this->User->delete($id))
+        {
+            $this->flash("L'utilisateur $id n'a pas pu &ecirc;tre supprim&eacute;.", '/users');
+        }
+        $this->flash("L'utilisateur $id a &eacute;t&eacute; supprim&eacute;.", '/users');
     }
 
     public function edit($id = null)
     {
-        if ($id != $this->Auth->user('id'))
+        // Si on est user_admin, on a tous les droits
+        if ($id != $this->Auth->user('id') && $this->userRole != 'site_admin')
         {
             $this->redirect("/");
             $this->end();
         }
+
+        $this->set("id", $id);
+
         if(empty($this->data))
         {
             $this->User->id = $id;

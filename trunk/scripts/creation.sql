@@ -90,10 +90,12 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Structure de la table `teams_users`
 --
 CREATE TABLE IF NOT EXISTS `teams_users` (
+  `id` int(11) NOT NULL auto_increment,
   `team_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `role_id` int(11) NOT NULL,
-  PRIMARY KEY  (`team_id`,`user_id`)
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `team_id` (`team_id`,`user_id`,`role_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -102,10 +104,12 @@ CREATE TABLE IF NOT EXISTS `teams_users` (
 -- Structure de la table `projects_users`
 --
 CREATE TABLE IF NOT EXISTS `projects_users` (
+  `id` int(11) NOT NULL auto_increment,
   `project_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `role_id` int(11) NOT NULL,
-  PRIMARY KEY  (`project_id`,`user_id`)
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `project_id` (`project_id`,`user_id`,`role_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -115,9 +119,11 @@ CREATE TABLE IF NOT EXISTS `projects_users` (
 --
 
 CREATE TABLE IF NOT EXISTS `tasks_users` (
+  `id` int(11) NOT NULL auto_increment,
   `task_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  PRIMARY KEY  (`task_id`,`user_id`)
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `task_id` (`task_id`,`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------

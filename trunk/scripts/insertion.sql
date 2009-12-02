@@ -60,14 +60,14 @@ INSERT INTO `teams` (`id`, `name`, `description`, `project_id`, `created`, `modi
 -- Contenu de la table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `firstname`, `lastname`, `password`, `role_id`) 
+INSERT INTO `users` (`id`, `name`, `firstname`, `lastname`, `password`, `role_id`)
 VALUES
 (1, 'root', 'PROUT', 'Admin', '0da5dbfe3807a49b6fa3a7c08e4ce9a7c9e096c6', 2),
 (2, 'mAn', 'Emmanuel', 'GAUDE', '0da5dbfe3807a49b6fa3a7c08e4ce9a7c9e096c6', 1),
 (3, 'bengrunt', 'Benjamin', 'GUILLON', '0da5dbfe3807a49b6fa3a7c08e4ce9a7c9e096c6', 1),
 (4, 'mafy', 'Mamy', 'RAMINOSOA', '0da5dbfe3807a49b6fa3a7c08e4ce9a7c9e096c6', 1),
 (5, 'hbmanu', 'Emmanuel', 'HALTER', '0da5dbfe3807a49b6fa3a7c08e4ce9a7c9e096c6', 1),
-(6, 'lajoie', 'Adrian', 'GAUDEBERT', '0da5dbfe3807a49b6fa3a7c08e4ce9a7c9e096c6', 1), 
+(6, 'lajoie', 'Adrian', 'GAUDEBERT', '0da5dbfe3807a49b6fa3a7c08e4ce9a7c9e096c6', 1),
 (7, 'rbardoux', 'Robert', 'BARDOUX', '0da5dbfe3807a49b6fa3a7c08e4ce9a7c9e096c6', 1),
 (8, 'jc', 'Jean-Claude', 'Chigne', '0da5dbfe3807a49b6fa3a7c08e4ce9a7c9e096c6', 1),
 (9, 'guyguy', 'Guy', 'GEORGES', '0da5dbfe3807a49b6fa3a7c08e4ce9a7c9e096c6', 1),
