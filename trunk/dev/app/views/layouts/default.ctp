@@ -50,8 +50,8 @@
                         echo $form->create('User', array('url' => array('controller' => 'users', 'action' => 'login')));
                         echo $form->inputs(array(
                             'legend' => __('Connexion', true),
-                            'name',
-                            'password'));
+                            'name' => array('label' => "Nom"),
+                            'password' => array('label' => "Mot de passe")));
                     ?><small><?php
                         echo $html->link(
                             $html->image("icons/user_silhouette.png") . " S'inscrire",
@@ -99,7 +99,7 @@
                     </a>
                 </li>
                 <li class="grid_2">
-                    <a href="#<?php //echo $html->url( array( "controller" => "about", "action" => "index" ) ); ?>" class="disable">
+                    <a href="<?php echo $html->url( array( "controller" => "pages", "action" => "about" ) ); ?>">
                         <?php echo $html->image("menu/about.png"); ?>
                         <span>&Agrave; propos</span>
                     </a>
