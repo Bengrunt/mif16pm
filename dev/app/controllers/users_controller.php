@@ -10,6 +10,7 @@ class UsersController extends AppController
     {
         //Configure AuthComponent
         $this->Auth->authorize = 'controller';
+        $this->Auth->allow(array("login", "register"));
         $this->Auth->fields = array(
             'username' => 'name',
             'password' => 'password'
@@ -19,7 +20,6 @@ class UsersController extends AppController
     public function isAuthorized()
     {
         $user = $this->Auth->user();
-        echo "<pre>",var_dump($user),"</pre>";
         if ( is_null( $user ) )
         {
             switch ($this->action)
@@ -88,6 +88,7 @@ class UsersController extends AppController
     public function profile()
     {
         $this->redirect(array('action' => 'view', $this->Auth->user('id')));
+        $this->end();
     }
 
     /**
@@ -110,6 +111,11 @@ class UsersController extends AppController
      */
     public function register()
     {
+        if ( !is_null( $this->Auth->user() ) )
+        {
+            $this->redirect("/");
+            $this->end();
+        }
         if ( !empty($this->data) )
         {
             $result = $this->User->save( $this->data );
@@ -126,6 +132,11 @@ class UsersController extends AppController
 
     public function delete($id = null)
     {
+        if ($id != $this->Auth->user('id'))
+        {
+            $this->redirect("/");
+            $this->end();
+        }
         $this->User->deleteAll(
             array('User.id' => $id),
             false,
@@ -150,8 +161,13 @@ class UsersController extends AppController
         $this->flash('L\'utilisateur ' . $id . ' a été supprimé.', '/users');
     }
 
-    public function edit($id = null) {
-
+    public function edit($id = null)
+    {
+        if ($id != $this->Auth->user('id'))
+        {
+            $this->redirect("/");
+            $this->end();
+        }
         if(empty($this->data))
         {
             $this->User->id = $id;
