@@ -50,7 +50,7 @@
                         echo $form->create('User', array('url' => array('controller' => 'users', 'action' => 'login')));
                         echo $form->inputs(array(
                             'legend' => __('Connexion', true),
-                            'name' => array('label' => "Nom"),
+                            'name' => array('label' => "Login"),
                             'password' => array('label' => "Mot de passe")));
                     ?><small><?php
                         echo $html->link(

@@ -18,7 +18,7 @@ foreach ($files as $file)
 
     $sql = file($file); // on charge le fichier SQL
     foreach($sql as $l){ // on le lit
-		echo $l . "\n<br/>";
+        //echo $l . "\n<br/>";
         if (substr(trim($l),0,2)!="--"){ // suppression des commentaires
             $requetes .= $l;
         }
